@@ -25,6 +25,30 @@ function register_acf_block_types() {
 		'keywords' => array( 'counter', 'zahlen' ),
 		'mode' => 'edit'
 	));
+
+	// register a Countdown block.
+	acf_register_block_type(array(
+		'name' => 'countdown',
+		'title' => __('Countdown'),
+		'description' => __('Der Block rendert einen benutzerdeinierten Countdown'),
+		'render_template' => '/blocks/countdown.php',
+		'category' => 'layout',
+		'icon' => 'backup',
+		'keywords' => array( 'counter', 'zahlen', 'countdown' ),
+		'mode' => 'edit'
+	));
+
+	// register a Köpfe block.
+	acf_register_block_type(array(
+		'name' => 'kopefe',
+		'title' => __('Köpfe anzeigen'),
+		'description' => __('Der Block zeigt die Köpfe an'),
+		'render_template' => '/blocks/koepfe.php',
+		'category' => 'layout',
+		'icon' => 'groups',
+		'keywords' => array( 'team', 'köpfe', 'koepfe' ),
+		'mode' => 'edit'
+	));
 }
 
 // Check if function exists and hook into setup.

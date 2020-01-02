@@ -420,3 +420,129 @@ button {
 		}
 	}
 }
+
+.fullpageArrowBottom {
+	position: absolute;
+	z-index: 999;
+	bottom: 25px;
+	width: 50px;
+	height: 50px;
+	background-color: rgba(255, 255, 255, .4);
+	text-align: center;
+	border-radius: 100%;
+	line-height: 80px;
+	-webkit-transition: all .5s linear;
+	transition: all .5s linear;
+	cursor: pointer;
+	svg {
+		color: $black;
+	}
+	&:hover {
+		background-color: rgba(0, 0, 0, .4);
+		svg {
+			color: $white;
+		}
+	}
+}
+
+.countdown {
+	text-align: center;
+	@include font-size(2.2rem);
+	background-color: $primary;
+	color: $white;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	.countdownValue {
+		font-weight: 700;
+		color: $secondary;
+	}
+}
+
+.kopfItem {
+	height: 430px;
+	position: relative;
+	z-index: 0;
+	overflow: hidden;
+	img {
+		width: 100%;
+		height: 100%;
+		-o-object-fit: cover;
+		   object-fit: cover;
+		-webkit-filter: brightness(60%);
+		        filter: brightness(60%);
+	}
+	.overlay {
+		position: absolute;
+		background-color: rgba(0,0,0,.85);
+		top: 0;
+		bottom: 0;
+		height: 100%;
+		width: 0;
+		-webkit-transition: all .5s ease;
+		transition: all .5s ease;
+		margin: auto;
+		overflow: hidden;
+		z-index: 1;
+	}
+	.titleTxt {
+		position: absolute;
+		z-index: 2;
+		color: $white;
+		top: 65%;
+		left: 30px;
+		width: calc(100% - 60px);
+		-webkit-transition: all .5s ease;
+		transition: all .5s ease;
+		h2,p {
+			font-weight: 700;
+		}
+		h2 {
+			@include font-size(3.1rem);
+		}
+		p {
+			@include font-size(1.125rem);
+		}
+	}
+	.quoteInfos {
+		position: absolute;
+		z-index: 1;
+		width: 0;
+		height: 50%;
+		top: 40%;
+		left: 0;
+		overflow: hidden;
+		blockquote {
+			p {
+				font-weight: 500;
+				@include font-size(1.25rem);
+			}
+		}
+	}
+	&:hover {
+		.overlay {
+			width: 100%;
+			left: 0;
+			overflow: visible;
+			-webkit-transition: all .5s ease;
+			transition: all .5s ease;
+		}
+		.titleTxt {
+			top: 40px;
+			h2 {
+				color: $secondary;
+			}
+		}
+		.quoteInfos {
+			overflow: visible;
+			width: 100%;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		/* Tablet quer */
+		height: 410px;
+	}
+	@include media-breakpoint-up(xl) {
+		/* Full Size Display */
+		height: 518px;
+	}
+}

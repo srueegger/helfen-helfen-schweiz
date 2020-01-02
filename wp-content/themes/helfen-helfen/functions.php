@@ -29,6 +29,8 @@ add_filter('show_admin_bar', '__return_false');
  * Custom Image Size
  ***************************************/
 add_image_size( 'imgsize-1920', 1920, 9999, false );
+add_image_size( 'kopf', 635, 9999, false );
+add_image_size( 'kopf2x', 1270, 9999, false );
 
 /***************************************
  * Add Wordpress Menus
@@ -61,8 +63,11 @@ function hh_startup_scripts() {
 		'home_url' => HOME_URI,
 		'ajax_url' => admin_url('admin-ajax.php'),
 		'ajax_secure' => wp_create_nonce('jtidb-check-ajax-secure'),
+		'txt' => array(
+			'arrow_bottom' => '<div class="fullpageArrowBottom"><i class="fas fa-angle-down fa-3x"></i></div>'
+		)
 	);
-	//wp_localize_script( 'hh-script', 'global_vars', $global_vars );
+	wp_localize_script( 'hh-script', 'global_vars', $global_vars );
 	wp_enqueue_style( 'hh-style' );
 	wp_enqueue_script( 'hh-script' );
 }
@@ -81,15 +86,24 @@ function hh_admin_style_and_script() {
  * 		jtidb ACF Init
  ***************************************/
 function hh_acf_init() {
+	/* SMTP Einstellungen */
 	 $args = array(
-		'page_title' => 'Einstellungen für JTI Datenbank',
-		'menu_title' => 'Datenbank Einstellungen',
-		'menu_slug' => 'jtidb-db-settings',
+		'page_title' => 'SMTP Einstellungen',
+		'menu_title' => 'SMTP',
+		'menu_slug' => 'hh-smtp-settings',
 		'parent_slug' => 'options-general.php',
 	);
 	acf_add_options_sub_page($args);
+	/* Footer Einstellungen */
+	$args = array(
+		'page_title' => 'Menü Footer Inhalte',
+		'menu_title' => 'Footer',
+		'menu_slug' => 'hh-footer-settings',
+		'parent_slug' => 'themes.php',
+	);
+	acf_add_options_sub_page($args);
 }
-//add_action( 'acf/init', 'hh_acf_init' );
+add_action( 'acf/init', 'hh_acf_init' );
 
 /***************************************
  * Remove Menus from Backend
