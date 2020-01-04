@@ -1,6 +1,12 @@
 (function($) {
 	'use strict';
 
+	/* Bilder per LazyLoad laden */
+	var lazyLoadInstance = new LazyLoad({
+		elements_selector: ".lazy"
+
+	});
+
 	/* Slick Full Page Carousel laden */
 	var fullSlider = $('.hh-full-carousel');
 	fullSlider.slick({
@@ -55,8 +61,6 @@
 	$('.menu-item.menu-item-has-children:not(.hovered-menu)').on('mouseover', function () {
 		$('.menu-item a').removeClass('underline');
 		var dynamicContent = $('.dynamic-menu-content');
-		//dynamicContent.removeClass('active');
-		//dynamicContent.html('');
 		var $this = $(this);
 		$this.find('a').addClass('underline');
 		var subMenu;
@@ -156,8 +160,6 @@
 				$('.countdownValue.hours').text(hours);
 				$('.countdownValue.minutes').text(minutes);
 				$('.countdownValue.seconds').text(seconds);
-				//countdownContainer.html(returnCounterHTML);
-				//countdownContainer.html(days + "d " + hours + "h " + minutes + "m " + seconds + "s ");
 			}, 1000);
 		});
 	}

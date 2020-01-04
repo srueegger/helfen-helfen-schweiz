@@ -33,8 +33,8 @@ if( !empty($block['align']) ) {
 				?>
 				<div class="col-12 col-sm-6 col-xl-4 kopfItem">
 					<picture>
-						<source srcset="<?php echo $image['sizes']['kopf']; ?> 1x, <?php echo $image['sizes']['kopf2x']; ?> 2x">
-						<img src="<?php echo $image['sizes']['kopf']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<source data-srcset="<?php echo $image['sizes']['kopf']; ?> 1x, <?php echo $image['sizes']['kopf2x']; ?> 2x">
+						<img class="lazy" data-src="<?php echo $image['sizes']['kopf']; ?>" alt="<?php echo $image['alt']; ?>" />
 					</picture>
 					<div class="overlay"></div>
 					<div class="titleTxt">
@@ -54,12 +54,14 @@ if( !empty($block['align']) ) {
 									<i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
 								</span>
 							</a>
+							<?php if(get_field('kopf_sm', get_the_ID()) != -1) { ?>
 							<a href="<?php the_field('kopf_sm_link', get_the_ID()); ?>" target="_blank">
 								<span class="fa-stack fa-2x">
 									<i class="fas fa-circle fa-stack-2x"></i>
 									<i class="fab fa-<?php the_field('kopf_sm', get_the_ID()); ?> fa-stack-1x fa-inverse"></i>
 								</span>
 							</a>
+							<?php } ?>
 						</div>
 					</div>
 				</div>
@@ -68,5 +70,7 @@ if( !empty($block['align']) ) {
 			wp_reset_postdata();
 		}
 		?>
+		<div class="col-12 col-sm-6 col-xl-4 kopfItem bg-primary"></div>
+		<div class="col-12 col-sm-6 col-xl-4 kopfItem bg-secondary"></div>
 	</div>
 </div>

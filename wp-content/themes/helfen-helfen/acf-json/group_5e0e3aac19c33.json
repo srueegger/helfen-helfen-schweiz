@@ -96,6 +96,7 @@
                 "id": ""
             },
             "choices": {
+                "-1": "Kein Social Media Profil",
                 "linkedin-in": "LinkedIn",
                 "facebook-f": "Facebook"
             },
@@ -113,7 +114,15 @@
             "type": "url",
             "instructions": "",
             "required": 1,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e0e3b2cad1bc",
+                        "operator": "!=",
+                        "value": "-1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -140,5 +149,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Felder für Köpfe",
-    "modified": 1577991114
+    "modified": 1578000045
 }
