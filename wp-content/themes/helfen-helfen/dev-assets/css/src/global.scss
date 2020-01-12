@@ -564,4 +564,39 @@ button {
 		/* Full Size Display */
 		height: 518px;
 	}
+	&.txtItem {
+		h3 {
+			position: absolute;
+			top: 25px;
+			left: 25px;
+			text-transform: uppercase;
+			@include font-size(1.4rem);
+		}
+		h4 {
+			position: absolute;
+			bottom: 50%;
+			left: 25px;
+			@include font-size(3.1rem);
+			-webkit-transform: translateY(50%);
+			        transform: translateY(50%);
+		}
+		.hh-btn {
+			position: absolute;
+			left: 25px;
+			bottom: 25px;
+			svg {
+				position: absolute;
+				right: 50%;
+				bottom: 50%;
+				-webkit-transform: translate(50%, 50%);
+				        transform: translate(50%, 50%);
+			}
+		}
+		&.bg-primary {
+			h3,
+			h4 {
+				color: $white;
+			}
+		}
+	}
 }

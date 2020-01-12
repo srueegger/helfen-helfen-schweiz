@@ -3,13 +3,65 @@
     "title": "Daten zur Person",
     "fields": [
         {
+            "key": "field_5e1b265391fe5",
+            "label": "Kacheltyp wählen",
+            "name": "kopf_typ",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Textbox",
+            "ui_off_text": "Person"
+        },
+        {
+            "key": "field_5e1b270118501",
+            "label": "Daten zur Person",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e1b265391fe5",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Daten zur Person erfassen",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_5e0e3ac0ad1b8",
             "label": "Bild",
             "name": "kopf_image",
             "type": "image",
             "instructions": "",
             "required": 1,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e1b265391fe5",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -33,7 +85,15 @@
             "type": "text",
             "instructions": "",
             "required": 1,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e1b265391fe5",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -52,7 +112,15 @@
             "type": "text",
             "instructions": "",
             "required": 1,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e1b265391fe5",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -71,7 +139,15 @@
             "type": "email",
             "instructions": "",
             "required": 1,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e1b265391fe5",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -89,7 +165,15 @@
             "type": "radio",
             "instructions": "",
             "required": 1,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e1b265391fe5",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -120,6 +204,11 @@
                         "field": "field_5e0e3b2cad1bc",
                         "operator": "!=",
                         "value": "-1"
+                    },
+                    {
+                        "field": "field_5e1b265391fe5",
+                        "operator": "!=",
+                        "value": "1"
                     }
                 ]
             ],
@@ -130,6 +219,133 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_5e1b272518502",
+            "label": "Textbox",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e1b265391fe5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Textbox konfigurieren",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5e1b279523314",
+            "label": "Farbe der Box",
+            "name": "kopf_txt_color",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bg-primary": "Blau",
+                "bg-secondary": "Gelb"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e1b275a23312",
+            "label": "Kleiner Titel (Text oben)",
+            "name": "kopf_txt_title1",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e1b265391fe5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e1b277523313",
+            "label": "Grosser Text (Text mitte)",
+            "name": "kopf_txt_title2",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e1b265391fe5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e1b28eba58f7",
+            "label": "Link",
+            "name": "kopf_txt_link",
+            "type": "link",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e1b265391fe5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -149,5 +365,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Felder für Köpfe",
-    "modified": 1578000045
+    "modified": 1578838293
 }
