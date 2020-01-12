@@ -8390,12 +8390,15 @@ button:focus {
   overflow-x: hidden; }
   .hh-full-carousel .slick-slide {
     height: 100vh;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     .hh-full-carousel .slick-slide img {
       width: 100%;
       -o-object-fit: cover;
       object-fit: cover;
-      height: 100vh; }
+      height: 100vh;
+      -webkit-transition: all .5s linear;
+      transition: all .5s linear; }
       .hh-full-carousel .slick-slide img:after {
         content: '';
         position: absolute;
@@ -8408,7 +8411,9 @@ button:focus {
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%; }
+      height: 100%;
+      -webkit-transition: all .5s linear;
+      transition: all .5s linear; }
       .hh-full-carousel .slick-slide .inner-container .inner {
         position: absolute;
         bottom: 90px;
@@ -8434,6 +8439,13 @@ button:focus {
         background-color: rgba(255, 213, 0, 0.5); }
       .hh-full-carousel .slick-slide .inner-container.blue {
         background-color: rgba(0, 97, 171, 0.5); }
+    .hh-full-carousel .slick-slide:hover img {
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05); }
+    .hh-full-carousel .slick-slide:hover .inner-container.yellow {
+      background-color: rgba(255, 213, 0, 0.8); }
+    .hh-full-carousel .slick-slide:hover .inner-container.blue {
+      background-color: rgba(0, 97, 171, 0.8); }
   .hh-full-carousel .slick-arrow {
     bottom: 30px;
     width: 34px;
