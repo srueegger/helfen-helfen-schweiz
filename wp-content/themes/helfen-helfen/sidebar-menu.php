@@ -44,39 +44,33 @@
 	</div>
 	<div class="container-fluid footer">
 		<div class="row justify-content-center footer">
-			<div class="col-4 mt-25">
-				<div class="row justify-content-center no-gutters">
-					<div class="col-4 col-xl-2 text-center">
-						<a href="#" target="" class="text-white"><i class="fas fa-cheeseburger fa-fw fa-3x"></i></a>
-					</div>
-					<div class="col-xl-6 d-none d-xl-block">
-						Besuchen sie uns:<br>
-						<strong>Hammerstrasse 15, 4058 Basel</strong>
-					</div>
-				</div>
-			</div>
-			<div class="col-4 mt-25">
-				<div class="row justify-content-center no-gutters">
-					<div class="col-4 col-xl-2 text-center">
-						<a href="#" target="" class="text-white"><i class="fas fa-cheeseburger fa-fw fa-3x"></i></a>
-					</div>
-					<div class="col-xl-6 d-none d-xl-block">
-						Besuchen sie uns:<br>
-						<strong>Hammerstrasse 15, 4058 Basel</strong>
-					</div>
-				</div>
-			</div>
-			<div class="col-4 mt-25">
-				<div class="row justify-content-center no-gutters">
-					<div class="col-4 col-xl-2 text-center">
-						<a href="#" target="" class="text-white"><i class="fas fa-cheeseburger fa-fw fa-3x"></i></a>
-					</div>
-					<div class="col-xl-6 d-none d-xl-block">
-						Besuchen sie uns:<br>
-						<strong>Hammerstrasse 15, 4058 Basel</strong>
+			<?php
+			/* Footer Inhalte ausgeben */
+			$footerSections = array('left', 'middle', 'right');
+			foreach($footerSections as $footerSection) {
+				$icon = get_field('footer_'.$footerSection.'_icon', 'option');
+				$txt = get_field('footer_'.$footerSection.'_txt', 'option');
+				$link = get_field('footer_'.$footerSection.'_link', 'option');
+				$linkTarget = '_self';
+				if(get_field('footer_'.$footerSection.'_link_newtab', 'option')) {
+					$linkTarget = '_blank';
+				}
+				?>
+				<div class="col-4 mt-25">
+					<div class="row justify-content-center no-gutters">
+						<div class="col-4 col-xl-2 text-center">
+							<a href="<?php echo $link; ?>" target="<?php echo $linkTarget; ?>" class="text-white">
+								<i class="<?php echo $icon; ?> fa-fw fa-3x"></i>
+							</a>
+						</div>
+						<div class="col-xl-6 d-none d-xl-block">
+							<?php echo $txt; ?>
+						</div>
 					</div>
 				</div>
-			</div>
+				<?php
+			}
+			?>
 		</div>
 	</div>
 	<div id="menuNewsContent" class="d-none">
