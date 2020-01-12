@@ -70,7 +70,7 @@
             "key": "field_5e0e448e05fc6",
             "label": "Link",
             "name": "footer_left_link",
-            "type": "url",
+            "type": "text",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -80,7 +80,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": ""
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5e0e44ab05fc7",
@@ -169,7 +172,7 @@
             "key": "field_5e0e45191717e",
             "label": "Link",
             "name": "footer_middle_link",
-            "type": "url",
+            "type": "text",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -179,7 +182,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": ""
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5e0e452f1717f",
@@ -268,7 +274,7 @@
             "key": "field_5e0e45da314bf",
             "label": "Link",
             "name": "footer_right_link",
-            "type": "url",
+            "type": "text",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -278,7 +284,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": ""
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5e0e4601314c1",
@@ -317,5 +326,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1578850296
+    "modified": 1578851060
 }
