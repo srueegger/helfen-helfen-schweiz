@@ -49,6 +49,18 @@ function register_acf_block_types() {
 		'keywords' => array( 'team', 'köpfe', 'koepfe' ),
 		'mode' => 'edit'
 	));
+
+	// register a Presse block.
+	acf_register_block_type(array(
+		'name' => 'presse',
+		'title' => __('Presseartikel anzeigen'),
+		'description' => __('Der Block zeigt die Presseartikel an'),
+		'render_template' => '/blocks/presse.php',
+		'category' => 'layout',
+		'icon' => 'microphone',
+		'keywords' => array( 'presse', 'news', 'nachrichten' ),
+		'mode' => 'edit'
+	));
 }
 
 // Check if function exists and hook into setup.

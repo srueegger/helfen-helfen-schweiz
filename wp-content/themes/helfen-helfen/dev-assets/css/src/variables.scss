@@ -105,8 +105,8 @@ $yiq-text-light:            $white !default;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-caret:                                true !default;
-$enable-rounded:                              true !default;
+$enable-caret:                                false !default;
+$enable-rounded:                              false !default;
 $enable-shadows:                              false !default;
 $enable-gradients:                            false !default;
 $enable-transitions:                          true !default;
@@ -186,6 +186,9 @@ $color-grey-arrow: $black !default;
 $width-default: 220px !default; // 3 960px-grid columns
 
 $zindex-select-dropdown: 1060 !default; // must be higher than a modal background (1050)
+
+/* Card Styles */
+$card-height: 100%;
 
 //** Placeholder text color
 $input-color-placeholder: #999 !default;

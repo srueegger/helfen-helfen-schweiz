@@ -23,6 +23,7 @@ require_once 'inc/custom-gutenberg-blocks.php';
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 add_theme_support( 'title-tag' );
 add_theme_support( 'menus' );
+add_theme_support( 'responsive-embeds' );
 add_filter('show_admin_bar', '__return_false');
 
 /***************************************
@@ -31,6 +32,8 @@ add_filter('show_admin_bar', '__return_false');
 add_image_size( 'imgsize-1920', 1920, 9999, false );
 add_image_size( 'kopf', 635, 9999, false );
 add_image_size( 'kopf2x', 1270, 9999, false );
+add_image_size( 'presse', 768, 9999, false );
+add_image_size( 'presse2x', 1536, 9999, false );
 
 /***************************************
  * Add Wordpress Menus
@@ -155,7 +158,7 @@ add_action( 'after_setup_theme', 'hh_gutenberg_colors', 11 );
 *	Gutenberg Blöcke auf Startseite mit Container rendern
 ***************************************/
 add_filter( 'render_block', function( $block_content, $block ) {
-	if(!is_front_page()) {
+	if(!is_front_page() && !is_page('presse')) {
 		// Target core/* and core-embed/* blocks.
 		if ( preg_match( '~^core/|core-embed/~', $block['blockName'] ) && $block['blockName'] != 'core/cover' && $block['blockName'] != 'core/gallery' ) {
 			$block_content = sprintf( '<div class="container"><div class="row justify-content-center"><div class="col-12 col-lg-9">%s</div></div></div>', $block_content );

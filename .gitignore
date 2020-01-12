@@ -84,4 +84,5 @@ wp-admin/
 node_modules/
 bower_components/
 wp-content/plugins/*
+!wp-content/plugins/hh-cpt-tax/
 *.swp
