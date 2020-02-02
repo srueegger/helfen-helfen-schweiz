@@ -14,7 +14,7 @@ if( !empty($block['align']) ) {
 	$className .= ' align' . $block['align'];
 }
 ?>
-<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo $className; ?>">
+<div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $className ); ?>">
 	<div class="row no-gutters">
 		<?php
 		$args = array(

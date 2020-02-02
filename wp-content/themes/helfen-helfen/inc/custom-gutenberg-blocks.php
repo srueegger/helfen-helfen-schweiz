@@ -61,6 +61,18 @@ function register_acf_block_types() {
 		'keywords' => array( 'presse', 'news', 'nachrichten' ),
 		'mode' => 'edit'
 	));
+
+	// Förderer Übersicht
+	acf_register_block_type(array(
+		'name' => 'foerderer',
+		'title' => __('Förderer anzeigen'),
+		'description' => __('Der Block managt die Förderer Übersicht'),
+		'render_template' => '/blocks/foerderer.php',
+		'category' => 'layout',
+		'icon' => 'star-filled',
+		'keywords' => array( 'förderer', 'foerderer' ),
+		'mode' => 'edit'
+	));
 }
 
 // Check if function exists and hook into setup.

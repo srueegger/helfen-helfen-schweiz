@@ -29,6 +29,20 @@
     opacity: 0; }
   100% {
     opacity: 1; } }
+@-webkit-keyframes textzoom {
+  from {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+@keyframes textzoom {
+  from {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -7995,6 +8009,11 @@ button:focus {
 .mt-25 {
   margin-top: 2.5rem; }
 
+blockquote {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto; }
+
 #logoContainer {
   position: fixed;
   z-index: 1030;
@@ -8485,5 +8504,56 @@ button:focus {
 
 .rounded-image img {
   border-radius: 50rem !important; }
+
+.foerderer .foerdererItem {
+  height: 400px;
+  overflow: hidden; }
+  .foerderer .foerdererItem img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear; }
+  .foerderer .foerdererItem .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 97, 171, 0.5);
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear; }
+    .foerderer .foerdererItem .overlay .inner {
+      text-align: center;
+      color: #fff;
+      position: absolute;
+      width: 100%;
+      bottom: 50%;
+      -webkit-transform: translateY(50%);
+      transform: translateY(50%); }
+      .foerderer .foerdererItem .overlay .inner h2 {
+        -webkit-animation: textzoom 2s normal;
+        animation: textzoom 2s normal;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: all .5s linear;
+        transition: all .5s linear; }
+  .foerderer .foerdererItem:nth-child(even) .overlay {
+    background-color: rgba(255, 213, 0, 0.5); }
+  .foerderer .foerdererItem:hover img {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); }
+  .foerderer .foerdererItem:hover .overlay {
+    background-color: rgba(0, 97, 171, 0.7); }
+    .foerderer .foerdererItem:hover .overlay h2 {
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05); }
+  .foerderer .foerdererItem:hover:nth-child(even) .overlay {
+    background-color: rgba(255, 213, 0, 0.7); }
 
 /*# sourceMappingURL=theme.css.map */

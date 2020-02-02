@@ -42,3 +42,25 @@
 		opacity: 1;
 	}
 }
+
+@-webkit-keyframes textzoom {
+	from {
+		-webkit-transform: scale(0);
+		        transform: scale(0);
+	}
+	to {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
+}
+
+@keyframes textzoom {
+	from {
+		-webkit-transform: scale(0);
+		        transform: scale(0);
+	}
+	to {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
+}
