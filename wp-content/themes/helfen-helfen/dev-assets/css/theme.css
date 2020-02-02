@@ -1,6 +1,34 @@
 @charset "UTF-8";
 /* Card Styles */
 /* CSS Hamburgers Settings */
+@-webkit-keyframes blocktext {
+  from {
+    -webkit-transform: translateY(-50vh);
+    transform: translateY(-50vh); }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+@keyframes blocktext {
+  from {
+    -webkit-transform: translateY(-50vh);
+    transform: translateY(-50vh); }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
+@-webkit-keyframes blockarrow {
+  0% {
+    opacity: 0; }
+  60% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes blockarrow {
+  0% {
+    opacity: 0; }
+  60% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -8305,6 +8333,7 @@ button:focus {
     padding-top: 15px; }
 
 .fullpageArrowBottom {
+  opacity: 1;
   position: absolute;
   z-index: 999;
   bottom: 25px;
@@ -8316,7 +8345,9 @@ button:focus {
   line-height: 80px;
   -webkit-transition: all .5s linear;
   transition: all .5s linear;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-animation: blockarrow 3s normal;
+  animation: blockarrow 3s normal; }
   .fullpageArrowBottom svg {
     color: #000; }
   .fullpageArrowBottom:hover {
@@ -8444,5 +8475,15 @@ button:focus {
   .kopfItem.txtItem.bg-primary h3,
   .kopfItem.txtItem.bg-primary h4 {
     color: #fff; }
+
+/* Block Images - Text Animation */
+.wp-block-cover__inner-container p {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-animation: blocktext 2.5s normal;
+  animation: blocktext 2.5s normal; }
+
+.rounded-image img {
+  border-radius: 50rem !important; }
 
 /*# sourceMappingURL=theme.css.map */

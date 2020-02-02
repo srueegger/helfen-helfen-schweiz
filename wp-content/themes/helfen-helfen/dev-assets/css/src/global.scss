@@ -441,6 +441,7 @@ button {
 }
 
 .fullpageArrowBottom {
+	opacity: 1;
 	position: absolute;
 	z-index: 999;
 	bottom: 25px;
@@ -453,6 +454,8 @@ button {
 	-webkit-transition: all .5s linear;
 	transition: all .5s linear;
 	cursor: pointer;
+	-webkit-animation: blockarrow 3s normal;
+	        animation: blockarrow 3s normal;
 	svg {
 		color: $black;
 	}
@@ -598,5 +601,21 @@ button {
 				color: $white;
 			}
 		}
+	}
+}
+
+/* Block Images - Text Animation */
+.wp-block-cover__inner-container {
+	p {
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+		-webkit-animation: blocktext 2.5s normal;
+		        animation: blocktext 2.5s normal;
+	}
+}
+
+.rounded-image {
+	img {
+		border-radius: 50rem !important;
 	}
 }
