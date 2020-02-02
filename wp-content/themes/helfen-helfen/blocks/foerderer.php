@@ -34,22 +34,24 @@ if( !empty($block['align']) ) {
 				$h2_txt = get_field('forderer_h2', get_the_ID());
 				?>
 				<div class="col-12 col-lg-6 col-xl-4 foerdererItem">
-					<picture>
-						<source data-srcset="<?php echo $image['sizes']['kopf']; ?> 1x, <?php echo $image['sizes']['kopf2x']; ?> 2x">
-						<img data-src="<?php echo $image['sizes']['kopf']; ?>" class="lazy" alt="<?php echo $image['alt']; ?>">
-					</picture>
-					<div class="overlay">
-						<div class="inner">
-							<?php
-							if(!empty($h1_txt)) {
-								echo '<h1 class="h3">'.$h1_txt.'</h1>';
-							}
-							if(!empty($h2_txt)) {
-								echo '<h2>'.$h2_txt.'</h2>';
-							}
-							?>
+					<a href="<?php the_permalink(); ?>" target="_self">
+						<picture>
+							<source data-srcset="<?php echo $image['sizes']['kopf']; ?> 1x, <?php echo $image['sizes']['kopf2x']; ?> 2x">
+							<img data-src="<?php echo $image['sizes']['kopf']; ?>" class="lazy" alt="<?php echo $image['alt']; ?>">
+						</picture>
+						<div class="overlay">
+							<div class="inner">
+								<?php
+								if(!empty($h1_txt)) {
+									echo '<h1 class="h3">'.$h1_txt.'</h1>';
+								}
+								if(!empty($h2_txt)) {
+									echo '<h2>'.$h2_txt.'</h2>';
+								}
+								?>
+							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 				<?php
 			}
