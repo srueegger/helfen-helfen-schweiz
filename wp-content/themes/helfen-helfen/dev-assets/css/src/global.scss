@@ -48,6 +48,10 @@ blockquote {
 			width: 50px;
 		}
 	}
+	&.animate-logo {
+		-webkit-animation: logo 1.5s normal;
+		        animation: logo 1.5s normal;
+	}
 }
 
 #menuButton {
@@ -73,6 +77,10 @@ blockquote {
 	@include media-breakpoint-up(md) {
 		top: 40px;
 		right: 40px;
+	}
+	&.animate-menu {
+		-webkit-animation: menubtn 1.75s normal;
+		        animation: menubtn 1.75s normal;
 	}
 }
 

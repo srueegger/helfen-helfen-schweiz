@@ -43,6 +43,40 @@
   to {
     -webkit-transform: scale(1);
     transform: scale(1); } }
+@-webkit-keyframes logo {
+  0% {
+    -webkit-transform: rotate(0) scale(0);
+    transform: rotate(0) scale(0); }
+  85% {
+    -webkit-transform: rotate(1080deg) scale(1.3);
+    transform: rotate(1080deg) scale(1.3); }
+  100% {
+    -webkit-transform: rotate(1080deg) scale(1);
+    transform: rotate(1080deg) scale(1); } }
+@keyframes logo {
+  0% {
+    -webkit-transform: rotate(0) scale(0);
+    transform: rotate(0) scale(0); }
+  85% {
+    -webkit-transform: rotate(1080deg) scale(1.3);
+    transform: rotate(1080deg) scale(1.3); }
+  100% {
+    -webkit-transform: rotate(1080deg) scale(1);
+    transform: rotate(1080deg) scale(1); } }
+@-webkit-keyframes menubtn {
+  0% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes menubtn {
+  0% {
+    opacity: 0; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -8041,6 +8075,9 @@ blockquote {
       height: 80px; }
       #logoContainer img {
         width: 50px; } }
+  #logoContainer.animate-logo {
+    -webkit-animation: logo 1.5s normal;
+    animation: logo 1.5s normal; }
 
 #menuButton {
   position: fixed;
@@ -8062,6 +8099,9 @@ blockquote {
     #menuButton {
       top: 40px;
       right: 40px; } }
+  #menuButton.animate-menu {
+    -webkit-animation: menubtn 1.75s normal;
+    animation: menubtn 1.75s normal; }
 
 #mainMenu {
   position: fixed;

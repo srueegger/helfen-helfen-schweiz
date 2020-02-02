@@ -8,7 +8,15 @@
 	</head>
 	<body <?php body_class(); ?>>
 		<header>
-			<div id="logoContainer">
+			<?php
+			$addLogoClass = '';
+			$addMenuClass = '';
+			if(is_front_page()) {
+				$addLogoClass = ' class="animate-logo"';
+				$addMenuClass = ' class="animate-menu"';
+			}
+			?>
+			<div id="logoContainer"<?php echo $addLogoClass; ?>>
 				<a href="<?php echo HOME_URI; ?>" target="_self">
 					<picture>
 						<source srcset="<?php echo THEME_IMAGES; ?>/logo-black@2x.png 2x, <?php echo THEME_IMAGES; ?>/logo-black.png 1x">
@@ -20,7 +28,7 @@
 					</picture>
 				</a>
 			</div>
-			<div id="menuButton">
+			<div id="menuButton"<?php echo $addMenuClass; ?>>
 				<button class="hamburger hamburger--squeeze" type="button">
 					<span class="hamburger-box">
 						<span class="hamburger-inner"></span>
