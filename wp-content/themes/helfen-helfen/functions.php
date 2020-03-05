@@ -105,8 +105,23 @@ function hh_acf_init() {
 		'parent_slug' => 'themes.php',
 	);
 	acf_add_options_sub_page($args);
+	/* Error 404 Seite Einstellungen */
+	$args = array(
+		'page_title' => 'Error 404: Einstellungen',
+		'menu_title' => '404',
+		'menu_slug' => 'hh-404-settings',
+		'parent_slug' => 'options-general.php',
+	);
+	acf_add_options_sub_page($args);
 }
 add_action( 'acf/init', 'hh_acf_init' );
+
+/***************************************
+ * ACF Menüpunkt verstecken - wenn Webseite im "nicht Debug Modus" läuft
+ ***************************************/
+if(!WP_DEBUG) {
+	add_filter('acf/settings/show_admin', '__return_false');
+}
 
 /***************************************
  * Remove Menus from Backend

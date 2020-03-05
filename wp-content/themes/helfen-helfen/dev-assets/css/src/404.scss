@@ -1,0 +1,16 @@
+/* CSS für die Error 404 Seite */
+#page-404 {
+	min-height: 100vh;
+	background-color: $primary;
+	color: $secondary;
+	text-align: center;
+	position: relative;
+	.inner {
+		width: 80%;
+		position: absolute;
+		right: 50%;
+		bottom: 50%;
+		-webkit-transform: translate(50%, 50%);
+		        transform: translate(50%, 50%);
+	}
+}
