@@ -175,9 +175,11 @@ add_action( 'after_setup_theme', 'hh_gutenberg_colors', 11 );
 add_filter( 'render_block', function( $block_content, $block ) {
 	if(!is_front_page() && !is_page('presse')) {
 		// Target core/* and core-embed/* blocks.
-		if ( preg_match( '~^core/|core-embed/~', $block['blockName'] ) && $block['blockName'] != 'core/cover' && $block['blockName'] != 'core/gallery' && $block['blockName'] != 'core/column' && $block['blockName'] != 'core/columns'  ) {
+		if ( preg_match( '~^core/|core-embed/~', $block['blockName'] ) && $block['blockName'] != 'core/cover' && $block['blockName'] != 'core/gallery' && $block['blockName'] != 'core/column' && $block['blockName'] != 'core/columns' ) {
 			$block_content = sprintf( '<div class="container"><div class="row justify-content-center"><div class="col-12 col-lg-9">%s</div></div></div>', $block_content );
 		} elseif ($block['blockName'] == 'core/gallery') {
+			$block_content = sprintf( '<div class="container-fluid"><div class="row justify-content-center"><div class="col-12 col-lg-9">%s</div></div></div>', $block_content );
+		} elseif ($block['blockName'] == 'core/columns' && in_array( 'inline-columns', $block['innerBlocks'][0]['attrs'] )) {
 			$block_content = sprintf( '<div class="container-fluid"><div class="row justify-content-center"><div class="col-12 col-lg-9">%s</div></div></div>', $block_content );
 		}
 		return $block_content;

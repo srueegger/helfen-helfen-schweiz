@@ -164,4 +164,10 @@
 		});
 	}
 
+	/* Bei einem Block wo es die Klasse "inline-columns" gibt müssen die Container Klassen entfernt werden */
+	var inline_columns = $('.inline-columns');
+	if(inline_columns.length) {
+		inline_columns.find('.container').removeClass('container').find('.row').removeClass('row justify-content-center').find('.col-12').removeClass('col-12 col-lg-9');
+	}
+
 })(jQuery);
