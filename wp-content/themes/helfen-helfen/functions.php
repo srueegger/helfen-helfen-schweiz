@@ -187,3 +187,17 @@ add_filter( 'render_block', function( $block_content, $block ) {
 		return $block_content;
 	}
 }, PHP_INT_MAX - 1, 2 );
+
+/***************************************
+ * 	 Standard Taxonomien für Kategorien und Tags entfernen
+ ***************************************/
+function hh_remove_default_taxonomies() {
+	global $pagenow;
+	register_taxonomy( 'post_tag', array() );
+	register_taxonomy( 'category', array() );
+	$tax = array('post_tag','category');
+	if($pagenow == 'edit-tags.php' && in_array($_GET['taxonomy'],$tax) ){
+		wp_die('Invalid taxonomy');
+	}
+}
+add_action('init', 'hh_remove_default_taxonomies');

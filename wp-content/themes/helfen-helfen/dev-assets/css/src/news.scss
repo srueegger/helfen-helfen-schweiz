@@ -1,0 +1,25 @@
+.news-meta-container {
+	.news-date,
+	.news-author {
+		text-align: left;
+	}
+	@include media-breakpoint-up(lg) {
+		.news-author {
+			text-align: right;
+		}
+	}
+}
+
+.next-news-link,
+.home-news-link,
+.prev-news-link {
+	text-align: left;
+}
+@include media-breakpoint-up(lg) {
+	.home-news-link {
+		text-align: center;
+	}
+	.prev-news-link {
+		text-align: right;
+	}
+}

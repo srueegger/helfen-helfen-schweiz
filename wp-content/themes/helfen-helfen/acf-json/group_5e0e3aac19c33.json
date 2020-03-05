@@ -346,6 +346,24 @@
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_5e613f3a0d0d0",
+            "label": "Kopf mit einer registrierten Person verknüpfen",
+            "name": "kopf_user",
+            "type": "user",
+            "instructions": "Ein Kopf kann hier mit einem bestehenden WordPress User verknüpft werden.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "role": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id"
         }
     ],
     "location": [
@@ -365,5 +383,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Felder für Köpfe",
-    "modified": 1578838293
+    "modified": 1583431615
 }

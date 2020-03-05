@@ -1,0 +1,72 @@
+{
+    "key": "group_5e6135af9c4dd",
+    "title": "Newsbild",
+    "fields": [
+        {
+            "key": "field_5e6135bbdadd8",
+            "label": "Bild auswählen",
+            "name": "news_image",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium_large",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5e6137bd7a1ff",
+            "label": "Layer Farbe",
+            "name": "news_image_layer",
+            "type": "radio",
+            "instructions": "Über das Bild wird ein Farblayer gelegt, der blau oder gelb sein kann.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "has-primary-background-color": "Blau",
+                "has-secondary-background-color": "Gelb"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "has-primary-background-color",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1583429685
+}

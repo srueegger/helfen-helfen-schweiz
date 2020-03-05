@@ -1,3 +1,7 @@
 .wp-block {
 	max-width: 1140px;
 }
+
+.column-comments {
+	display: none;
+}

@@ -10950,4 +10950,30 @@ blockquote {
   transform: translate(50%, 50%);
 }
 
+.news-meta-container .news-date,
+.news-meta-container .news-author {
+  text-align: left;
+}
+@media (min-width: 992px) {
+  .news-meta-container .news-author {
+    text-align: right;
+  }
+}
+
+.next-news-link,
+.home-news-link,
+.prev-news-link {
+  text-align: left;
+}
+
+@media (min-width: 992px) {
+  .home-news-link {
+    text-align: center;
+  }
+
+  .prev-news-link {
+    text-align: right;
+  }
+}
+
 /*# sourceMappingURL=theme.css.map */
