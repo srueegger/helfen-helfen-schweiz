@@ -10654,6 +10654,9 @@ blockquote {
   padding-bottom: 25px;
   width: 60%;
 }
+.menu-news-container .news-item {
+  cursor: pointer;
+}
 .menu-news-container .news-item .news-date {
   font-weight: 400;
   letter-spacing: 2px;

@@ -73,18 +73,28 @@
 			?>
 		</div>
 	</div>
-	<div id="menuNewsContent" class="d-none">
-		<div class="menu-news-container">
-			<div class="news-item">
-				<div class="news-date">23. August 1988</div>
-				<h3>Titel der News</h3>
-				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="news-item">
-				<div class="news-date">23. August 1988</div>
-				<h3>Titel der News</h3>
-				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-			</div>
-		</div>
-	</div>
+	<?php
+	/* Die neusten beiden veröffentlichten Newsbeiträge auslesen */
+	$args = array(
+		'posts_per_page' => 2,
+		'post_type' => 'post',
+		'post_status' => 'publish',
+		'orderby' => 'date',
+		'order' => 'DESC'
+	);
+	$news = get_posts($args);
+	if(!empty($news)) {
+		echo '<div id="menuNewsContent" class="d-none"><div class="menu-news-container">';
+		global $post;
+		foreach($news as $post) {
+			setup_postdata( $post );
+			echo '<div data-goto="'.get_the_permalink().'" class="news-item"><div class="news-date">'.get_the_time( get_option( 'date_format' ) ).'</div>';
+			the_title('<h3>', '</h3>');
+			the_excerpt();
+			echo '</div>';
+		}
+		wp_reset_postdata();
+		echo '</div></div>';
+	}
+	?>
 </nav>

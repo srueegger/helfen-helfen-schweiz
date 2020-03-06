@@ -197,4 +197,10 @@ function _extends(){return(_extends=Object.assign||function(t){for(var e=1;e<arg
 	if(current_url.indexOf('seite') > -1 && current_url.indexOf('news')) {
 		scrollDown();
 	}
+
+	/* Wenn auf eine Newsvorschau im Menü geklickt wird, Link zur entsprechen News öffnen */
+	$(document).on('click', '.news-item', function() {
+		var go_to_link = $(this).data('goto');
+		window.location.href = go_to_link;
+	});
 })(jQuery);
