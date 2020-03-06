@@ -117,8 +117,8 @@
 		var vheight = $(window).height();
 		var vwidth = $(window).width();
 		$('.wp-block-cover.fullpage').css({
-		  'height': vheight,
-		  'width': vwidth 
+			'height': vheight,
+			'width': vwidth 
 		});
 	};
 	resize();
@@ -170,4 +170,9 @@
 		inline_columns.find('.container').removeClass('container').find('.row').removeClass('row justify-content-center').find('.col-12').removeClass('col-12 col-lg-9');
 	}
 
+	/* Prüfen ob die Url das Wort Seite enthält - falls ja zum Inhaltsbereich scrollen */
+	var current_url = window.location.href;
+	if(current_url.indexOf('seite') > -1 && current_url.indexOf('news')) {
+		scrollDown();
+	}
 })(jQuery);

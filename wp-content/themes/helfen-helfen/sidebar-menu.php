@@ -32,7 +32,7 @@
 						}
 					}
 					?>
-					<a href="#" target="_self" class="menu-news">
+					<a href="<?php echo get_post_type_archive_link('post'); ?>" target="_self" class="menu-news">
 						<i class="fas fa-newspaper fa-fw fa-4x"></i>
 					</a>
 				</div>

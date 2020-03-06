@@ -10975,5 +10975,16 @@ blockquote {
     text-align: right;
   }
 }
+.page-numbers {
+  padding: 10px 15px;
+  border: 1px solid #0061ab;
+  font-weight: 700;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.page-numbers.current, .page-numbers:hover {
+  background-color: #0061ab;
+  color: #fff;
+}
 
 /*# sourceMappingURL=theme.css.map */

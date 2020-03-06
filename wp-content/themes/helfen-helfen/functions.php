@@ -201,3 +201,38 @@ function hh_remove_default_taxonomies() {
 	}
 }
 add_action('init', 'hh_remove_default_taxonomies');
+
+/***************************************
+ * 	 Beim "the_excerpt()" Conditional Tag das Ende aners darstellen
+ ***************************************/
+function hh_excerpt_more( $more ) {
+	return '&#46;&#46;&#46;';
+}
+add_filter( 'excerpt_more', 'hh_excerpt_more' );
+
+/***************************************
+ * 	 Ändert in der URL den Slug "page" durch "Seite" für korrekte Lokalisierung
+ ***************************************/
+function hh_re_rewrite_rules() {
+	global $wp_rewrite;
+	$wp_rewrite->pagination_base = 'seite';
+	$wp_rewrite->flush_rules();
+}
+add_action('init', 'hh_re_rewrite_rules');
+
+/***************************************
+ * 	 Erstellung einer Pagination Bar für das Newsarchiv
+ ***************************************/
+function hh_pagination_bar() {
+	global $wp_query;
+	$total_pages = $wp_query->max_num_pages;
+	if ($total_pages > 1){
+		$current_page = max(1, get_query_var('paged'));
+		echo paginate_links(array(
+			'base' => get_pagenum_link(1) . '%_%',
+			'format' => '/seite/%#%',
+			'current' => $current_page,
+			'total' => $total_pages,
+		));
+	}
+}
