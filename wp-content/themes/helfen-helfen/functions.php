@@ -16,6 +16,7 @@ define( 'FILES_DIR', THEME_URI . '/dist-assets/files' );
  * Include helpers
  ***************************************/
 require_once 'inc/custom-gutenberg-blocks.php';
+require_once 'inc/gravityforms.php';
 
 /***************************************
  * 		Theme Support and Options
