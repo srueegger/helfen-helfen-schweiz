@@ -73,6 +73,18 @@ function register_acf_block_types() {
 		'keywords' => array( 'förderer', 'foerderer' ),
 		'mode' => 'edit'
 	));
+
+	// Layout Formular
+	acf_register_block_type(array(
+		'name' => 'layoutform',
+		'title' => __('Layout Formular'),
+		'description' => __('Der Block kan GravityForms Formulare in einem speziellen Layout anzeigen'),
+		'render_template' => '/blocks/layoutform.php',
+		'category' => 'layout',
+		'icon' => 'forms',
+		'keywords' => array( 'form', 'formular' ),
+		'mode' => 'edit'
+	));
 }
 
 // Check if function exists and hook into setup.

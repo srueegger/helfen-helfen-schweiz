@@ -237,3 +237,22 @@ function hh_pagination_bar() {
 		));
 	}
 }
+
+/***************************************
+ * 	 ACF: Fill Select Menus with all GravityForms
+ ***************************************/
+function hh_acf_populate_gf_forms( $field ) {
+	// reset choices
+	$field['choices'] = array();
+	/* Alle Formulare laden */
+	$forms = GFAPI::get_forms(true, false);
+	// loop through array and add to field 'choices'
+	if( !empty($forms) ) {
+		foreach( $forms as $form ) {
+			$field['choices'][ $form['id'] ] = $form['title'];
+		}
+	}
+	// return the field
+	return $field;
+}
+add_filter('acf/load_field/name=block_lf_form', 'hh_acf_populate_gf_forms');

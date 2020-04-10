@@ -2544,7 +2544,7 @@ textarea.form-control {
   }
 }
 
-.btn {
+.btn, body .gform_wrapper .gform_page_footer .gform_save_link, body .gform_wrapper .gform_page_footer .gform_previous_button, body .gform_wrapper .gform_page_footer .gform_next_button {
   display: inline-block;
   font-weight: 400;
   color: #212529;
@@ -2561,53 +2561,59 @@ textarea.form-control {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn {
+  .btn, body .gform_wrapper .gform_page_footer .gform_save_link, body .gform_wrapper .gform_page_footer .gform_previous_button, body .gform_wrapper .gform_page_footer .gform_next_button {
     transition: none;
   }
 }
-.btn:hover {
+.btn:hover, body .gform_wrapper .gform_page_footer .gform_save_link:hover, body .gform_wrapper .gform_page_footer .gform_previous_button:hover, body .gform_wrapper .gform_page_footer .gform_next_button:hover {
   color: #212529;
   text-decoration: none;
 }
-.btn:focus, .btn.focus {
+.btn:focus, body .gform_wrapper .gform_page_footer .gform_save_link:focus, body .gform_wrapper .gform_page_footer .gform_previous_button:focus, body .gform_wrapper .gform_page_footer .gform_next_button:focus, .btn.focus, body .gform_wrapper .gform_page_footer .focus.gform_save_link, body .gform_wrapper .gform_page_footer .focus.gform_previous_button, body .gform_wrapper .gform_page_footer .focus.gform_next_button {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 97, 171, 0.25);
 }
-.btn.disabled, .btn:disabled {
+.btn.disabled, body .gform_wrapper .gform_page_footer .disabled.gform_save_link, body .gform_wrapper .gform_page_footer .disabled.gform_previous_button, body .gform_wrapper .gform_page_footer .disabled.gform_next_button, .btn:disabled, body .gform_wrapper .gform_page_footer .gform_save_link:disabled, body .gform_wrapper .gform_page_footer .gform_previous_button:disabled, body .gform_wrapper .gform_page_footer .gform_next_button:disabled {
   opacity: 0.65;
 }
-a.btn.disabled,
-fieldset:disabled a.btn {
+a.btn.disabled, body .gform_wrapper .gform_page_footer a.disabled.gform_save_link, body .gform_wrapper .gform_page_footer a.disabled.gform_previous_button, body .gform_wrapper .gform_page_footer a.disabled.gform_next_button,
+fieldset:disabled a.btn,
+fieldset:disabled body .gform_wrapper .gform_page_footer a.gform_save_link,
+body .gform_wrapper .gform_page_footer fieldset:disabled a.gform_save_link,
+fieldset:disabled body .gform_wrapper .gform_page_footer a.gform_previous_button,
+body .gform_wrapper .gform_page_footer fieldset:disabled a.gform_previous_button,
+fieldset:disabled body .gform_wrapper .gform_page_footer a.gform_next_button,
+body .gform_wrapper .gform_page_footer fieldset:disabled a.gform_next_button {
   pointer-events: none;
 }
 
-.btn-primary {
+.btn-primary, body .gform_wrapper .gform_page_footer .gform_next_button {
   color: #fff;
   background-color: #0061ab;
   border-color: #0061ab;
 }
-.btn-primary:hover {
+.btn-primary:hover, body .gform_wrapper .gform_page_footer .gform_next_button:hover {
   color: #fff;
   background-color: #004b85;
   border-color: #004478;
 }
-.btn-primary:focus, .btn-primary.focus {
+.btn-primary:focus, body .gform_wrapper .gform_page_footer .gform_next_button:focus, .btn-primary.focus, body .gform_wrapper .gform_page_footer .focus.gform_next_button {
   color: #fff;
   background-color: #004b85;
   border-color: #004478;
   box-shadow: 0 0 0 0.2rem rgba(38, 121, 184, 0.5);
 }
-.btn-primary.disabled, .btn-primary:disabled {
+.btn-primary.disabled, body .gform_wrapper .gform_page_footer .disabled.gform_next_button, .btn-primary:disabled, body .gform_wrapper .gform_page_footer .gform_next_button:disabled {
   color: #fff;
   background-color: #0061ab;
   border-color: #0061ab;
 }
-.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+.btn-primary:not(:disabled):not(.disabled):active, body .gform_wrapper .gform_page_footer .gform_next_button:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, body .gform_wrapper .gform_page_footer .gform_next_button:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle, body .gform_wrapper .gform_page_footer .show > .dropdown-toggle.gform_next_button {
   color: #fff;
   background-color: #004478;
   border-color: #003d6b;
 }
-.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
+.btn-primary:not(:disabled):not(.disabled):active:focus, body .gform_wrapper .gform_page_footer .gform_next_button:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, body .gform_wrapper .gform_page_footer .gform_next_button:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus, body .gform_wrapper .gform_page_footer .show > .dropdown-toggle.gform_next_button:focus {
   box-shadow: 0 0 0 0.2rem rgba(38, 121, 184, 0.5);
 }
 
@@ -2821,28 +2827,28 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
 }
 
-.btn-outline-primary {
+.btn-outline-primary, body .gform_wrapper .gform_page_footer .gform_previous_button {
   color: #0061ab;
   border-color: #0061ab;
 }
-.btn-outline-primary:hover {
+.btn-outline-primary:hover, body .gform_wrapper .gform_page_footer .gform_previous_button:hover {
   color: #fff;
   background-color: #0061ab;
   border-color: #0061ab;
 }
-.btn-outline-primary:focus, .btn-outline-primary.focus {
+.btn-outline-primary:focus, body .gform_wrapper .gform_page_footer .gform_previous_button:focus, .btn-outline-primary.focus, body .gform_wrapper .gform_page_footer .focus.gform_previous_button {
   box-shadow: 0 0 0 0.2rem rgba(0, 97, 171, 0.5);
 }
-.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+.btn-outline-primary.disabled, body .gform_wrapper .gform_page_footer .disabled.gform_previous_button, .btn-outline-primary:disabled, body .gform_wrapper .gform_page_footer .gform_previous_button:disabled {
   color: #0061ab;
   background-color: transparent;
 }
-.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle {
+.btn-outline-primary:not(:disabled):not(.disabled):active, body .gform_wrapper .gform_page_footer .gform_previous_button:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, body .gform_wrapper .gform_page_footer .gform_previous_button:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle, body .gform_wrapper .gform_page_footer .show > .dropdown-toggle.gform_previous_button {
   color: #fff;
   background-color: #0061ab;
   border-color: #0061ab;
 }
-.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary.dropdown-toggle:focus {
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, body .gform_wrapper .gform_page_footer .gform_previous_button:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, body .gform_wrapper .gform_page_footer .gform_previous_button:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary.dropdown-toggle:focus, body .gform_wrapper .gform_page_footer .show > .dropdown-toggle.gform_previous_button:focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 97, 171, 0.5);
 }
 
@@ -2946,28 +2952,28 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(255, 213, 0, 0.5);
 }
 
-.btn-outline-danger {
+.btn-outline-danger, body .gform_wrapper .gform_page_footer .gform_save_link {
   color: #dc3545;
   border-color: #dc3545;
 }
-.btn-outline-danger:hover {
+.btn-outline-danger:hover, body .gform_wrapper .gform_page_footer .gform_save_link:hover {
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
 }
-.btn-outline-danger:focus, .btn-outline-danger.focus {
+.btn-outline-danger:focus, body .gform_wrapper .gform_page_footer .gform_save_link:focus, .btn-outline-danger.focus, body .gform_wrapper .gform_page_footer .focus.gform_save_link {
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
 }
-.btn-outline-danger.disabled, .btn-outline-danger:disabled {
+.btn-outline-danger.disabled, body .gform_wrapper .gform_page_footer .disabled.gform_save_link, .btn-outline-danger:disabled, body .gform_wrapper .gform_page_footer .gform_save_link:disabled {
   color: #dc3545;
   background-color: transparent;
 }
-.btn-outline-danger:not(:disabled):not(.disabled):active, .btn-outline-danger:not(:disabled):not(.disabled).active, .show > .btn-outline-danger.dropdown-toggle {
+.btn-outline-danger:not(:disabled):not(.disabled):active, body .gform_wrapper .gform_page_footer .gform_save_link:not(:disabled):not(.disabled):active, .btn-outline-danger:not(:disabled):not(.disabled).active, body .gform_wrapper .gform_page_footer .gform_save_link:not(:disabled):not(.disabled).active, .show > .btn-outline-danger.dropdown-toggle, body .gform_wrapper .gform_page_footer .show > .dropdown-toggle.gform_save_link {
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
 }
-.btn-outline-danger:not(:disabled):not(.disabled):active:focus, .btn-outline-danger:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-danger.dropdown-toggle:focus {
+.btn-outline-danger:not(:disabled):not(.disabled):active:focus, body .gform_wrapper .gform_page_footer .gform_save_link:not(:disabled):not(.disabled):active:focus, .btn-outline-danger:not(:disabled):not(.disabled).active:focus, body .gform_wrapper .gform_page_footer .gform_save_link:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-danger.dropdown-toggle:focus, body .gform_wrapper .gform_page_footer .show > .dropdown-toggle.gform_save_link:focus {
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
 }
 
@@ -3039,14 +3045,14 @@ fieldset:disabled a.btn {
   pointer-events: none;
 }
 
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, body .gform_wrapper .gform_page_footer .btn-group-lg > .gform_save_link, body .gform_wrapper .gform_page_footer .btn-group-lg > .gform_previous_button, body .gform_wrapper .gform_page_footer .btn-group-lg > .gform_next_button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0;
 }
 
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, body .gform_wrapper .gform_page_footer .btn-group-sm > .gform_save_link, body .gform_wrapper .gform_page_footer .btn-group-sm > .gform_previous_button, body .gform_wrapper .gform_page_footer .btn-group-sm > .gform_next_button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -3272,19 +3278,34 @@ input[type=button].btn-block {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn,
-.btn-group-vertical > .btn {
+.btn-group > .btn, body .gform_wrapper .gform_page_footer .btn-group > .gform_save_link, body .gform_wrapper .gform_page_footer .btn-group > .gform_previous_button, body .gform_wrapper .gform_page_footer .btn-group > .gform_next_button,
+.btn-group-vertical > .btn,
+body .gform_wrapper .gform_page_footer .btn-group-vertical > .gform_save_link,
+body .gform_wrapper .gform_page_footer .btn-group-vertical > .gform_previous_button,
+body .gform_wrapper .gform_page_footer .btn-group-vertical > .gform_next_button {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn:hover,
-.btn-group-vertical > .btn:hover {
+.btn-group > .btn:hover, body .gform_wrapper .gform_page_footer .btn-group > .gform_save_link:hover, body .gform_wrapper .gform_page_footer .btn-group > .gform_previous_button:hover, body .gform_wrapper .gform_page_footer .btn-group > .gform_next_button:hover,
+.btn-group-vertical > .btn:hover,
+body .gform_wrapper .gform_page_footer .btn-group-vertical > .gform_save_link:hover,
+body .gform_wrapper .gform_page_footer .btn-group-vertical > .gform_previous_button:hover,
+body .gform_wrapper .gform_page_footer .btn-group-vertical > .gform_next_button:hover {
   z-index: 1;
 }
-.btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
+.btn-group > .btn:focus, body .gform_wrapper .gform_page_footer .btn-group > .gform_save_link:focus, body .gform_wrapper .gform_page_footer .btn-group > .gform_previous_button:focus, body .gform_wrapper .gform_page_footer .btn-group > .gform_next_button:focus, .btn-group > .btn:active, body .gform_wrapper .gform_page_footer .btn-group > .gform_save_link:active, body .gform_wrapper .gform_page_footer .btn-group > .gform_previous_button:active, body .gform_wrapper .gform_page_footer .btn-group > .gform_next_button:active, .btn-group > .btn.active, body .gform_wrapper .gform_page_footer .btn-group > .active.gform_save_link, body .gform_wrapper .gform_page_footer .btn-group > .active.gform_previous_button, body .gform_wrapper .gform_page_footer .btn-group > .active.gform_next_button,
 .btn-group-vertical > .btn:focus,
+body .gform_wrapper .gform_page_footer .btn-group-vertical > .gform_save_link:focus,
+body .gform_wrapper .gform_page_footer .btn-group-vertical > .gform_previous_button:focus,
+body .gform_wrapper .gform_page_footer .btn-group-vertical > .gform_next_button:focus,
 .btn-group-vertical > .btn:active,
-.btn-group-vertical > .btn.active {
+body .gform_wrapper .gform_page_footer .btn-group-vertical > .gform_save_link:active,
+body .gform_wrapper .gform_page_footer .btn-group-vertical > .gform_previous_button:active,
+body .gform_wrapper .gform_page_footer .btn-group-vertical > .gform_next_button:active,
+.btn-group-vertical > .btn.active,
+body .gform_wrapper .gform_page_footer .btn-group-vertical > .active.gform_save_link,
+body .gform_wrapper .gform_page_footer .btn-group-vertical > .active.gform_previous_button,
+body .gform_wrapper .gform_page_footer .btn-group-vertical > .active.gform_next_button {
   z-index: 1;
 }
 
@@ -3297,7 +3318,7 @@ input[type=button].btn-block {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child),
+.btn-group > .btn:not(:first-child), body .gform_wrapper .gform_page_footer .btn-group > .gform_save_link:not(:first-child), body .gform_wrapper .gform_page_footer .btn-group > .gform_previous_button:not(:first-child), body .gform_wrapper .gform_page_footer .btn-group > .gform_next_button:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
@@ -3312,12 +3333,12 @@ input[type=button].btn-block {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, body .gform_wrapper .gform_page_footer .btn-group-sm > .gform_save_link + .dropdown-toggle-split, body .gform_wrapper .gform_page_footer .btn-group-sm > .gform_previous_button + .dropdown-toggle-split, body .gform_wrapper .gform_page_footer .btn-group-sm > .gform_next_button + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, body .gform_wrapper .gform_page_footer .btn-group-lg > .gform_save_link + .dropdown-toggle-split, body .gform_wrapper .gform_page_footer .btn-group-lg > .gform_previous_button + .dropdown-toggle-split, body .gform_wrapper .gform_page_footer .btn-group-lg > .gform_next_button + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -3327,20 +3348,26 @@ input[type=button].btn-block {
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn,
+.btn-group-vertical > .btn, body .gform_wrapper .gform_page_footer .btn-group-vertical > .gform_save_link, body .gform_wrapper .gform_page_footer .btn-group-vertical > .gform_previous_button, body .gform_wrapper .gform_page_footer .btn-group-vertical > .gform_next_button,
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), body .gform_wrapper .gform_page_footer .btn-group-vertical > .gform_save_link:not(:first-child), body .gform_wrapper .gform_page_footer .btn-group-vertical > .gform_previous_button:not(:first-child), body .gform_wrapper .gform_page_footer .btn-group-vertical > .gform_next_button:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
-.btn-group-toggle > .btn,
-.btn-group-toggle > .btn-group > .btn {
+.btn-group-toggle > .btn, body .gform_wrapper .gform_page_footer .btn-group-toggle > .gform_save_link, body .gform_wrapper .gform_page_footer .btn-group-toggle > .gform_previous_button, body .gform_wrapper .gform_page_footer .btn-group-toggle > .gform_next_button,
+.btn-group-toggle > .btn-group > .btn,
+body .gform_wrapper .gform_page_footer .btn-group-toggle > .btn-group > .gform_save_link,
+body .gform_wrapper .gform_page_footer .btn-group-toggle > .btn-group > .gform_previous_button,
+body .gform_wrapper .gform_page_footer .btn-group-toggle > .btn-group > .gform_next_button {
   margin-bottom: 0;
 }
-.btn-group-toggle > .btn input[type=radio],
+.btn-group-toggle > .btn input[type=radio], body .gform_wrapper .gform_page_footer .btn-group-toggle > .gform_save_link input[type=radio], body .gform_wrapper .gform_page_footer .btn-group-toggle > .gform_previous_button input[type=radio], body .gform_wrapper .gform_page_footer .btn-group-toggle > .gform_next_button input[type=radio],
 .btn-group-toggle > .btn input[type=checkbox],
+body .gform_wrapper .gform_page_footer .btn-group-toggle > .gform_save_link input[type=checkbox],
+body .gform_wrapper .gform_page_footer .btn-group-toggle > .gform_previous_button input[type=checkbox],
+body .gform_wrapper .gform_page_footer .btn-group-toggle > .gform_next_button input[type=checkbox],
 .btn-group-toggle > .btn-group > .btn input[type=radio],
 .btn-group-toggle > .btn-group > .btn input[type=checkbox] {
   position: absolute;
@@ -3394,23 +3421,89 @@ input[type=button].btn-block {
 .input-group-append {
   display: flex;
 }
-.input-group-prepend .btn,
-.input-group-append .btn {
+.input-group-prepend .btn, .input-group-prepend body .gform_wrapper .gform_page_footer .gform_save_link, body .gform_wrapper .gform_page_footer .input-group-prepend .gform_save_link, .input-group-prepend body .gform_wrapper .gform_page_footer .gform_previous_button, body .gform_wrapper .gform_page_footer .input-group-prepend .gform_previous_button, .input-group-prepend body .gform_wrapper .gform_page_footer .gform_next_button, body .gform_wrapper .gform_page_footer .input-group-prepend .gform_next_button,
+.input-group-append .btn,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_save_link,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_save_link,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_previous_button,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_previous_button,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_next_button,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_next_button {
   position: relative;
   z-index: 2;
 }
-.input-group-prepend .btn:focus,
-.input-group-append .btn:focus {
+.input-group-prepend .btn:focus, .input-group-prepend body .gform_wrapper .gform_page_footer .gform_save_link:focus, body .gform_wrapper .gform_page_footer .input-group-prepend .gform_save_link:focus, .input-group-prepend body .gform_wrapper .gform_page_footer .gform_previous_button:focus, body .gform_wrapper .gform_page_footer .input-group-prepend .gform_previous_button:focus, .input-group-prepend body .gform_wrapper .gform_page_footer .gform_next_button:focus, body .gform_wrapper .gform_page_footer .input-group-prepend .gform_next_button:focus,
+.input-group-append .btn:focus,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_save_link:focus,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_save_link:focus,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_previous_button:focus,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_previous_button:focus,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_next_button:focus,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_next_button:focus {
   z-index: 3;
 }
-.input-group-prepend .btn + .btn,
+.input-group-prepend .btn + .btn, .input-group-prepend body .gform_wrapper .gform_page_footer .gform_save_link + .btn, body .gform_wrapper .gform_page_footer .input-group-prepend .gform_save_link + .btn, .input-group-prepend body .gform_wrapper .gform_page_footer .btn + .gform_save_link, body .gform_wrapper .gform_page_footer .input-group-prepend .btn + .gform_save_link, .input-group-prepend body .gform_wrapper .gform_page_footer .gform_save_link + .gform_save_link, body .gform_wrapper .gform_page_footer .input-group-prepend .gform_save_link + .gform_save_link, .input-group-prepend body .gform_wrapper .gform_page_footer .gform_previous_button + .btn, .input-group-prepend body .gform_wrapper .gform_page_footer .gform_previous_button + .gform_save_link, body .gform_wrapper .gform_page_footer .input-group-prepend .gform_previous_button + .btn, body .gform_wrapper .gform_page_footer .input-group-prepend .gform_previous_button + .gform_save_link, .input-group-prepend body .gform_wrapper .gform_page_footer .btn + .gform_previous_button, .input-group-prepend body .gform_wrapper .gform_page_footer .gform_save_link + .gform_previous_button, body .gform_wrapper .gform_page_footer .input-group-prepend .btn + .gform_previous_button, body .gform_wrapper .gform_page_footer .input-group-prepend .gform_save_link + .gform_previous_button, .input-group-prepend body .gform_wrapper .gform_page_footer .gform_previous_button + .gform_previous_button, body .gform_wrapper .gform_page_footer .input-group-prepend .gform_previous_button + .gform_previous_button, .input-group-prepend body .gform_wrapper .gform_page_footer .gform_next_button + .btn, .input-group-prepend body .gform_wrapper .gform_page_footer .gform_next_button + .gform_save_link, .input-group-prepend body .gform_wrapper .gform_page_footer .gform_next_button + .gform_previous_button, body .gform_wrapper .gform_page_footer .input-group-prepend .gform_next_button + .btn, body .gform_wrapper .gform_page_footer .input-group-prepend .gform_next_button + .gform_save_link, body .gform_wrapper .gform_page_footer .input-group-prepend .gform_next_button + .gform_previous_button, .input-group-prepend body .gform_wrapper .gform_page_footer .btn + .gform_next_button, .input-group-prepend body .gform_wrapper .gform_page_footer .gform_save_link + .gform_next_button, .input-group-prepend body .gform_wrapper .gform_page_footer .gform_previous_button + .gform_next_button, body .gform_wrapper .gform_page_footer .input-group-prepend .btn + .gform_next_button, body .gform_wrapper .gform_page_footer .input-group-prepend .gform_save_link + .gform_next_button, body .gform_wrapper .gform_page_footer .input-group-prepend .gform_previous_button + .gform_next_button, .input-group-prepend body .gform_wrapper .gform_page_footer .gform_next_button + .gform_next_button, body .gform_wrapper .gform_page_footer .input-group-prepend .gform_next_button + .gform_next_button,
 .input-group-prepend .btn + .input-group-text,
+.input-group-prepend body .gform_wrapper .gform_page_footer .gform_save_link + .input-group-text,
+body .gform_wrapper .gform_page_footer .input-group-prepend .gform_save_link + .input-group-text,
+.input-group-prepend body .gform_wrapper .gform_page_footer .gform_previous_button + .input-group-text,
+body .gform_wrapper .gform_page_footer .input-group-prepend .gform_previous_button + .input-group-text,
+.input-group-prepend body .gform_wrapper .gform_page_footer .gform_next_button + .input-group-text,
+body .gform_wrapper .gform_page_footer .input-group-prepend .gform_next_button + .input-group-text,
 .input-group-prepend .input-group-text + .input-group-text,
 .input-group-prepend .input-group-text + .btn,
+.input-group-prepend body .gform_wrapper .gform_page_footer .input-group-text + .gform_save_link,
+body .gform_wrapper .gform_page_footer .input-group-prepend .input-group-text + .gform_save_link,
+.input-group-prepend body .gform_wrapper .gform_page_footer .input-group-text + .gform_previous_button,
+body .gform_wrapper .gform_page_footer .input-group-prepend .input-group-text + .gform_previous_button,
+.input-group-prepend body .gform_wrapper .gform_page_footer .input-group-text + .gform_next_button,
+body .gform_wrapper .gform_page_footer .input-group-prepend .input-group-text + .gform_next_button,
 .input-group-append .btn + .btn,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_save_link + .btn,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_save_link + .btn,
+.input-group-append body .gform_wrapper .gform_page_footer .btn + .gform_save_link,
+body .gform_wrapper .gform_page_footer .input-group-append .btn + .gform_save_link,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_save_link + .gform_save_link,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_save_link + .gform_save_link,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_previous_button + .btn,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_previous_button + .gform_save_link,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_previous_button + .btn,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_previous_button + .gform_save_link,
+.input-group-append body .gform_wrapper .gform_page_footer .btn + .gform_previous_button,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_save_link + .gform_previous_button,
+body .gform_wrapper .gform_page_footer .input-group-append .btn + .gform_previous_button,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_save_link + .gform_previous_button,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_previous_button + .gform_previous_button,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_previous_button + .gform_previous_button,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_next_button + .btn,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_next_button + .gform_save_link,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_next_button + .gform_previous_button,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_next_button + .btn,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_next_button + .gform_save_link,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_next_button + .gform_previous_button,
+.input-group-append body .gform_wrapper .gform_page_footer .btn + .gform_next_button,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_save_link + .gform_next_button,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_previous_button + .gform_next_button,
+body .gform_wrapper .gform_page_footer .input-group-append .btn + .gform_next_button,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_save_link + .gform_next_button,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_previous_button + .gform_next_button,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_next_button + .gform_next_button,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_next_button + .gform_next_button,
 .input-group-append .btn + .input-group-text,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_save_link + .input-group-text,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_save_link + .input-group-text,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_previous_button + .input-group-text,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_previous_button + .input-group-text,
+.input-group-append body .gform_wrapper .gform_page_footer .gform_next_button + .input-group-text,
+body .gform_wrapper .gform_page_footer .input-group-append .gform_next_button + .input-group-text,
 .input-group-append .input-group-text + .input-group-text,
-.input-group-append .input-group-text + .btn {
+.input-group-append .input-group-text + .btn,
+.input-group-append body .gform_wrapper .gform_page_footer .input-group-text + .gform_save_link,
+body .gform_wrapper .gform_page_footer .input-group-append .input-group-text + .gform_save_link,
+.input-group-append body .gform_wrapper .gform_page_footer .input-group-text + .gform_previous_button,
+body .gform_wrapper .gform_page_footer .input-group-append .input-group-text + .gform_previous_button,
+.input-group-append body .gform_wrapper .gform_page_footer .input-group-text + .gform_next_button,
+body .gform_wrapper .gform_page_footer .input-group-append .input-group-text + .gform_next_button {
   margin-left: -1px;
 }
 
@@ -3451,7 +3544,13 @@ input[type=button].btn-block {
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
-.input-group-lg > .input-group-append > .btn {
+body .gform_wrapper .gform_page_footer .input-group-lg > .input-group-prepend > .gform_save_link,
+body .gform_wrapper .gform_page_footer .input-group-lg > .input-group-prepend > .gform_previous_button,
+body .gform_wrapper .gform_page_footer .input-group-lg > .input-group-prepend > .gform_next_button,
+.input-group-lg > .input-group-append > .btn,
+body .gform_wrapper .gform_page_footer .input-group-lg > .input-group-append > .gform_save_link,
+body .gform_wrapper .gform_page_footer .input-group-lg > .input-group-append > .gform_previous_button,
+body .gform_wrapper .gform_page_footer .input-group-lg > .input-group-append > .gform_next_button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -3467,7 +3566,13 @@ input[type=button].btn-block {
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
-.input-group-sm > .input-group-append > .btn {
+body .gform_wrapper .gform_page_footer .input-group-sm > .input-group-prepend > .gform_save_link,
+body .gform_wrapper .gform_page_footer .input-group-sm > .input-group-prepend > .gform_previous_button,
+body .gform_wrapper .gform_page_footer .input-group-sm > .input-group-prepend > .gform_next_button,
+.input-group-sm > .input-group-append > .btn,
+body .gform_wrapper .gform_page_footer .input-group-sm > .input-group-append > .gform_save_link,
+body .gform_wrapper .gform_page_footer .input-group-sm > .input-group-append > .gform_previous_button,
+body .gform_wrapper .gform_page_footer .input-group-sm > .input-group-append > .gform_next_button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -4549,7 +4654,7 @@ a.badge:hover, a.badge:focus {
   display: none;
 }
 
-.btn .badge {
+.btn .badge, body .gform_wrapper .gform_page_footer .gform_save_link .badge, body .gform_wrapper .gform_page_footer .gform_previous_button .badge, body .gform_wrapper .gform_page_footer .gform_next_button .badge {
   position: relative;
   top: -1px;
 }
@@ -10220,6 +10325,127 @@ main.page h2 {
   }
 }
 
+body .gform_wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body .gform_wrapper .gf_page_steps {
+  border-bottom: none;
+  margin-bottom: 40px;
+  position: relative;
+}
+body .gform_wrapper .gf_page_steps .gf_step {
+  width: calc(100% / 6);
+  padding-left: 35px;
+  background-color: #edece7;
+  padding-top: 15px;
+  height: 50px;
+  margin: 0;
+  opacity: 1;
+  border-left: 5px solid rgba(250, 250, 250, 0.5);
+  display: inline-block;
+  position: relative;
+}
+body .gform_wrapper .gf_page_steps .gf_step:before {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 22px solid rgba(250, 250, 250, 0.9);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+body .gform_wrapper .gf_page_steps .gf_step:after {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 22px solid #edece7;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -22px;
+  z-index: 2;
+}
+body .gform_wrapper .gf_page_steps .gf_step.gf_step_first {
+  border-left: none;
+}
+body .gform_wrapper .gf_page_steps .gf_step.gf_step_first:before {
+  display: none;
+}
+body .gform_wrapper .gf_page_steps .gf_step.gf_step_last:after {
+  display: none;
+}
+body .gform_wrapper .gf_page_steps .gf_step.gf_step_active {
+  background-color: #0061ab;
+  color: #fff;
+}
+body .gform_wrapper .gf_page_steps .gf_step.gf_step_active:after {
+  border-left: 22px solid #0061ab;
+}
+body .gform_wrapper .gf_page_steps .gf_step.gf_step_completed {
+  background-color: #66a0cc;
+  color: #fff;
+}
+body .gform_wrapper .gf_page_steps .gf_step.gf_step_completed:before {
+  display: none;
+}
+body .gform_wrapper .gf_page_steps .gf_step.gf_step_completed:after {
+  display: none;
+}
+body .gform_wrapper select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: transparent;
+  background-image: linear-gradient(45deg, transparent 50%, #272727 50%), linear-gradient(135deg, #272727 50%, transparent 50%);
+  background-origin: padding-box;
+  background-position: calc(100% - 15px) calc(1em + 2px), calc(100% - 10px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-repeat: no-repeat;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  margin-bottom: 20px;
+  min-width: 25%;
+  display: inline-block;
+  border: none;
+  border-bottom: 3px solid #90908c;
+  border-radius: 0;
+  outline: none;
+  font-family: open sans, sans-serif;
+  font-size: 18px;
+  padding: 5px 35px 5px 0;
+  height: 45px;
+  color: #6c6b66;
+  background-color: transparent;
+}
+body .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+body .gform_wrapper select {
+  background-color: #eee;
+  border: 1px solid #cecdc6;
+  border-radius: 3px;
+  padding: 7px 5px 7px 20px !important;
+  height: 45px;
+  margin-top: 0;
+  opacity: 1;
+}
+body .gform_wrapper .gfield_label {
+  margin-bottom: 0 !important;
+}
+body .gform_wrapper .validation_error {
+  display: none;
+}
+body .gform_wrapper .gform_page_footer {
+  border-top: none;
+  position: relative;
+}
+body .gform_wrapper .gform_page_footer .gform_save_link {
+  position: absolute;
+  right: 15px;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -10934,6 +11160,52 @@ blockquote {
 }
 .foerderer .foerdererItem:hover:nth-child(even) .overlay {
   background-color: rgba(255, 213, 0, 0.7);
+}
+
+.layoutform {
+  width: 100%;
+  height: calc(100vh - 115px);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.layoutform .inner {
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  transform: translateY(50%);
+}
+.layoutform .inner .layoutform--title {
+  color: #fff;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  font-size: 3.125rem;
+}
+@media (max-width: 1200px) {
+  .layoutform .inner .layoutform--title {
+    font-size: calc(1.4375rem + 2.25vw);
+  }
+}
+.layoutform .inner .form-outer .form-inner {
+  background-color: rgba(255, 255, 255, 0.85);
+  height: 500px;
+  padding: 25px;
+}
+
+.layout-form--form-bottom {
+  height: 115px;
+  background-color: #000;
+}
+.layout-form--form-bottom h2 {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2.375rem;
+  margin: 0;
+  line-height: 115px;
+}
+@media (max-width: 1200px) {
+  .layout-form--form-bottom h2 {
+    font-size: calc(1.3625rem + 1.35vw);
+  }
 }
 
 /* CSS für die Error 404 Seite */
