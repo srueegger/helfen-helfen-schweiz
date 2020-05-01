@@ -774,14 +774,11 @@ blockquote {
 
 .layoutform {
 	width: 100%;
-	height: calc(100vh - 115px);
+	height: auto;
 	background-repeat: no-repeat;
 	background-size: cover;
 	.inner {
-		position: absolute;
-		bottom: 50%;
-		width: 100%;
-		transform: translateY(50%);
+		padding-top: 100px;
 		.layoutform--title {
 			color: $white;
 			text-shadow: 0 0 3px rgba(0, 0, 0, .4);
@@ -790,8 +787,25 @@ blockquote {
 		.form-outer {
 			.form-inner {
 				background-color: rgba(255,255,255,.85);
-				height: 500px;
+				height: auto;
 				padding: 25px;
+				padding-bottom: calc(25px + 38px);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		height: calc(100vh - 115px);
+		.inner {
+			position: absolute;
+			bottom: 50%;
+			width: 100%;
+			transform: translateY(50%);
+			padding-top: 0;
+		}
+		.form-outer {
+			.form-inner {
+				height: 600px;
+				padding-bottom: 25px;
 			}
 		}
 	}
@@ -803,8 +817,13 @@ blockquote {
 		text-align: center;
 		color: $white;
 		text-transform: uppercase;
-		@include font-size(2.375rem);
+		@include font-size(1.9rem);
 		margin: 0;
 		line-height: 115px;
+	}
+	@include media-breakpoint-up(xl) {
+		h2 {
+			@include font-size(2.375rem);
+		}
 	}
 }
