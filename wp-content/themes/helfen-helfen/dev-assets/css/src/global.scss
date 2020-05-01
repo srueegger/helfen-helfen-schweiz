@@ -827,3 +827,31 @@ blockquote {
 		}
 	}
 }
+
+.emptypage {
+	height: 100vh;
+	background: $blue;
+	.inner {
+		position: absolute;
+		right: 50%;
+		bottom: 50%;
+		transform: translate(50%, 50%);
+		ul {
+			li {
+				&:not(:last-of-type) {
+					margin-bottom: 1.25em;
+				}
+			}
+		}
+		a {
+			color: $white;
+			text-decoration: none;
+			font-weight: 700;
+			@include font-size(3rem);
+			transition: all .3s ease-in;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}

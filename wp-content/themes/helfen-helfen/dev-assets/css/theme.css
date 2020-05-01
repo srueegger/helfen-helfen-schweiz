@@ -11305,6 +11305,35 @@ blockquote {
   }
 }
 
+.emptypage {
+  height: 100vh;
+  background: #0061ab;
+}
+.emptypage .inner {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+}
+.emptypage .inner ul li:not(:last-of-type) {
+  margin-bottom: 1.25em;
+}
+.emptypage .inner a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 3rem;
+  transition: all 0.3s ease-in;
+}
+@media (max-width: 1200px) {
+  .emptypage .inner a {
+    font-size: calc(1.425rem + 2.1vw);
+  }
+}
+.emptypage .inner a:hover {
+  text-decoration: underline;
+}
+
 /* CSS für die Error 404 Seite */
 #page-404 {
   min-height: 100vh;
