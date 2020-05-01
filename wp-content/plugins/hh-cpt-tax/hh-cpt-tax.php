@@ -58,39 +58,39 @@ function cptui_register_my_cpts() {
 	register_post_type( "koepfe", $args );
 
 	/**
-	 * Post Type: Presse.
+	 * Post Type: Partner
 	 */
 
 	$labels = [
-		"name" => __( "Presse", "hh-wptheme" ),
-		"singular_name" => __( "Presse", "hh-wptheme" ),
-		"menu_name" => __( "Presse", "hh-wptheme" ),
-		"all_items" => __( "Alle Einträge", "hh-wptheme" ),
-		"add_new_item" => __( "Neuer Presseartikel hinzufügen", "hh-wptheme" ),
-		"edit_item" => __( "Presseartikel bearbeiten", "hh-wptheme" ),
-		"new_item" => __( "Presseartikel hinzufügen", "hh-wptheme" ),
-		"view_item" => __( "Presseartikel anzeigen", "hh-wptheme" ),
-		"view_items" => __( "Presseartikel anzeigen", "hh-wptheme" ),
-		"search_items" => __( "Presse durchsuchen", "hh-wptheme" ),
-		"not_found" => __( "Keine Presseartikel gefunden", "hh-wptheme" ),
-		"not_found_in_trash" => __( "Keine Presseartikel im Papierkorb gefunden", "hh-wptheme" ),
-		"featured_image" => __( "Beitragsbild für Presseartikel", "hh-wptheme" ),
-		"set_featured_image" => __( "Beitragsbild für Presseartikel festlegen", "hh-wptheme" ),
+		"name" => __( "Partner", "hh-wptheme" ),
+		"singular_name" => __( "Partner", "hh-wptheme" ),
+		"menu_name" => __( "Partner", "hh-wptheme" ),
+		"all_items" => __( "Alle Partner", "hh-wptheme" ),
+		"add_new_item" => __( "Neuer Partner hinzufügen", "hh-wptheme" ),
+		"edit_item" => __( "Partner bearbeiten", "hh-wptheme" ),
+		"new_item" => __( "Partner hinzufügen", "hh-wptheme" ),
+		"view_item" => __( "Partner anzeigen", "hh-wptheme" ),
+		"view_items" => __( "Partner anzeigen", "hh-wptheme" ),
+		"search_items" => __( "Partner durchsuchen", "hh-wptheme" ),
+		"not_found" => __( "Keine Partner gefunden", "hh-wptheme" ),
+		"not_found_in_trash" => __( "Keine Partner im Papierkorb gefunden", "hh-wptheme" ),
+		"featured_image" => __( "Beitragsbild für Partner", "hh-wptheme" ),
+		"set_featured_image" => __( "Beitragsbild für Partner festlegen", "hh-wptheme" ),
 		"remove_featured_image" => __( "Beitragsbild entfernen", "hh-wptheme" ),
-		"name_admin_bar" => __( "Presse", "hh-wptheme" ),
-		"item_published" => __( "Presseartikel veröffentlicht", "hh-wptheme" ),
-		"item_updated" => __( "Presseartikel aktualisiert", "hh-wptheme" ),
+		"name_admin_bar" => __( "Partner", "hh-wptheme" ),
+		"item_published" => __( "Partner veröffentlicht", "hh-wptheme" ),
+		"item_updated" => __( "Partner aktualisiert", "hh-wptheme" ),
 	];
 
 	$args = [
-		"label" => __( "Presse", "hh-wptheme" ),
+		"label" => __( "Partner", "hh-wptheme" ),
 		"labels" => $labels,
-		"description" => "Dieser Post Type verwaltet die Presse Meldung zu Helfen helfen Schweiz",
+		"description" => "Dieser Post Type verwaltet die Partner für Helfen helfen Schweiz",
 		"public" => true,
 		"publicly_queryable" => true,
 		"show_ui" => true,
-		"show_in_rest" => true,
-		"rest_base" => "presse",
+		"show_in_rest" => false,
+		"rest_base" => "partner",
 		"rest_controller_class" => "WP_REST_Posts_Controller",
 		"has_archive" => false,
 		"show_in_menu" => true,
@@ -102,11 +102,11 @@ function cptui_register_my_cpts() {
 		"hierarchical" => false,
 		"rewrite" => false,
 		"query_var" => true,
-		"menu_icon" => "dashicons-microphone",
-		"supports" => [ "title", "editor", "revisions", "author" ],
+		"menu_icon" => "dashicons-star-filled",
+		"supports" => [ "title", "custom-fields", "revisions", "author" ],
 	];
 
-	register_post_type( "hh_presse", $args );
+	register_post_type( "hh_partner", $args );
 }
 
 add_action( 'init', 'cptui_register_my_cpts' );

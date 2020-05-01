@@ -11334,6 +11334,17 @@ blockquote {
   text-decoration: underline;
 }
 
+.partner-container {
+  padding: 25px;
+}
+.partner-container img {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+  object-position: center;
+  filter: grayscale(100%);
+}
+
 /* CSS für die Error 404 Seite */
 #page-404 {
   min-height: 100vh;
