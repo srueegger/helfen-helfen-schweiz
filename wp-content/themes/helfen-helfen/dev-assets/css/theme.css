@@ -11324,6 +11324,7 @@ blockquote {
   font-weight: 700;
   font-size: 3rem;
   transition: all 0.3s ease-in;
+  text-transform: uppercase;
 }
 @media (max-width: 1200px) {
   .emptypage .inner a {

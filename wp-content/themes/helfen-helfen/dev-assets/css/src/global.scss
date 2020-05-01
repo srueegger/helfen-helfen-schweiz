@@ -849,6 +849,7 @@ blockquote {
 			font-weight: 700;
 			@include font-size(3rem);
 			transition: all .3s ease-in;
+			text-transform: uppercase;
 			&:hover{
 				text-decoration: underline;
 			}
