@@ -1,5 +1,8 @@
-body {
+html, body {
 	overflow-x: hidden;
+	&.no-scroll {
+		overflow: hidden;
+	}
 }
 
 button {
@@ -84,7 +87,7 @@ blockquote {
 	}
 }
 
-#mainMenu {
+.main_menu {
 	position: fixed;
 	width: 100%;
 	height: 100vh;
@@ -105,8 +108,10 @@ blockquote {
 	.row.footer {
 		height: 135px;
 	}
-	&.active {
-		right: 0;
+	&.menu-mobile {
+		&.active {
+			right: 0;
+		}
 	}
 	.footer {
 		background-color: $black;
@@ -137,6 +142,16 @@ blockquote {
 		.container-fluid.custom-size,
 		.row.custom-size {
 			height: calc(100% - 135px - 20px);
+		}
+		&.menu-mobile {
+			&.active {
+				right: -100vw;
+			}
+		}
+		&.menu-desktop {
+			&.active {
+				right: 0;
+			}
 		}
 	}
 }
@@ -185,6 +200,39 @@ blockquote {
 		.menu-item {
 			&:not(:last-of-type) {
 				margin-bottom: 30px;
+			}
+		}
+	}
+	&.menu-list-mobile {
+		text-align: center;
+		.scroll {
+			overflow-y: scroll;
+		}
+		.menu-item {
+			a {
+				font-size: 2rem;
+				&.colored {
+					color: $blue;
+				}
+			}
+		}
+		.sub-menu {
+			display: block;
+			visibility: hidden;
+			max-height: 0;
+			padding: 0;
+			list-style: none;
+			transition: max-height .5s cubic-bezier(0, 1, 0, 1);
+			.menu-item {
+				a {
+					font-size: 1.675rem;
+					font-weight: 400;
+				}
+			}
+			&.open {
+				visibility: visible;
+				max-height: 999px;
+				transition: max-height 1s ease-in-out;
 			}
 		}
 	}
@@ -384,7 +432,12 @@ blockquote {
 		display: inline-block;
 		line-height: 50px;
 		position: relative;
-		margin-right: 20px;
+		&:not(:last-of-type) {
+			margin-right: 20px;
+		}
+		&:first-of-type {
+			margin-left: 20px;
+		}
 		&:hover {
 			background-color: $black;
 			color: $white;
@@ -396,16 +449,23 @@ blockquote {
 			-webkit-transform: translate(50%, 50%);
 			        transform: translate(50%, 50%);
 		}
+		@include media-breakpoint-up(xl) {
+			margin-right: 20px !important;
+			&:first-of-type {
+				margin-left: 0;
+			}
+		}
 	}
 	.menu-news {
 		background-color: $primary;
 		border-radius: 100%;
-		width: 140px;
-		height: 140px;
+		width: 100px;
+		height: 100px;
 		display: inline-block;
-		top: 50px;
+		top: 0;
 		position: relative;
 		svg {
+			font-size: 3em;
 			right: 50%;
 			bottom: 50%;
 			position: absolute;
@@ -419,6 +479,14 @@ blockquote {
 			svg {
 				-webkit-transform: translate(50%, 50%) rotate(25deg);
 				        transform: translate(50%, 50%) rotate(25deg);
+			}
+		}
+		@include media-breakpoint-up(xl) {
+			width: 140px;
+			height: 140px;
+			top: 50px;
+			svg {
+				font-size: 4em;
 			}
 		}
 	}

@@ -65,8 +65,10 @@ function _extends(){return(_extends=Object.assign||function(t){for(var e=1;e<arg
 	var hamburger = $('.hamburger');
 	hamburger.on('click', function() {
 		hamburger.toggleClass('is-active');
-		$('#mainMenu').toggleClass('active');
+		$('.main_menu').toggleClass('active');
 		invertBTNs();
+		/* Body Scrollen ein und Auschalten */
+		$('body').toggleClass('no-scroll');
 	});
 
 	/* Funktion die Menübutton und Logo invertiert / bzw wieder normal darstellt */
@@ -80,7 +82,7 @@ function _extends(){return(_extends=Object.assign||function(t){for(var e=1;e<arg
 	}
 
 	/* Im Menü Inhalt mit dynamischen Content füllen */
-	$('.menu-item.menu-item-has-children:not(.hovered-menu)').on('mouseover', function () {
+	$('.menu-list:not(.menu-list-mobile) .menu-item.menu-item-has-children:not(.hovered-menu)').on('mouseover', function () {
 		$('.menu-item a').removeClass('underline');
 		var dynamicContent = $('.dynamic-menu-content');
 		var $this = $(this);
@@ -202,5 +204,35 @@ function _extends(){return(_extends=Object.assign||function(t){for(var e=1;e<arg
 	$(document).on('click', '.news-item', function() {
 		var go_to_link = $(this).data('goto');
 		window.location.href = go_to_link;
+	});
+
+	/* Mobile: Bei Klick auf Hauptmenü - Untermenü anzeigen */
+	$(document).on('click', 'ul.menu-list.menu-list-mobile .menu-item.menu-item-has-children > a:not(.colored)', function(event) {
+		/* Browser Aktionen stoppen */
+		event.preventDefault();
+		/* Das passende Submenü herausfinden */
+		var subMenu = $(this).parent().find('.sub-menu');
+		/* Alle farbigen Menüpunkte entfernen */
+		$('.menu-item a').removeClass('colored');
+		/* Alle Submenüs schliessen */
+		$('.sub-menu').removeClass('open');
+		/* Aktiver Menüpnkt einfärben */
+		$(this).addClass('colored');
+		/* Das ausgewählte Submenü öffnen */
+		subMenu.addClass('open');
+		/* Social Media Buttons ausblenden */
+		$('.social-media-container').hide();
+	});
+
+	/* Mobile: Bei Klick auf Hauptmenü - bereits offenes Menü - Menü schliessen */
+	$(document).on('click', 'ul.menu-list.menu-list-mobile .menu-item.menu-item-has-children > a.colored', function(event) {
+		/* Browser Aktionen stoppen */
+		event.preventDefault();
+		/* Alle farbigen Menüpunkte entfernen */
+		$('.menu-item a').removeClass('colored');
+		/* Alle Submenüs schliessen */
+		$('.sub-menu').removeClass('open');
+		/* Social Media Buttons einblenden */
+		$('.social-media-container').show();
 	});
 })(jQuery);
