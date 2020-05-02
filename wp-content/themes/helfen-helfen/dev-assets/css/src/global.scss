@@ -866,3 +866,18 @@ blockquote {
 		filter: grayscale(100%);
 	}
 }
+
+.block-contactform {
+	min-height: 100vh;
+	position: relative;
+	padding: 25px;
+	&>div {
+		position: absolute;
+		right: 50%;
+		bottom: 50%;
+		transform: translate(50%, 50%);
+	}
+	@include media-breakpoint-up(xl) {
+		padding: 0;
+	}
+}

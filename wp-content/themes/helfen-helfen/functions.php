@@ -121,7 +121,7 @@ add_action( 'acf/init', 'hh_acf_init' );
  * ACF Menüpunkt verstecken - wenn Webseite im "nicht Debug Modus" läuft
  ***************************************/
 if(!WP_DEBUG) {
-	add_filter('acf/settings/show_admin', '__return_false');
+	//add_filter('acf/settings/show_admin', '__return_false');
 }
 
 /***************************************
@@ -256,3 +256,4 @@ function hh_acf_populate_gf_forms( $field ) {
 	return $field;
 }
 add_filter('acf/load_field/name=block_lf_form', 'hh_acf_populate_gf_forms');
+add_filter('acf/load_field/name=block_cf_form', 'hh_acf_populate_gf_forms');

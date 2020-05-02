@@ -97,6 +97,18 @@ function register_acf_block_types() {
 		'keywords' => array( 'partner', 'support' ),
 		'mode' => 'edit'
 	));
+
+	// register a Partner block.
+	acf_register_block_type(array(
+		'name' => 'contactform',
+		'title' => __('Kontaktformular'),
+		'description' => __('Der Block zeigt das Kontaktformular an'),
+		'render_template' => '/blocks/contactform.php',
+		'category' => 'layout',
+		'icon' => 'email',
+		'keywords' => array( 'contact', 'form', 'support', 'help' ),
+		'mode' => 'edit'
+	));
 }
 
 // Check if function exists and hook into setup.

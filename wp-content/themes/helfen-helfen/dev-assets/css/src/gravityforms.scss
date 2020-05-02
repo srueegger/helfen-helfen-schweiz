@@ -107,6 +107,22 @@ body {
 				width: 100%;
 			}
 		}
+		.hh-contactform {
+			/* Kontaktformular Einstellungen */
+			.field_sublabel_hidden_label .ginput_complex.ginput_container input[type="text"], .gform_wrapper .field_sublabel_hidden_label .ginput_complex.ginput_container select {
+				margin-bottom: 0;
+			}
+			.gform_drop_instructions {
+				color: $white;
+			}
+			.gform_button_select_files {
+				@extend .btn;
+				@extend .btn-outline-secondary;
+			}
+			.gform_footer {
+				padding: 0;
+			}
+		}
 	}
 	@include media-breakpoint-up(xl) {
 		.gform_wrapper {

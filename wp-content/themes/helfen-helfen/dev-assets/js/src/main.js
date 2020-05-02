@@ -213,4 +213,18 @@
 		/* Social Media Buttons einblenden */
 		$('.social-media-container').show();
 	});
+
+	/* Formular Button beim Kontaktformular anpassen */
+	$(document).on('gform_post_render', function(event, form_id, current_page){
+		/* Prüfen ob wir auf der Kontaktseite sein */
+		if($('.block-contactform').length) {
+			/* Wir sind auf der Kontaktseite - Formular Button ändern wenn der Hintergrund blau (bg-primary) ist */
+			if($('.block-contactform').hasClass('bg-primary')) {
+				/* Der Hintergrund ist blau => Button gelb machen */
+				var btn = $('.gform_footer .btn');
+				btn.removeClass('btn-primary');
+				btn.addClass('btn-secondary');
+			}
+		}
+	});
 })(jQuery);
