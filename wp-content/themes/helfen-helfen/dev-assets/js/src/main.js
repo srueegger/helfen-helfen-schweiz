@@ -1,12 +1,6 @@
 (function($) {
 	'use strict';
 
-	/* Bilder per LazyLoad laden */
-	var lazyLoadInstance = new LazyLoad({
-		elements_selector: ".lazy"
-
-	});
-
 	/* Slick Full Page Carousel laden */
 	var fullSlider = $('.hh-full-carousel');
 	fullSlider.slick({

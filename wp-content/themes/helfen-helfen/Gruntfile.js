@@ -21,7 +21,6 @@ module.exports = function( grunt ) {
 					'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
                     'node_modules/slick-carousel/slick/slick.min.js',
                     'node_modules/waypoints/lib/jquery.waypoints.min.js',
-                    'node_modules/vanilla-lazyload/dist/lazyload.min.js',
                     'dev-assets/js/src/main.js'
                 ],
                 dest: 'dev-assets/js/theme.js'

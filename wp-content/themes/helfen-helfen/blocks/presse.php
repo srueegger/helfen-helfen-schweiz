@@ -47,8 +47,8 @@ if( !empty($block['align']) ) {
 						if(!empty($image)) {
 							?>
 							<picture>
-								<source data-srcset="<?php echo $image['sizes']['presse']; ?> 1x, <?php echo $image['sizes']['presse2x']; ?> 2x">
-								<img data-src="<?php echo $image['sizes']['presse']; ?>" class="card-img-top lazy" alt="<?php echo $image['alt']; ?>">
+								<source srcset="<?php echo $image['sizes']['presse']; ?> 1x, <?php echo $image['sizes']['presse2x']; ?> 2x">
+								<img src="<?php echo $image['sizes']['presse']; ?>" class="card-img-top" loading="lazy" alt="<?php echo $image['alt']; ?>">
 							</picture>
 							<?php
 						}

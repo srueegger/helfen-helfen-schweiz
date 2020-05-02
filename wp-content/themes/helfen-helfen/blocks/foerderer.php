@@ -36,8 +36,8 @@ if( !empty($block['align']) ) {
 				<div class="col-12 col-lg-6 col-xl-4 foerdererItem">
 					<a href="<?php the_permalink(); ?>" target="_self">
 						<picture>
-							<source data-srcset="<?php echo $image['sizes']['kopf']; ?> 1x, <?php echo $image['sizes']['kopf2x']; ?> 2x">
-							<img data-src="<?php echo $image['sizes']['kopf']; ?>" class="lazy" alt="<?php echo $image['alt']; ?>">
+							<source srcset="<?php echo $image['sizes']['kopf']; ?> 1x, <?php echo $image['sizes']['kopf2x']; ?> 2x">
+							<img src="<?php echo $image['sizes']['kopf']; ?>" loading="lazy" alt="<?php echo $image['alt']; ?>">
 						</picture>
 						<div class="overlay">
 							<div class="inner">
