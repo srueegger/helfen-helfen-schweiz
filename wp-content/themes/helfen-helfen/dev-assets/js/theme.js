@@ -79,13 +79,11 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 		var dynamicContent = $('.dynamic-menu-content');
 		var $this = $(this);
 		var subMenu;
-		setTimeout(function() {
-			/* Untermenü finden */
-			subMenu = $this.find('.sub-menu').html();
-			/* Inhalt im dynamischen Content zeichnen */
-			dynamicContent.html('<ul class="list-unstyled custom-sub-menu">'+subMenu+'</ul>');
-			dynamicContent.addClass('active');
-		}, 500);
+		/* Untermenü finden */
+		subMenu = $this.find('.sub-menu').html();
+		/* Inhalt im dynamischen Content zeichnen */
+		dynamicContent.html('<ul class="list-unstyled custom-sub-menu">'+subMenu+'</ul>');
+		dynamicContent.addClass('active');
 	});
 
 	/* News in den dynamischen Inhalt füllen */
