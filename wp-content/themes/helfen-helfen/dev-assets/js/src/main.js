@@ -53,14 +53,13 @@
 		$('#menuButton').toggleClass('invert');
 	}
 
-	/* Im Menü Inhalt mit dynamischen Content füllen */
-	$('.menu-list:not(.menu-list-mobile) .menu-item.menu-item-has-children:not(.hovered-menu)').on('mouseover', function () {
+	/* Hauptmenü Desktop steuern */
+	$('.menu-list:not(.menu-list-mobile) .menu-item.menu-item-has-children:not(.hovered-menu)').on('click', function(event) {
+		event.preventDefault();
 		$('.menu-item a').removeClass('underline');
 		var dynamicContent = $('.dynamic-menu-content');
 		var $this = $(this);
-		$this.find('a').addClass('underline');
 		var subMenu;
-		//$this.addClass('hovered-menu');
 		setTimeout(function() {
 			/* Untermenü finden */
 			subMenu = $this.find('.sub-menu').html();
