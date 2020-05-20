@@ -109,6 +109,18 @@ function register_acf_block_types() {
 		'keywords' => array( 'contact', 'form', 'support', 'help' ),
 		'mode' => 'edit'
 	));
+
+	// register a Checkliste block.
+	acf_register_block_type(array(
+		'name' => 'hh_checklist',
+		'title' => __('Checkliste'),
+		'description' => __('Der Block zeigt eine Checkliste an'),
+		'render_template' => '/blocks/checklist.php',
+		'category' => 'layout',
+		'icon' => 'yes',
+		'keywords' => array( 'list', 'check' ),
+		'mode' => 'edit'
+	));
 }
 
 // Check if function exists and hook into setup.
