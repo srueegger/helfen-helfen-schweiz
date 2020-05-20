@@ -18,7 +18,9 @@ $header_image = get_field( 'setting_mitstreiter_image', 'option' );
 		<?php
 		$args = array(
 			'taxonomy' => 'hh_mitstreiterkategorien',
-			'hide_empty' => true
+			'hide_empty' => true,
+			'orderby' => 'menu_order',
+			'order' => 'ASC'
 		);
 		$terms = get_terms( $args );
 		foreach( $terms as $term ) {

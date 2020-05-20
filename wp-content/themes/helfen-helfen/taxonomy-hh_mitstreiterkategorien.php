@@ -21,6 +21,8 @@ $header_image = get_field( 'hh_cat_mitstreiter_image', $term );
 			'posts_per_page' => -1,
 			'post_type' => 'hh_mitstreiter',
 			'post_status' => 'publish',
+			'orderby' => 'menu_order',
+			'order' => 'ASC',
 			'tax_query' => array(
 				array(
 					'taxonomy' => $term->taxonomy,
