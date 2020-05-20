@@ -54,4 +54,5 @@ $image = get_field('news_image', get_queried_object_id());
 	</div>
 </main>
 <?php
+get_template_part( 'templates/modal', 'windows' );
 get_footer();

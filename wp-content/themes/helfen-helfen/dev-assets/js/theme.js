@@ -237,4 +237,13 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 			}
 		}
 	});
+
+	/* Alle vorhandenen Modal Fenster öffnen */
+	var modal_window_object = $('.helfen-helfen-modal');
+	if(modal_window_object.length) {
+		modal_window_object.each( function() {
+			var modal_id = $(this).attr('id');
+			$( '#' + modal_id ).modal('show');
+		});
+	}
 })(jQuery);

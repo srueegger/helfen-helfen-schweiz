@@ -122,6 +122,14 @@ function hh_acf_init() {
 		'parent_slug' => 'edit.php?post_type=hh_mitstreiter',
 	);
 	acf_add_options_sub_page($args);
+	/* Infofenster Einstellungen */
+	$args = array(
+		'page_title' => 'Einstellungen für die Infofenster',
+		'menu_title' => 'Infofenster',
+		'menu_slug' => 'hh-modalwindow-settings',
+		'parent_slug' => 'themes.php',
+	);
+	acf_add_options_sub_page($args);
 }
 add_action( 'acf/init', 'hh_acf_init' );
 
