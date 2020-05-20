@@ -5,3 +5,10 @@
 .column-comments {
 	display: none;
 }
+
+.term-parent-wrap,
+.term-description-wrap,
+th.column-description,
+td.column-description {
+	display: none;
+}

@@ -703,8 +703,10 @@ blockquote {
 	}
 }
 
-.foerderer {
-	.foerdererItem {
+.foerderer,
+#mitstreiter-list {
+	.foerdererItem,
+	.mitstreiterItem {
 		height: 400px;
 		overflow: hidden;
 		img {

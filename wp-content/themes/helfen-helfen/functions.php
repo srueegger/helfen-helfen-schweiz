@@ -114,6 +114,14 @@ function hh_acf_init() {
 		'parent_slug' => 'options-general.php',
 	);
 	acf_add_options_sub_page($args);
+	/* Mitstreiter Einstellungen */
+	$args = array(
+		'page_title' => 'Einstellungen zu den Mitstreitern',
+		'menu_title' => 'Einstellungen',
+		'menu_slug' => 'hh-mitstreiter-settings',
+		'parent_slug' => 'edit.php?post_type=hh_mitstreiter',
+	);
+	acf_add_options_sub_page($args);
 }
 add_action( 'acf/init', 'hh_acf_init' );
 

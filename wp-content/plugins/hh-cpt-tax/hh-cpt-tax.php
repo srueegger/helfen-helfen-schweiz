@@ -12,6 +12,53 @@
 
 function cptui_register_my_cpts() {
 
+
+	/**
+	 * Post Type: Mitstreiter.
+	 */
+
+	$labels = [
+		"name" => __( "Mitstreiter", "hh-wptheme" ),
+		"singular_name" => __( "Mitstreiter", "hh-wptheme" ),
+		"menu_name" => __( "Mitstreiter", "hh-wptheme" ),
+		"all_items" => __( "Alle Mitstreiter", "hh-wptheme" ),
+		"add_new_item" => __( "Neuer Mitstreiter", "hh-wptheme" ),
+		"edit_item" => __( "Mitstreiter bearbeiten", "hh-wptheme" ),
+		"new_item" => __( "Neuer Mitstreiter", "hh-wptheme" ),
+		"view_item" => __( "Mitstreiter ansehen", "hh-wptheme" ),
+		"view_items" => __( "Mitstreiter ansehen", "hh-wptheme" ),
+		"search_items" => __( "Mitstreiter suchen", "hh-wptheme" ),
+		"not_found" => __( "Es wurden keine Mitstreiter gefunden", "hh-wptheme" ),
+		"not_found_in_trash" => __( "Es wurden keine Mitstreiter im Papierkorb gefunden", "hh-wptheme" ),
+	];
+
+	$args = [
+		"label" => __( "Mitstreiter", "hh-wptheme" ),
+		"labels" => $labels,
+		"description" => "Die Mitstreiter von Helfen helfen Schweiz",
+		"public" => false,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "mitstreiter",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"has_archive" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => true,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => array('slug' => 'mitstreiter', 'with_front' => false),
+		"query_var" => true,
+		"menu_icon" => "dashicons-visibility",
+		"supports" => [ "title", "custom-fields" ],
+	];
+
+	register_post_type( "hh_mitstreiter", $args );
+
+
 	/**
 	 * Post Type: Köpfe.
 	 */
@@ -110,3 +157,43 @@ function cptui_register_my_cpts() {
 }
 
 add_action( 'init', 'cptui_register_my_cpts' );
+
+
+function cptui_register_my_taxes() {
+
+	/**
+	 * Taxonomy: Kurskategorien.
+	 */
+
+	$labels = [
+		"name" => __( "Mitstreiter-Kategorien", "hh-wptheme" ),
+		"singular_name" => __( "Mitstreiter-Kategorie", "hh-wptheme" ),
+		"menu_name" => __( "Kategorien", "hh-wptheme" ),
+		"all_items" => __( "Alle Mitstreiter-Kategorien", "hh-wptheme" ),
+		"edit_item" => __( "Mitstreiter-Kategorie bearbeiten", "hh-wptheme" ),
+		"view_item" => __( "Mitstreiter-Kategorie ansehen", "hh-wptheme" ),
+		"add_new_item" => __( "Neue Mitstreiter-Kategorie", "hh-wptheme" ),
+		"search_items" => __( "Mitstreiter-Kategorien suchen", "hh-wptheme" ),
+		"not_found" => __( "Keine Mitstreiter-Kategorien gefunden", "hh-wptheme" ),
+	];
+
+	$args = [
+		"label" => __( "Mitstreiter-Kategorien", "hh-wptheme" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => true,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => [ 'slug' => 'mitstreiter-kategorie', 'with_front' => false, ],
+		"show_admin_column" => true,
+		"show_in_rest" => true,
+		"rest_base" => "hh_mitstreiterkategorien",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"show_in_quick_edit" => true,
+	];
+	register_taxonomy( "hh_mitstreiterkategorien", [ "hh_mitstreiter" ], $args );
+}
+add_action( 'init', 'cptui_register_my_taxes' );
