@@ -16,9 +16,7 @@ button {
 }
 
 blockquote {
-	-webkit-hyphens: auto;
-	    -ms-hyphens: auto;
-	        hyphens: auto;
+	hyphens: auto;
 }
 
 #logoContainer {
@@ -32,7 +30,6 @@ blockquote {
 	width: 60px;
 	height: 60px;
 	background-color: $white;
-	-webkit-transition: all .5s linear;
 	transition: all .5s linear;
 	img {
 		width: 35px;
@@ -52,8 +49,7 @@ blockquote {
 		}
 	}
 	&.animate-logo {
-		-webkit-animation: logo 1.5s normal;
-		        animation: logo 1.5s normal;
+		animation: logo 1.5s normal;
 	}
 }
 
@@ -82,8 +78,7 @@ blockquote {
 		right: 40px;
 	}
 	&.animate-menu {
-		-webkit-animation: menubtn 1.75s normal;
-		        animation: menubtn 1.75s normal;
+		animation: menubtn 1.75s normal;
 	}
 }
 
@@ -95,7 +90,6 @@ blockquote {
 	z-index: $zindex-dropdown;
 	top: 0;
 	right: -100vw;
-	-webkit-transition: all .3s linear;
 	transition: all .3s linear;
 	.container-fluid.custom-size,
 	.row.custom-size {
@@ -177,7 +171,6 @@ blockquote {
 				height: 6px;
 				width: 0;
 				background-color: $primary;
-				-webkit-transition: all .5s linear;
 				transition: all .5s linear;
 				display: block;
 			}
@@ -254,11 +247,10 @@ blockquote {
 			color: $black;
 			text-transform: uppercase;
 			font-weight: 500;
-			@include font-size(2rem);
+			@include font-size(1.4rem);
 			&:hover {
 				text-decoration: underline;
-				-webkit-text-decoration-color: $primary;
-				        text-decoration-color: $primary;
+				text-decoration-color: $primary;
 			}
 		}
 		&:not(:last-of-type) {
@@ -270,7 +262,6 @@ blockquote {
 
 .dynamic-menu-content {
 	max-height: 0;
-	-webkit-transition: max-height .5s ease-out;
 	transition: max-height .5s ease-out;
 	overflow: hidden;
 	position: absolute;
@@ -279,7 +270,6 @@ blockquote {
 	width: 100%;
 	&.active {
 		max-height: 2000px;
-		-webkit-transition: max-height .5s ease-in;
 		transition: max-height .5s ease-in;
 	}
 }
@@ -297,7 +287,6 @@ blockquote {
 				height: 6px;
 				width: 0;
 				background-color: $primary;
-				-webkit-transition: all .5s linear;
 				transition: all .5s linear;
 				display: block;
 			}
@@ -321,10 +310,8 @@ blockquote {
 		overflow: hidden;
 		img {
 			width: 100%;
-			-o-object-fit: cover;
-			   object-fit: cover;
+			object-fit: cover;
 			height: 100vh;
-			-webkit-transition: all .5s linear;
 			transition: all .5s linear;
 			&:after {
 				content: '';
@@ -344,7 +331,6 @@ blockquote {
 			left: 0;
 			width: 100%;
 			height: 100%;
-			-webkit-transition: all .5s linear;
 			transition: all .5s linear;
 			.inner {
 				position: absolute;
@@ -373,8 +359,7 @@ blockquote {
 		}
 		&:hover {
 			img {
-				-webkit-transform: scale(1.05);
-				        transform: scale(1.05);
+				transform: scale(1.05);
 			}
 			.inner-container {
 				&.yellow {
@@ -395,8 +380,7 @@ blockquote {
 		z-index: 999;
 		top: unset;
 		color: $black;
-		-webkit-transform: none;
-				transform: none;
+		transform: none;
 		svg {
 			width: 20px;
 			height: 20px;
@@ -436,7 +420,6 @@ blockquote {
 		background-color: $white;
 		border: 2px solid $black;
 		color: $black;
-		-webkit-transition: all .5s linear;
 		transition: all .5s linear;
 		display: inline-block;
 		line-height: 50px;
@@ -455,8 +438,7 @@ blockquote {
 			position: absolute;
 			right: 50%;
 			bottom: 50%;
-			-webkit-transform: translate(50%, 50%);
-			        transform: translate(50%, 50%);
+			transform: translate(50%, 50%);
 		}
 		@include media-breakpoint-up(xl) {
 			margin-right: 20px !important;
@@ -481,13 +463,11 @@ blockquote {
 			color: $white;
 			-webkit-transition: all .4s linear;
 			transition: all .4s linear;
-			-webkit-transform: translate(50%, 50%) rotate(-25deg);
-			        transform: translate(50%, 50%) rotate(-25deg);
+			transform: translate(50%, 50%) rotate(-25deg);
 		}
 		&:hover {
 			svg {
-				-webkit-transform: translate(50%, 50%) rotate(25deg);
-				        transform: translate(50%, 50%) rotate(25deg);
+				transform: translate(50%, 50%) rotate(25deg);
 			}
 		}
 		@include media-breakpoint-up(xl) {
@@ -543,11 +523,9 @@ blockquote {
 	text-align: center;
 	border-radius: 100%;
 	line-height: 80px;
-	-webkit-transition: all .5s linear;
 	transition: all .5s linear;
 	cursor: pointer;
-	-webkit-animation: blockarrow 3s normal;
-	        animation: blockarrow 3s normal;
+	animation: blockarrow 3s normal;
 	svg {
 		color: $black;
 	}
@@ -580,10 +558,8 @@ blockquote {
 	img {
 		width: 100%;
 		height: 100%;
-		-o-object-fit: cover;
-		   object-fit: cover;
-		-webkit-filter: brightness(60%);
-		        filter: brightness(60%);
+		object-fit: cover;
+		filter: brightness(60%);
 	}
 	.overlay {
 		position: absolute;
@@ -592,7 +568,6 @@ blockquote {
 		bottom: 0;
 		height: 100%;
 		width: 0;
-		-webkit-transition: all .5s ease;
 		transition: all .5s ease;
 		margin: auto;
 		overflow: hidden;
@@ -605,7 +580,6 @@ blockquote {
 		top: 65%;
 		left: 30px;
 		width: calc(100% - 60px);
-		-webkit-transition: all .5s ease;
 		transition: all .5s ease;
 		h2,p {
 			font-weight: 700;
@@ -672,8 +646,7 @@ blockquote {
 			bottom: 50%;
 			left: 25px;
 			@include font-size(3.1rem);
-			-webkit-transform: translateY(50%);
-			        transform: translateY(50%);
+			transform: translateY(50%);
 		}
 		.hh-btn {
 			position: absolute;
@@ -683,8 +656,7 @@ blockquote {
 				position: absolute;
 				right: 50%;
 				bottom: 50%;
-				-webkit-transform: translate(50%, 50%);
-				        transform: translate(50%, 50%);
+				transform: translate(50%, 50%);
 			}
 		}
 		&.bg-primary {
@@ -699,10 +671,8 @@ blockquote {
 /* Block Images - Text Animation */
 .wp-block-cover__inner-container {
 	p {
-		-webkit-transform: translateY(0);
-		        transform: translateY(0);
-		-webkit-animation: blocktext 2.5s normal;
-		        animation: blocktext 2.5s normal;
+		transform: translateY(0);
+		animation: blocktext 2.5s normal;
 	}
 }
 
@@ -721,13 +691,9 @@ blockquote {
 		img {
 			width: 100%;
 			height: 100%;
-			-o-object-fit: cover;
 			object-fit: cover;
-			-o-object-position: center;
 			object-position: center;
-			-webkit-transform: scale(1);
-			        transform: scale(1);
-			-webkit-transition: all .5s linear;
+			transform: scale(1);
 			transition: all .5s linear;
 		}
 		.overlay {
@@ -737,7 +703,6 @@ blockquote {
 			top: 0;
 			left: 0;
 			background-color: rgba(0, 97, 171, .5);
-			-webkit-transition: all .5s linear;
 			transition: all .5s linear;
 			.inner {
 				text-align: center;
@@ -745,14 +710,10 @@ blockquote {
 				position: absolute;
 				width: 100%;
 				bottom: 50%;
-				-webkit-transform: translateY(50%);
-						transform: translateY(50%);
+				transform: translateY(50%);
 				h2 {
-					-webkit-animation: textzoom 2s normal;
-							animation: textzoom 2s normal;
-					-webkit-transform: scale(1);
-							transform: scale(1);
-					-webkit-transition: all .5s linear;
+					animation: textzoom 2s normal;
+					transform: scale(1);
 					transition: all .5s linear;
 				}
 			}
@@ -764,14 +725,12 @@ blockquote {
 		}
 		&:hover {
 			img {
-				-webkit-transform: scale(1.05);
-				        transform: scale(1.05);
+				transform: scale(1.05);
 			}
 			.overlay {
 				background-color: rgba(0, 97, 171, .7);
 				h2 {
-					-webkit-transform: scale(1.05);
-					        transform: scale(1.05);
+					transform: scale(1.05);
 				}
 			}
 			&:nth-child(even) {

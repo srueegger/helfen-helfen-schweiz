@@ -113,9 +113,9 @@ $enable-transitions:                          true !default;
 $enable-prefers-reduced-motion-media-query:   true !default;
 $enable-grid-classes:                         true !default;
 $enable-pointer-cursor-for-buttons:           true !default;
-$enable-print-styles:                         true !default;
+$enable-print-styles:                         false !default;
 $enable-responsive-font-sizes:                true !default;
-$enable-validation-icons:                     true !default;
+$enable-validation-icons:                     false !default;
 $enable-deprecation-messages:                 true !default;
 
 // Spacing
