@@ -43,6 +43,7 @@ function register_hh_menu() {
 	register_nav_menu( 'main-menu', 'Hauptmenü' );
 	register_nav_menu( 'sub-menu', 'Untermenü' );
 	register_nav_menu( 'socialmedia-menu', 'Social Media Menü' );
+	register_nav_menu( 'footer-menu', 'Footer Menü' );
 }
 add_action( 'after_setup_theme', 'register_hh_menu' );
 

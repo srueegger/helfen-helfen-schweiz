@@ -8963,6 +8963,52 @@ blockquote {
 .fa-ul li:not(:last-of-type) {
   margin-bottom: 15px; }
 
+#pageFooter {
+  position: relative; }
+  #pageFooter .container {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    border-top: 2px solid #000;
+    padding-top: 15px;
+    text-align: center; }
+
+#scrollToTop {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%) scale(1);
+  bottom: 100px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #000;
+  cursor: pointer;
+  transition: all .25s ease; }
+  #scrollToTop svg {
+    color: #fff;
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%) scale(1);
+    transition: all .25s ease; }
+  #scrollToTop:hover {
+    transform: translateX(50%) scale(1.05); }
+    #scrollToTop:hover svg {
+      transform: translate(50%, 50%) scale(1.05); }
+
+.page-footer-menu li.list-inline-item a, .page-footer-menu .submenu-list li.menu-item a, .submenu-list .page-footer-menu li.menu-item a {
+  color: #000;
+  font-size: 1.125rem; }
+  .page-footer-menu li.list-inline-item a:hover, .page-footer-menu .submenu-list li.menu-item a:hover, .submenu-list .page-footer-menu li.menu-item a:hover, .page-footer-menu li.list-inline-item a:active, .page-footer-menu .submenu-list li.menu-item a:active, .submenu-list .page-footer-menu li.menu-item a:active, .page-footer-menu li.list-inline-item a:focus, .page-footer-menu .submenu-list li.menu-item a:focus, .submenu-list .page-footer-menu li.menu-item a:focus {
+    color: #000;
+    text-decoration: underline; }
+.page-footer-menu li.list-inline-item:not(:last-of-type), .page-footer-menu .submenu-list li.menu-item:not(:last-of-type), .submenu-list .page-footer-menu li.menu-item:not(:last-of-type) {
+  margin-right: 15px; }
+  .page-footer-menu li.list-inline-item:not(:last-of-type):after, .page-footer-menu .submenu-list li.menu-item:not(:last-of-type):after, .submenu-list .page-footer-menu li.menu-item:not(:last-of-type):after {
+    content: '|';
+    padding-left: 15px;
+    font-size: 1.125rem;
+    font-weight: 700; }
+
 /* CSS für die Error 404 Seite */
 #page-404 {
   min-height: 100vh;

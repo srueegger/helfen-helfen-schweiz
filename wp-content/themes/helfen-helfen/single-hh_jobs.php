@@ -79,4 +79,5 @@ $image = get_field('news_image');
 </main>
 <?php
 endwhile; endif;
+get_template_part( 'templates/page', 'footer' );
 get_footer();

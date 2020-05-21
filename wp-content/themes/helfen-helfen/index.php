@@ -7,4 +7,5 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 </main>
 <?php
 endwhile; endif;
+get_template_part( 'templates/page', 'footer' );
 get_footer();

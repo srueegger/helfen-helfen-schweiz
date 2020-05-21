@@ -30,5 +30,6 @@ get_header();
 	</div>
 </main>
 <?php
+get_template_part( 'templates/page', 'footer' );
 get_template_part( 'templates/modal', 'windows' );
 get_footer();

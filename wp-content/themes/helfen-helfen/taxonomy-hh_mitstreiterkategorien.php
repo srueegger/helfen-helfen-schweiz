@@ -59,4 +59,5 @@ $header_image = get_field( 'hh_cat_mitstreiter_image', $term );
 	</div>
 </main>
 <?php
+get_template_part( 'templates/page', 'footer' );
 get_footer();

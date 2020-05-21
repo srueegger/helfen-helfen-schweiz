@@ -144,8 +144,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 	function scrollDown() {
 		var vheight = $(window).height();
 		$('html, body').animate({
-		scrollTop: (Math.floor($(window).scrollTop() / vheight)+1) * vheight
-		}, 500);  
+			scrollTop: (Math.floor($(window).scrollTop() / vheight)+1) * vheight
+		}, 500);
 	};
 
 	/* Prüfen ob auf der Seite einen Countdown angezeigt werden muss, falls ja CountDown ausgeben */
@@ -246,4 +246,9 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 			$( '#' + modal_id ).modal('show');
 		});
 	}
+
+	/* Bei Klick auf Scroll to Top Icon nach oben scrollen */
+	$('#scrollToTop').on('click', function() {
+		$('html, body').animate({ scrollTop: 0 }, 'slow');
+	});
 })(jQuery);

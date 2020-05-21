@@ -45,4 +45,5 @@ $header_image = get_field( 'setting_mitstreiter_image', 'option' );
 	</div>
 </main>
 <?php
+get_template_part( 'templates/page', 'footer' );
 get_footer();
