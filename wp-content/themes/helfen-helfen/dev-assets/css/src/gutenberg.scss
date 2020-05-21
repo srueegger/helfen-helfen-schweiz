@@ -47,7 +47,6 @@ main {
 		color: $black;
 		padding: 30px 0;
 		width: 100%;
-		max-width: 500px;
 		z-index: 1;
 		margin: 80px auto;
 		align-self: center;
@@ -79,6 +78,9 @@ main {
 		img {
 			border-radius: 100%;
 		}
+	}
+	&.has-media-on-the-right {
+		grid-template-columns: 1fr 35%;
 	}
 }
 
