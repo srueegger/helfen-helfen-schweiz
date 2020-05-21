@@ -961,3 +961,14 @@ blockquote {
 		}
 	}
 }
+
+.fa-ul {
+	&.custom {
+		margin-left: 1.7rem;
+	}
+	li {
+		&:not(:last-of-type) {
+			margin-bottom: 15px;
+		}
+	}
+}

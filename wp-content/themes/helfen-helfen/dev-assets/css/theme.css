@@ -9140,6 +9140,11 @@ blockquote {
     right: -20px;
     top: -20px; } }
 
+.fa-ul.custom {
+  margin-left: 1.7rem; }
+.fa-ul li:not(:last-of-type) {
+  margin-bottom: 15px; }
+
 /* CSS für die Error 404 Seite */
 #page-404 {
   min-height: 100vh;

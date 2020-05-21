@@ -1,0 +1,43 @@
+{
+    "key": "group_5ec651db8fef5",
+    "title": "Felder für Job-Einstellungen",
+    "fields": [
+        {
+            "key": "field_5ec65202b15a8",
+            "label": "Text der angezeigt wird, wenn keine Jobs verfügbar sind.",
+            "name": "setting_job_nojobs",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "hh-jobs-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1590055505
+}

@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Custom Post Types and Taxonomies
- * Version: 1.0.0
+ * Version: 1.4.4
  * Plugin URI: https://rueegger.me
  * Description: Dieses Plugin managt die Post Types und Taxonomies für Helfen-helfen Schweiz
  * Author: Samuel Rüegger
@@ -154,6 +154,57 @@ function cptui_register_my_cpts() {
 	];
 
 	register_post_type( "hh_partner", $args );
+
+	/**
+	 * Post Type: Jobs
+	 */
+
+	$labels = [
+		"name" => __( "Jobs", "hh-wptheme" ),
+		"singular_name" => __( "Job", "hh-wptheme" ),
+		"menu_name" => __( "Jobs", "hh-wptheme" ),
+		"all_items" => __( "Alle Jobs", "hh-wptheme" ),
+		"add_new_item" => __( "Neuer Job hinzufügen", "hh-wptheme" ),
+		"edit_item" => __( "Job bearbeiten", "hh-wptheme" ),
+		"new_item" => __( "Job hinzufügen", "hh-wptheme" ),
+		"view_item" => __( "Job anzeigen", "hh-wptheme" ),
+		"view_items" => __( "Job anzeigen", "hh-wptheme" ),
+		"search_items" => __( "Jobs durchsuchen", "hh-wptheme" ),
+		"not_found" => __( "Keine Jobs gefunden", "hh-wptheme" ),
+		"not_found_in_trash" => __( "Keine Jobs im Papierkorb gefunden", "hh-wptheme" ),
+		"featured_image" => __( "Beitragsbild für Job", "hh-wptheme" ),
+		"set_featured_image" => __( "Beitragsbild für Job festlegen", "hh-wptheme" ),
+		"remove_featured_image" => __( "Beitragsbild entfernen", "hh-wptheme" ),
+		"name_admin_bar" => __( "Job", "hh-wptheme" ),
+		"item_published" => __( "Job veröffentlicht", "hh-wptheme" ),
+		"item_updated" => __( "Job aktualisiert", "hh-wptheme" ),
+	];
+
+	$args = [
+		"label" => __( "Jobs", "hh-wptheme" ),
+		"labels" => $labels,
+		"description" => "Dieser Post Type verwaltet die Jobs für Helfen helfen Schweiz",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => false,
+		"rest_base" => "partner",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"has_archive" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => true,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => array('slug' => 'jobs', 'with_front' => false),
+		"query_var" => true,
+		"menu_icon" => "dashicons-building",
+		"supports" => [ "title", "custom-fields", "revisions", "author" ],
+	];
+
+	register_post_type( "hh_jobs", $args );
 }
 
 add_action( 'init', 'cptui_register_my_cpts' );

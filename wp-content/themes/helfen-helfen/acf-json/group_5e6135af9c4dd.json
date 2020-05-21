@@ -1,6 +1,6 @@
 {
     "key": "group_5e6135af9c4dd",
-    "title": "Newsbild",
+    "title": "Bild wählen",
     "fields": [
         {
             "key": "field_5e6135bbdadd8",
@@ -65,6 +65,13 @@
                 "operator": "==",
                 "value": "posts_page"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "hh_jobs"
+            }
         ]
     ],
     "menu_order": 0,
@@ -75,5 +82,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1583491406
+    "modified": 1590055582
 }
