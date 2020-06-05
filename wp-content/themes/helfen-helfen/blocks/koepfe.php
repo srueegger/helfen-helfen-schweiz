@@ -76,7 +76,7 @@ if( !empty($block['align']) ) {
 						<h3><?php the_field('kopf_txt_title1', get_the_ID()); ?></h3>
 						<h4><?php the_field('kopf_txt_title2', get_the_ID()); ?></h4>
 						<?php
-						$link = get_field('', get_the_ID());
+						$link = get_field('kopf_txt_link', get_the_ID());
 						$link_target = $link['target'] ? $link['target'] : '_self';
 						?>
 						<a href="<?php echo $link['url']; ?>" target="<?php echo $link_target; ?>" class="hh-btn">
