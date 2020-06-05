@@ -307,3 +307,11 @@ function hh_acf_populate_gf_forms( $field ) {
 }
 add_filter('acf/load_field/name=block_lf_form', 'hh_acf_populate_gf_forms');
 add_filter('acf/load_field/name=block_cf_form', 'hh_acf_populate_gf_forms');
+
+/***************************************
+ * 	 Limit Exceprt Length
+ ***************************************/
+function hh_custom_excerpt_length( $length ) {
+	return 25;
+}
+add_filter( 'excerpt_length', 'hh_custom_excerpt_length', 999 );

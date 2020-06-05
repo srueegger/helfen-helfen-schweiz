@@ -117,3 +117,9 @@ main {
 		@include font-size(1.6rem);
 	}
 }
+
+.wp-block-cover {
+	p {
+		word-wrap: break-word;
+	}
+}

@@ -10231,6 +10231,10 @@ main.page h2 {
   }
 }
 
+.wp-block-cover p {
+  word-wrap: break-word;
+}
+
 body .gform_wrapper {
   margin-top: 0;
   margin-bottom: 0;
