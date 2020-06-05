@@ -747,6 +747,8 @@ blockquote {
 	height: auto;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center center;
+	position: relative;
 	.inner {
 		padding-top: 100px;
 		.layoutform--title {

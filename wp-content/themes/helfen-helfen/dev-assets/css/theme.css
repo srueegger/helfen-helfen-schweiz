@@ -11159,6 +11159,8 @@ blockquote {
   height: auto;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
+  position: relative;
 }
 .layoutform .inner {
   padding-top: 100px;
