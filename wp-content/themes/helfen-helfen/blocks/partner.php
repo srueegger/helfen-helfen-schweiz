@@ -31,7 +31,7 @@ if( !empty($block['align']) ) {
 			$logo = get_field('partner_logo', $partner->ID);
 			echo '<div class="col-12 col-md-6 col-lg-4 col-xl-3">';
 			echo '<div class="partner-container"><a href="'.get_field('partner_link', $partner->ID).'" title="'.get_the_title($partner->ID).'" target="_blank">';
-			echo '<picture><img src="'.$logo['url'].'" alt="'.$logo['alt'].'"></picture>';
+			echo '<picture><img data-object-fit="contain" loading="lazy" src="'.$logo['url'].'" alt="'.$logo['alt'].'"></picture>';
 			echo '</a></div></div>';
 		}
 		echo '</div>';

@@ -260,4 +260,7 @@
 		/* Cookie Banner schliessen */
 		cookie_banner.removeClass('show');
 	});
+
+	/* Bild Polyfill für IE aktivieren */
+	objectFitPolyfill();
 })(jQuery);

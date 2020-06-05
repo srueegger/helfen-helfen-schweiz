@@ -30,7 +30,7 @@ $header_image = get_field( 'setting_mitstreiter_image', 'option' );
 				<a href="<?php echo get_term_link( $term, 'hh_mitstreiterkategorien' ) ?>" target="_self">
 						<picture>
 							<source srcset="<?php echo $image['sizes']['kopf']; ?> 1x, <?php echo $image['sizes']['kopf2x']; ?> 2x">
-							<img src="<?php echo $image['sizes']['kopf']; ?>" loading="lazy" alt="<?php echo $image['alt']; ?>">
+							<img data-object-fit="cover" src="<?php echo $image['sizes']['kopf']; ?>" loading="lazy" alt="<?php echo $image['alt']; ?>">
 						</picture>
 						<div class="overlay">
 							<div class="inner">

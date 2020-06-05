@@ -17,7 +17,8 @@ module.exports = function( grunt ) {
             },
             basetheme: {
                 src: [
-					'dev-assets/js/_vendor/*.js',
+                    'dev-assets/js/_vendor/*.js',
+                    'node_modules/objectFitPolyfill/dist/objectFitPolyfill.min.js',
 					'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
                     'node_modules/slick-carousel/slick/slick.min.js',
                     'node_modules/waypoints/lib/jquery.waypoints.min.js',

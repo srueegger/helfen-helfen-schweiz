@@ -37,7 +37,7 @@ if( !empty($block['align']) ) {
 					<div class="col-12 col-sm-6 col-xl-4 kopfItem">
 						<picture>
 							<source srcset="<?php echo $image['sizes']['kopf']; ?> 1x, <?php echo $image['sizes']['kopf2x']; ?> 2x">
-							<img src="<?php echo $image['sizes']['kopf']; ?>" loading="lazy" alt="<?php echo $image['alt']; ?>" />
+							<img data-object-fit="cover" src="<?php echo $image['sizes']['kopf']; ?>" loading="lazy" alt="<?php echo $image['alt']; ?>" />
 						</picture>
 						<div class="overlay"></div>
 						<div class="titleTxt">
