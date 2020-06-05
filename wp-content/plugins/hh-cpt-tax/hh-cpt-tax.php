@@ -205,6 +205,57 @@ function cptui_register_my_cpts() {
 	];
 
 	register_post_type( "hh_jobs", $args );
+
+	/**
+	 * Post Type: Presse
+	 */
+
+	$labels = [
+		"name" => __( "Presse", "hh-wptheme" ),
+		"singular_name" => __( "Presse", "hh-wptheme" ),
+		"menu_name" => __( "Presse", "hh-wptheme" ),
+		"all_items" => __( "Alle Presse Einträge", "hh-wptheme" ),
+		"add_new_item" => __( "Neuer Presse Eintrag hinzufügen", "hh-wptheme" ),
+		"edit_item" => __( "Presse Beitrag bearbeiten", "hh-wptheme" ),
+		"new_item" => __( "Presse Beitrag hinzufügen", "hh-wptheme" ),
+		"view_item" => __( "Presse Beitrag anzeigen", "hh-wptheme" ),
+		"view_items" => __( "Presse Beitrag anzeigen", "hh-wptheme" ),
+		"search_items" => __( "Presse Beiträge durchsuchen", "hh-wptheme" ),
+		"not_found" => __( "Keine Presse Beiträge gefunden", "hh-wptheme" ),
+		"not_found_in_trash" => __( "Keine Presse Beiträge im Papierkorb gefunden", "hh-wptheme" ),
+		"featured_image" => __( "Beitragsbild für Presse", "hh-wptheme" ),
+		"set_featured_image" => __( "Beitragsbild für ParPressetner festlegen", "hh-wptheme" ),
+		"remove_featured_image" => __( "Beitragsbild entfernen", "hh-wptheme" ),
+		"name_admin_bar" => __( "Presse", "hh-wptheme" ),
+		"item_published" => __( "Presse Beitrag veröffentlicht", "hh-wptheme" ),
+		"item_updated" => __( "Presse Beitrag aktualisiert", "hh-wptheme" ),
+	];
+
+	$args = [
+		"label" => __( "PartPressener", "hh-wptheme" ),
+		"labels" => $labels,
+		"description" => "Dieser Post Type verwaltet die Presse Beiträge für Helfen helfen Schweiz",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => false,
+		"rest_base" => "partner",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => false,
+		"delete_with_user" => false,
+		"exclude_from_search" => true,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => false,
+		"query_var" => true,
+		"menu_icon" => "dashicons-megaphone",
+		"supports" => [ "title", "custom-fields", "revisions", "author" ],
+	];
+
+	register_post_type( "hh_presse", $args );
 }
 
 add_action( 'init', 'cptui_register_my_cpts' );
