@@ -4,5 +4,12 @@
 		/* WordPress Footer Scripte einbauen */
 		wp_footer();
 		?>
+		<script>
+		/* Gravityforms DatePicker Language */
+		gform.addFilter('gform_datepicker_options_pre_init', function (optionsObj, formId, fieldId) {
+			jQuery.datepicker.regional['de'];
+			return optionsObj;
+		});
+		</script>
 	</body>
 </html>

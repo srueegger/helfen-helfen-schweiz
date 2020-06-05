@@ -27,3 +27,14 @@ function hh_change_separator( $separator, $form_id ) {
 	return ';';
 }
 add_filter( 'gform_export_separator', 'hh_change_separator', 10, 2 );
+
+/***************************************
+ * Datepicker Regional to Swiss / German
+ ***************************************/
+function hh_add_datepicker_regional() {
+	if ( wp_script_is( 'gform_datepicker_init' ) ) {
+		wp_enqueue_script( 'datepicker-regional', DIST_JS . '/datepicker-de.min.js', array( 'gform_datepicker_init' ), false, true );
+		remove_action( 'wp_enqueue_scripts', 'wp_localize_jquery_ui_datepicker', 1000 );
+	}
+}
+add_action( 'gform_enqueue_scripts', 'hh_add_datepicker_regional', 11 );
