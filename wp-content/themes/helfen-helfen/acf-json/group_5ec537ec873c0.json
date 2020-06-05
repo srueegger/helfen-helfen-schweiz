@@ -131,6 +131,25 @@
                     "multiple": 1,
                     "return_format": "id",
                     "ui": 1
+                },
+                {
+                    "key": "field_5eda5b3a06a74",
+                    "label": "Schliessen speichern",
+                    "name": "closesave",
+                    "type": "true_false",
+                    "instructions": "Wenn die Option ausgewählt ist, merkt sich der Browser, dass das Fenster geschlossen wurde und zeigt es nicht wieder an.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 }
             ]
         }
@@ -152,5 +171,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1589985033
+    "modified": 1591368567
 }

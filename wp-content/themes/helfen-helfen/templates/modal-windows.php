@@ -6,8 +6,12 @@ if( have_rows( 'setting_modalwindow_windows', 'option' ) ) {
 		$window_pages = get_sub_field( 'pages' );
 		if( in_array( get_queried_object_id(), $window_pages ) ) {
 			/* Modal Fenster ausgeben */
+			$saveclose = 'no';
+			if(get_sub_field( 'closesave' )) {
+				$saveclose = 'yes';
+			}
 			?>
-			<div class="modal fade helfen-helfen-modal" id="helfen-helfen-infowindow-<?php echo get_row_index(); ?>" tabindex="-1" role="dialog" aria-labelledby="helfen-helfen-infowindow-Label-<?php echo get_row_index(); ?>" aria-hidden="true">
+			<div data-saveclose="<?php echo $saveclose; ?>" class="modal fade helfen-helfen-modal" id="helfen-helfen-infowindow-<?php echo get_row_index(); ?>" tabindex="-1" role="dialog" aria-labelledby="helfen-helfen-infowindow-Label-<?php echo get_row_index(); ?>" aria-hidden="true">
 				<div class="modal-dialog modal-lg modal-dialog-centered">
 					<div class="modal-content">
 						<?php

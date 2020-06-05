@@ -228,9 +228,21 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 	if(modal_window_object.length) {
 		modal_window_object.each( function() {
 			var modal_id = $(this).attr('id');
-			$( '#' + modal_id ).modal('show');
+			/* Prüfen ob das Fenster geöffnet werden darf, falls ja öffnen */
+			if(sessionStorage.getItem('modal-' + modal_id) != 'notopen') {
+				$( '#' + modal_id ).modal('show');
+			}
 		});
 	}
+
+	/* Prüfen ob das schliessen des Modal Window gespeichert werden musss */
+	$('.modal').on('hidden.bs.modal', function () {
+		var save_close = $(this).data('saveclose');
+		if(save_close == 'yes') {
+			var modal_id = $(this).attr('id');
+			sessionStorage.setItem('modal-' + modal_id, 'notopen');
+		}
+	});
 
 	/* Bei Klick auf Scroll to Top Icon nach oben scrollen */
 	$('#scrollToTop').on('click', function() {
