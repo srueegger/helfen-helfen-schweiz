@@ -201,7 +201,7 @@ function hh_send_smtp( $phpmailer ) {
 	$phpmailer->FromName = get_field( 'sys_smtp_fromname', 'option' );
 	$phpmailer->CharSet = 'utf-8';
 }
-//add_action( 'phpmailer_init', 'hh_send_smtp' );
+add_action( 'phpmailer_init', 'hh_send_smtp' );
 
 
 /***************************************
