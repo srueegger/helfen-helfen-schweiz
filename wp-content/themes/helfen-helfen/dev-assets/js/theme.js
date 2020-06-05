@@ -20,6 +20,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 (function($) {
 	'use strict';
 
+	/* Globale Variabeln */
+
 	/* Slick Full Page Carousel laden */
 	var fullSlider = $('.hh-full-carousel');
 	fullSlider.slick(global_vars.slider_options);
@@ -238,4 +240,16 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 	$(document).on('gform_post_render', function(event, form_id, current_page) {
 		$('.gform_drop_instructions').text(global_vars.txt.gf_change_upload);
 	});
+
+	/* Gutenberg Abstandhalter für mobile Ansicht halbieren */
+	if($(window).width() <= 576) {
+		hh_half_gutenberg_spacers();
+	}
+
+	function hh_half_gutenberg_spacers() {
+		$('.wp-block-spacer').each(function() {
+			var spacer_height = $(this).outerHeight();
+			$(this).css('height', spacer_height / 2);
+		});
+	}
 })(jQuery);
