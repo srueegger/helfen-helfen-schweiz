@@ -69,7 +69,27 @@ function hh_startup_scripts() {
 		'ajax_url' => admin_url('admin-ajax.php'),
 		'ajax_secure' => wp_create_nonce('jtidb-check-ajax-secure'),
 		'txt' => array(
-			'arrow_bottom' => '<div class="fullpageArrowBottom"><i class="fas fa-angle-down fa-3x"></i></div>'
+			'arrow_bottom' => '<div class="fullpageArrowBottom"><i class="fas fa-angle-down fa-3x"></i></div>',
+			'gf_change_upload' => 'Ziehe Dateien hier hin oder',
+		),
+		'slider_options' => array(
+			'infinite' => false,
+			'slidesToShow' => 2,
+			'slidesToScroll' => 1,
+			'arrows' => true,
+			'dots' => false,
+			'prevArrow' => '<button type="button" class="slick-prev"><i class="fa fa-arrow-left"></i></button>',
+			'nextArrow' => '<button type="button" class="slick-next"><i class="fa fa-arrow-right"></i></button>',
+			'responsive' => array(
+				array(
+					'breakpoint' => 769,
+					'settings' => array(
+						'slidesToShow' => 1,
+						'arrows' => false,
+						'dots' => true
+					)
+				)
+			)
 		)
 	);
 	wp_localize_script( 'hh-script', 'global_vars', $global_vars );

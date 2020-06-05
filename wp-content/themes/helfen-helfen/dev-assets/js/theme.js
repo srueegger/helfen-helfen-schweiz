@@ -22,25 +22,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
 	/* Slick Full Page Carousel laden */
 	var fullSlider = $('.hh-full-carousel');
-	fullSlider.slick({
-		infinite: false,
-		slidesToShow: 2,
-		slidesToScroll: 1,
-		arrows: true,
-		dots: false,
-		prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-arrow-left"></i></button>',
-		nextArrow: '<button type="button" class="slick-next"><i class="fa fa-arrow-right"></i></button>',
-		responsive: [
-			{
-				breakpoint: 769,
-				settings: {
-					slidesToShow: 1,
-					arrows: false,
-					dots: true
-				}
-			}
-		]
-	});
+	fullSlider.slick(global_vars.slider_options);
 
 	/* Slick Slider über das Mausrad steuern */
 	fullSlider.on('wheel', (function(e) {
@@ -250,5 +232,10 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 	/* Bei Klick auf Scroll to Top Icon nach oben scrollen */
 	$('#scrollToTop').on('click', function() {
 		$('html, body').animate({ scrollTop: 0 }, 'slow');
+	});
+
+	/* GravityForms Changes after Page Load */
+	$(document).on('gform_post_render', function(event, form_id, current_page) {
+		$('.gform_drop_instructions').text(global_vars.txt.gf_change_upload);
 	});
 })(jQuery);
