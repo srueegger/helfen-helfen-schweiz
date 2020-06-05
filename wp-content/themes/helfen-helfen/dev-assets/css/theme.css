@@ -10184,13 +10184,10 @@ main.page h2 {
   overflow: hidden;
 }
 .wp-block-gallery a img {
-  -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
 .wp-block-gallery a img:hover {
-  -webkit-transform: scale(1.15);
   transform: scale(1.15);
-  -webkit-filter: brightness(50%);
   filter: brightness(50%);
 }
 .wp-block-gallery.no-gutters li {
@@ -11407,6 +11404,31 @@ blockquote {
   padding-left: 15px;
   font-size: 1.125rem;
   font-weight: 700;
+}
+
+#cookieBanner {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 15px 0;
+  z-index: 99999;
+  max-height: 0;
+  visibility: hidden;
+  transition: all 1s linear;
+}
+#cookieBanner button {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#cookieBanner p {
+  font-size: 0.8em;
+}
+#cookieBanner.show {
+  max-height: 1000px;
+  visibility: visible;
+  transition: all 0.35s linear;
 }
 
 /* CSS für die Error 404 Seite */

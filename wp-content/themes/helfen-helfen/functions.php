@@ -159,6 +159,14 @@ function hh_acf_init() {
 		'parent_slug' => 'edit.php?post_type=hh_jobs',
 	);
 	acf_add_options_sub_page($args);
+	/* Cookie Banner Einstellungen */
+	$args = array(
+		'page_title' => 'Einstellungen für den Cookie Banner',
+		'menu_title' => 'Cookie Banner',
+		'menu_slug' => 'hh-cookiebanner-settings',
+		'parent_slug' => 'themes.php',
+	);
+	acf_add_options_sub_page($args);
 }
 add_action( 'acf/init', 'hh_acf_init' );
 
@@ -312,6 +320,6 @@ add_filter('acf/load_field/name=block_cf_form', 'hh_acf_populate_gf_forms');
  * 	 Limit Exceprt Length
  ***************************************/
 function hh_custom_excerpt_length( $length ) {
-	return 25;
+	return 35;
 }
 add_filter( 'excerpt_length', 'hh_custom_excerpt_length', 999 );

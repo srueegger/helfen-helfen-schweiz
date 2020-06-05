@@ -995,3 +995,28 @@ blockquote {
 		}
 	}
 }
+
+#cookieBanner {
+	background-color: $white;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding: 15px 0;
+	z-index: 99999;
+	max-height: 0;
+	visibility: hidden;
+	transition: all 1s linear;
+	button {
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+	p {
+		font-size: .8em;
+	}
+	&.show {
+		max-height: 1000px;
+		visibility: visible;
+		transition: all .35s linear;
+	}
+}

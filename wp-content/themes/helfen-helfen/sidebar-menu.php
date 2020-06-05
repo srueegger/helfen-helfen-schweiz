@@ -76,7 +76,7 @@
 	<?php
 	/* Die neusten beiden veröffentlichten Newsbeiträge auslesen */
 	$args = array(
-		'posts_per_page' => 2,
+		'posts_per_page' => 1,
 		'post_type' => 'post',
 		'post_status' => 'publish',
 		'orderby' => 'date',

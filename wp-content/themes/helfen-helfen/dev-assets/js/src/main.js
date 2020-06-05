@@ -2,6 +2,7 @@
 	'use strict';
 
 	/* Globale Variabeln */
+	var has_close_cookie_banner = localStorage.getItem('cookieBanner');
 
 	/* Slick Full Page Carousel laden */
 	var fullSlider = $('.hh-full-carousel');
@@ -233,4 +234,18 @@
 			$(this).css('height', spacer_height / 2);
 		});
 	}
+
+	/* Falls kein LocaStorage besteht Cookie Banner anzeigen */
+	var cookie_banner = $('#cookieBanner');
+	if(has_close_cookie_banner != 1) {
+		cookie_banner.addClass('show');
+	}
+
+	/* Cookie Banner schliessen */
+	$('#closeCookieBanner').on('click', function() {
+		/* Schliessen des Cookie Banner in der localstorage speichern */
+		localStorage.setItem('cookieBanner', 1)
+		/* Cookie Banner schliessen */
+		cookie_banner.removeClass('show');
+	});
 })(jQuery);

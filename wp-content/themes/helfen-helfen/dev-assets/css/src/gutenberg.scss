@@ -82,13 +82,10 @@ main {
 	a {
 		overflow: hidden;
 		img {
-			-webkit-transition: all .5s linear;
 			transition: all .5s linear;
 			&:hover {
-				-webkit-transform: scale(1.15);
-						transform: scale(1.15);
-				-webkit-filter: brightness(50%);
-						filter: brightness(50%);
+				transform: scale(1.15);
+				filter: brightness(50%);
 			}
 		}
 	}
