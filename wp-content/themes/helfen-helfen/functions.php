@@ -52,17 +52,19 @@ add_action( 'after_setup_theme', 'register_hh_menu' );
  ***************************************/
 function hh_startup_scripts() {
 	wp_enqueue_style( 'hh-fonts', 'https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap', null, false );
-	wp_enqueue_script( 'hh-counterup', DIST_JS . '/jquery.rcounterup.min.js', array('jquery'), '1.0', true );
+	wp_enqueue_script( 'hh-counterup', DIST_JS . '/jquery.rcounterup.min.js', array('jquery'), '1.0', false );
+	/* Raisenow Widget JS Code */
+	wp_enqueue_script( 'hh-raisenow', 'https://widget.raisenow.com/widgets/lema/helfe-077a/js/dds-init-widget-de.js', array(), false, true );
 	if (WP_DEBUG) {
 		$modificated_css = date( 'YmdHis', filemtime( get_stylesheet_directory() . '/dev-assets/css/theme.css' ) );
 		$modificated_js = date( 'YmdHis', filemtime( get_stylesheet_directory() . '/dev-assets/js/theme.js' ) );
 		wp_register_style( 'hh-style', DEV_CSS . '/theme.css', array('hh-fonts'), $modificated_css );
-		wp_register_script( 'hh-script', DEV_JS . '/theme.js', array('jquery', 'hh-counterup'), $modificated_js, true );
+		wp_register_script( 'hh-script', DEV_JS . '/theme.js', array('jquery', 'hh-counterup', 'hh-raisenow'), $modificated_js, true );
 	} else {
 		$modificated_css = date( 'YmdHis', filemtime( get_stylesheet_directory() . '/dist-assets/css/theme.min.css' ) );
 		$modificated_js = date( 'YmdHis', filemtime( get_stylesheet_directory() . '/dist-assets/js/theme.min.js' ) );
 		wp_register_style( 'hh-style', DIST_CSS . '/theme.min.css', array('hh-fonts'), $modificated_css );
-		wp_register_script( 'hh-script', DIST_JS . '/theme.min.js', array('jquery', 'hh-counterup'), $modificated_js, true );
+		wp_register_script( 'hh-script', DIST_JS . '/theme.min.js', array('jquery', 'hh-counterup', 'hh-raisenow'), $modificated_js, true );
 	}
 	$global_vars = array(
 		'home_url' => HOME_URI,

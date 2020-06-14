@@ -11433,6 +11433,11 @@ blockquote {
   transition: all 0.35s linear;
 }
 
+#lema-container {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 /* CSS für die Error 404 Seite */
 #page-404 {
   min-height: 100vh;
