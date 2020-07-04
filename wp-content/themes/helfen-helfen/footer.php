@@ -8,9 +8,9 @@
 		/* Gravityforms DatePicker Language */
 		if(jQuery('.gform_wrapper').length) {
 			gform.addFilter('gform_datepicker_options_pre_init', function (optionsObj, formId, fieldId) {
-			jQuery.datepicker.regional['de'];
-			return optionsObj;
-		});
+				jQuery.datepicker.regional['de'];
+				return optionsObj;
+			});
 		}
 		</script>
 	</body>
