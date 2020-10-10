@@ -38,3 +38,54 @@ function hh_add_datepicker_regional() {
 	}
 }
 add_action( 'gform_enqueue_scripts', 'hh_add_datepicker_regional', 11 );
+
+/***************************************
+ * Jobs zum Formular Mitglied werden hinzufügen (als Checkboxen)
+ ***************************************/
+function hh_add_jobs_to_member_form( $form ) {
+	foreach ( $form['fields'] as $field ) {
+		if ( $field->type != 'checkbox' || strpos( $field->cssClass, 'hh_add_dynamic_jobs' ) === false ) {
+			continue;
+		}
+		if($field->pageNumber == 6) {
+			continue;
+		}
+		print_r($form);
+		/* Alle Jobs auslesen */
+		$args = array(
+			'numberposts' => -1,
+			'post_status' => 'publish',
+			'post_type' => 'hh_jobs',
+			'orderby' => 'date',
+			'order' => 'ASC'
+		);
+		$jobs = get_posts( $args );
+		if(!empty($jobs)) {
+			$input_counter = count($field->inputs) + 1;;
+			$new_choices = array();
+			$new_inputs = array();
+			foreach( $jobs as $job ) {
+				$job_title = 'Aktivmitglied (' . $job->post_title . ')';
+				$new_choices[] = array(
+					'text' => $job_title,
+					'value' => $job_title
+				);
+				$new_inputs[] = array(
+					'label' => $job_title,
+					'id' => '19.' . $input_counter
+				);
+				$input_counter++;
+			}
+			$old_choices = $field->choices;
+			$merge_choices = array_merge( $old_choices, $new_choices );
+			$field->choices = $merge_choices;
+			$old_inputs = $field->inputs;
+			$merge_inputs = array_merge( $old_inputs, $new_inputs );
+			$field->inputs = $merge_inputs;
+		}
+	}
+	return $form;
+}
+add_filter( 'gform_pre_render_2', 'hh_add_jobs_to_member_form' );
+add_filter( 'gform_pre_submission_filter_2', 'hh_add_jobs_to_member_form' );
+add_filter( 'gform_admin_pre_render_2', 'hh_add_jobs_to_member_form' );
