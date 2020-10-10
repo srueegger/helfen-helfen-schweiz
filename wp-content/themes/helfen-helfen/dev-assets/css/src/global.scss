@@ -811,7 +811,7 @@ blockquote {
 		ul {
 			li {
 				&:not(:last-of-type) {
-					margin-bottom: 1.25em;
+					margin-bottom: 1.5em;
 				}
 			}
 		}
@@ -819,11 +819,18 @@ blockquote {
 			color: $white;
 			text-decoration: none;
 			font-weight: 700;
-			@include font-size(3rem);
+			@include font-size(2rem);
 			transition: all .3s ease-in;
 			text-transform: uppercase;
 			&:hover{
 				text-decoration: underline;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+		.inner {
+			a {
+				white-space: nowrap;
 			}
 		}
 	}
