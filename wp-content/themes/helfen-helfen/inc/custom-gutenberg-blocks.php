@@ -121,6 +121,18 @@ function register_acf_block_types() {
 		'keywords' => array( 'list', 'check' ),
 		'mode' => 'edit'
 	));
+
+	//Newsletter Anmeldung Block
+	acf_register_block_type(array(
+		'name' => 'hh_newsletter',
+		'title' => __('Newsletter Anmeldung'),
+		'description' => __('Der Block zeigt eine Checkliste an'),
+		'render_template' => '/blocks/newsletter.php',
+		'category' => 'layout',
+		'icon' => 'edit',
+		'keywords' => array( 'anmeldung', 'newsletter' ),
+		'mode' => 'edit'
+	));
 }
 
 // Check if function exists and hook into setup.

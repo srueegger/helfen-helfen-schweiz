@@ -261,6 +261,13 @@
 		cookie_banner.removeClass('show');
 	});
 
+	/* Neues Newsletter Formular set Placeholder */
+	$('#rm-firstname').attr('placeholder', 'Vorname');
+	$('#rm-lastname').attr('placeholder', 'Nachname');
+	$('#rm-email').attr('placeholder', 'E-Mail-Adresse');
+	$('#rm-firstname').attr('required', 'required');
+	$('#rm-lastname').attr('required', 'required');
+
 	/* Bild Polyfill für IE aktivieren */
 	objectFitPolyfill();
 })(jQuery);

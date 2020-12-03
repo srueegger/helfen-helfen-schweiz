@@ -1041,3 +1041,42 @@ blockquote {
 		object-position: top;
 	}
 }
+
+.rm-form-container {
+	padding: 25px 0 50px 0;
+	label {
+		display: none;
+	}
+	li {
+		margin-bottom: 15px !important;
+		input {
+			width: 100%;
+		}
+		input[type="submit"] {
+			@extend .btn;
+			@extend .btn-secondary;
+		}
+	}
+	li[rel="firstname"],
+	li[rel="lastname"] {
+		display: block;
+		width: 100%;
+	}
+	@include media-breakpoint-up(lg) {
+		li[rel="firstname"],
+		li[rel="lastname"] {
+			display: inline-block;
+			width: calc(50% - 7.5px);
+		}
+		li[rel="firstname"] {
+			margin-right: 7.5px;
+		}
+		li[rel="lastname"] {
+			margin-left: 7.5px;
+		}
+	}
+}
+
+.h2.important {
+	font-size: 2rem !important;
+}
