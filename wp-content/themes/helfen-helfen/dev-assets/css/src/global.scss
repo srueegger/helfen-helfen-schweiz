@@ -1036,5 +1036,8 @@ blockquote {
 }
 
 .fix-bild {
-	object-fit: contain;
+	img {
+		object-fit: contain;
+		object-position: top;
+	}
 }

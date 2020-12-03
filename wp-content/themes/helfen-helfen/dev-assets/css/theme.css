@@ -11428,8 +11428,9 @@ blockquote {
   margin-right: auto !important;
 }
 
-.fix-bild {
+.fix-bild img {
   object-fit: contain;
+  object-position: top;
 }
 
 /* CSS für die Error 404 Seite */
