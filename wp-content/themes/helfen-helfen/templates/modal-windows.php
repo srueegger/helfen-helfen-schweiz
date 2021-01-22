@@ -4,7 +4,11 @@ if( have_rows( 'setting_modalwindow_windows', 'option' ) ) {
 	while( have_rows( 'setting_modalwindow_windows', 'option' ) ) {
 		the_row();
 		$window_pages = get_sub_field( 'pages' );
-		if( in_array( get_queried_object_id(), $window_pages ) ) {
+		$show_window = false;
+		if( get_sub_field( 'job_oberview' ) && is_post_type_archive( 'hh_jobs' )) {
+			$show_window = true;
+		}
+		if( in_array( get_queried_object_id(), $window_pages ) || $show_window ) {
 			/* Modal Fenster ausgeben */
 			$saveclose = 'no';
 			if(get_sub_field( 'closesave' )) {
