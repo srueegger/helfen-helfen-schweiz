@@ -21,12 +21,10 @@
 			<div id="logoContainer"<?php echo $addLogoClass; ?>>
 				<a href="<?php echo HOME_URI; ?>" target="_self">
 					<picture>
-						<source srcset="<?php echo THEME_IMAGES; ?>/logo-black@2x.png 2x, <?php echo THEME_IMAGES; ?>/logo-black.png 1x">
-						<img class="logo-normal" src="<?php echo THEME_IMAGES; ?>/logo-black.png" alt="">
+						<img class="logo-normal" src="<?php echo THEME_IMAGES; ?>/logo_blue.svg" alt="">
 					</picture>
 					<picture>
-						<source srcset="<?php echo THEME_IMAGES; ?>/logo-white@2x.png 2x, <?php echo THEME_IMAGES; ?>/logo-white.png 1x">
-						<img class="logo-invert d-none" src="<?php echo THEME_IMAGES; ?>/logo-white.png" alt="">
+						<img class="logo-invert d-none" src="<?php echo THEME_IMAGES; ?>/logo_black.svg" alt="">
 					</picture>
 				</a>
 			</div>

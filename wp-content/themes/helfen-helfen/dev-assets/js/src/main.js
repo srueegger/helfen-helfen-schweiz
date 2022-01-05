@@ -31,11 +31,8 @@
 	/* Funktion die Menübutton und Logo invertiert / bzw wieder normal darstellt */
 	function invertBTNs() {
 		/* Logo invertieren */
-		$('#logoContainer').toggleClass('invert');
 		$('.logo-normal').toggleClass('d-none');
 		$('.logo-invert').toggleClass('d-none');
-		/* Menübutton invertieren */
-		$('#menuButton').toggleClass('invert');
 	}
 
 	/* Hauptmenü Desktop steuern */
