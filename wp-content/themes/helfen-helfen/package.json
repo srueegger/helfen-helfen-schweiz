@@ -1,21 +1,21 @@
 {
-  "name": "jtidb",
-  "title": "JTI Datenbank",
+  "name": "hhtheme",
+  "title": "Helfen Helfen Theme",
   "description": "JTI Datenbank für Stewards",
   "version": "0.1.0",
-  "homepage": "https://compresso.ch",
+  "homepage": "https://rueegger.me",
   "author": {
     "name": "Samuel Rüegger",
-    "email": "rueegger@gmail.com"
+    "email": "samuel@rueegger.me"
   },
   "devDependencies": {
-    "bootstrap": "^4.6.1",
-    "grunt": "^1.4.1",
-    "grunt-contrib-concat": "^2.0.0",
+    "bootstrap": "^4.6.2",
+    "grunt": "^1.6.1",
+    "grunt-contrib-concat": "^2.1.0",
     "grunt-contrib-cssmin": "^4.0.0",
-    "grunt-contrib-jshint": "^3.1.1",
+    "grunt-contrib-jshint": "^3.2.0",
     "grunt-contrib-sass": "^2.0.0",
-    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-contrib-uglify": "^5.2.2",
     "grunt-contrib-watch": "^1.1.0",
     "matchdep": "^2.0.0",
     "slick-carousel": "^1.8.1",

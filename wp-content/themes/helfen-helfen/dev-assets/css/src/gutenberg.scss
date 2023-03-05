@@ -107,7 +107,6 @@ main {
 	svg {
 		@include font-size(3rem);
 		margin-bottom: 15px;
-		color: $secondary;
 	}
 	.number {
 		@include font-size(3.5rem);
