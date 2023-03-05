@@ -121,3 +121,10 @@ main {
 		word-wrap: break-word;
 	}
 }
+
+.wp-block-columns {
+	&.no-spacer {
+		margin-bottom: 0;
+		gap: 0;
+	}
+}

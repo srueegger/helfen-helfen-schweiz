@@ -9598,6 +9598,11 @@ main.page h2 {
   word-wrap: break-word;
 }
 
+.wp-block-columns.no-spacer {
+  margin-bottom: 0;
+  gap: 0;
+}
+
 body .gform_wrapper {
   margin-top: 0;
   margin-bottom: 0;
@@ -9799,20 +9804,17 @@ blockquote {
   position: fixed;
   right: 20px;
   top: 20px;
-  background-color: #fff;
+  background-color: #193a72;
   width: 60px;
   height: 60px;
   border-radius: 100%;
   z-index: 1030;
   text-align: center;
 }
-#menuButton.invert {
-  background-color: #000;
-}
-#menuButton.invert .hamburger-inner {
+#menuButton .hamburger-inner {
   background-color: #fff;
 }
-#menuButton.invert .hamburger-inner:before, #menuButton.invert .hamburger-inner:after {
+#menuButton .hamburger-inner:before, #menuButton .hamburger-inner:after {
   background-color: #fff;
 }
 @media (min-width: 768px) {
@@ -9850,7 +9852,7 @@ blockquote {
   right: 0;
 }
 .main_menu .footer {
-  background-color: #000;
+  background-color: #193a72;
   color: #fff;
 }
 .main_menu .footer a {
@@ -9895,7 +9897,7 @@ blockquote {
 }
 
 .menu-list .menu-item a {
-  color: #000;
+  color: #193a72;
   font-weight: 700;
   font-size: 4.5rem;
 }
@@ -9973,7 +9975,7 @@ blockquote {
 }
 
 .submenu-list .menu-item a {
-  color: #000;
+  color: #193a72;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.4rem;
@@ -9985,10 +9987,9 @@ blockquote {
 }
 .submenu-list .menu-item a:hover {
   text-decoration: underline;
-  text-decoration-color: #193a72;
 }
 .submenu-list .menu-item:not(:last-of-type) {
-  border-right: 1px solid #000;
+  border-right: 1px solid #193a72;
   padding-right: 11px;
 }
 
@@ -10007,7 +10008,7 @@ blockquote {
 }
 
 .custom-sub-menu .menu-item a {
-  color: #000;
+  color: #193a72;
   font-weight: 500;
   text-transform: uppercase;
   font-size: 3rem;
@@ -10366,7 +10367,7 @@ blockquote {
   top: 40px;
 }
 .kopfItem:hover .titleTxt h2 {
-  color: #ffd500;
+  color: #fff;
 }
 .kopfItem:hover .quoteInfos {
   overflow: visible;
@@ -10440,6 +10441,12 @@ blockquote {
 #mitstreiter-list .mitstreiterItem {
   height: 400px;
   overflow: hidden;
+}
+.foerderer .foerdererItem.heightfix,
+.foerderer .mitstreiterItem.heightfix,
+#mitstreiter-list .foerdererItem.heightfix,
+#mitstreiter-list .mitstreiterItem.heightfix {
+  height: 520px;
 }
 .foerderer .foerdererItem img,
 .foerderer .mitstreiterItem img,
@@ -10841,6 +10848,10 @@ blockquote {
 
 .h2.important {
   font-size: 2rem !important;
+}
+
+ul .container {
+  padding: 0;
 }
 
 /* CSS für die Error 404 Seite */

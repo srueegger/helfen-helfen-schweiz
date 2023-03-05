@@ -52,17 +52,11 @@ if( !empty($block['align']) ) {
 							</div>
 							<div class="infoContent ml-4">
 								<a href="mailto:<?php the_field('kopf_mail', get_the_ID()); ?>">
-									<span class="fa-stack fa-2x">
-										<i class="fas fa-circle fa-stack-2x"></i>
-										<i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-									</span>
+									<i class="fas fa-envelope fa-inverse fa-2x fa-fw"></i>
 								</a>
 								<?php if(get_field('kopf_sm', get_the_ID()) != -1) { ?>
 								<a href="<?php the_field('kopf_sm_link', get_the_ID()); ?>" target="_blank">
-									<span class="fa-stack fa-2x">
-										<i class="fas fa-circle fa-stack-2x"></i>
-										<i class="fab fa-<?php the_field('kopf_sm', get_the_ID()); ?> fa-stack-1x fa-inverse"></i>
-									</span>
+									<i class="fab fa-<?php the_field('kopf_sm', get_the_ID()); ?> fa-2x fa-fw fa-inverse"></i>
 								</a>
 								<?php } ?>
 							</div>

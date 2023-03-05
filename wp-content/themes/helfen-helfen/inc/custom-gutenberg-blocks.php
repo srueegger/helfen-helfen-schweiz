@@ -133,6 +133,18 @@ function register_acf_block_types() {
 		'keywords' => array( 'anmeldung', 'newsletter' ),
 		'mode' => 'edit'
 	));
+
+	//Kachelliste Block
+	acf_register_block_type(array(
+		'name' => 'hh_kachellist',
+		'title' => __('Kachelliste'),
+		'description' => __('Der Block zeigt ein Kachelmenü an'),
+		'render_template' => '/blocks/kachellist.php',
+		'category' => 'layout',
+		'icon' => 'edit',
+		'keywords' => array( 'list', 'kachel' ),
+		'mode' => 'edit'
+	));
 }
 
 // Check if function exists and hook into setup.
