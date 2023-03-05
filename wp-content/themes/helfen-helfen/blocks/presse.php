@@ -6,7 +6,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'presse';
+$className = 'presse foerderer';
 if( !empty($block['className']) ) {
 	$className .= '' . $block['className'];
 }
@@ -15,63 +15,41 @@ if( !empty($block['align']) ) {
 }
 ?>
 <div id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $className ); ?>">
-		<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
-		<?php
-		$args = array(
-			'numberposts' => -1,
-			'post_type' => 'hh_presse',
-			'orderby' => 'date',
-			'order' => 'DESC',
-			'post_status' => 'publish'
-		);
-		$presse = get_posts($args);
-		if(!empty($presse)) {
-			global $post;
-			$i = 1;
-			foreach($presse as $post) {
-				setup_postdata( $post );
-				$image = get_field('presse_image', get_the_ID());
-				$link = get_field('presse_link', get_the_ID());
-				if ($i % 2 != 0) {
-					$headerBG = 'bg-primary text-white';
-				} else {
-					$headerBG = 'bg-secondary';
-				}
-				?>
-				<div class="col mb-4">
-					<div class="card border-0">
-						<div class="card-header font-weight-bold text-right <?php echo $headerBG; ?>">
-							Vom <?php the_time( get_option( 'date_format' ) ); ?>
-						</div>
-						<?php
-						if(!empty($image)) {
-							?>
-							<picture>
-								<source srcset="<?php echo $image['sizes']['presse']; ?> 1x, <?php echo $image['sizes']['presse2x']; ?> 2x">
-								<img src="<?php echo $image['sizes']['presse']; ?>" class="card-img-top" loading="lazy" alt="<?php echo $image['alt']; ?>">
-							</picture>
-							<?php
-						}
-						?>
-						<div class="card-body">
-							<?php
-							the_title('<h5 class="card-title">', '</h5>');
-							the_content();
-							if($link) {
-								$link_target = $link['target'] ? $link['target'] : '_self';
-								?>
-								<a href="<?php echo $link['url']; ?>" target="<?php echo $link_target; ?>" class="card-link"><i class="far fa-globe-europe mr-2"></i><?php echo $link['title']; ?></a>
-								<?php
-								}
-							?>
-						</div>
+	<?php
+	$args = array(
+		'numberposts' => -1,
+		'post_type' => 'hh_presse',
+		'orderby' => 'date',
+		'order' => 'DESC',
+		'post_status' => 'publish'
+	);
+	$presse = get_posts($args);
+	if( !empty( $presse ) ) {
+		global $post;
+		echo '<div class="row no-gutters">';
+		foreach( $presse as $post ) {
+			setup_postdata( $post );
+			$image = get_field( 'presse_image', get_the_ID() );
+			$link = get_field( 'presse_link', get_the_ID() );
+			$link_target = $link['target'] ? $link['target'] : '_self';
+			echo '<div class="col-12 col-lg-6 col-xl-4 foerdererItem">';
+			?>
+			<a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+				<picture>
+					<source srcset="<?php echo $image['sizes']['kopf']; ?> 1x, <?php echo $image['sizes']['kopf2x']; ?> 2x">
+					<img data-object-fit="cover" src="<?php echo $image['sizes']['kopf']; ?>" loading="lazy" alt="<?php echo $image['alt']; ?>">
+				</picture>
+				<div class="overlay">
+					<div class="inner">
+						<h2><?php echo esc_attr( get_the_title( get_the_ID() ) ); ?></h2>
 					</div>
 				</div>
-				<?php
-				$i++;
-			}
-			wp_reset_postdata();
+			</a>
+			<?php
+			echo '</div>';
 		}
-		?>
-	</div>
+		wp_reset_postdata();
+		echo '</div>';
+	}
+	?>
 </div>

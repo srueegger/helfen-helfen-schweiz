@@ -145,6 +145,42 @@ function register_acf_block_types() {
 		'keywords' => array( 'list', 'kachel' ),
 		'mode' => 'edit'
 	));
+
+	//FAQ Block
+	acf_register_block_type(array(
+		'name' => 'hh_faq',
+		'title' => __('FAQ'),
+		'description' => __('Der Block zeigt das FAQ-Menü an'),
+		'render_template' => '/blocks/faq.php',
+		'category' => 'layout',
+		'icon' => 'edit',
+		'keywords' => array( 'faq', 'fragen' ),
+		'mode' => 'edit'
+	));
+
+	//History Carousel Block
+	acf_register_block_type(array(
+		'name' => 'hh_historyslider',
+		'title' => __('History Slider'),
+		'description' => __('Der Block zeigt den History Slider an'),
+		'render_template' => '/blocks/historycarousel.php',
+		'category' => 'layout',
+		'icon' => 'edit',
+		'keywords' => array( 'history', 'geschichte' ),
+		'mode' => 'edit'
+	));
+
+	//History Carousel Block
+	acf_register_block_type(array(
+		'name' => 'hh_socialmedia',
+		'title' => __('Social Media'),
+		'description' => __('Der Block zeigt einen Social Media Banner an'),
+		'render_template' => '/blocks/social.php',
+		'category' => 'layout',
+		'icon' => 'edit',
+		'keywords' => array( 'social', 'media' ),
+		'mode' => 'edit'
+	));
 }
 
 // Check if function exists and hook into setup.

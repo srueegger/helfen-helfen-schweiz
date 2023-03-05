@@ -3,9 +3,10 @@
     "title": "Block: Kontaktformular",
     "fields": [
         {
-            "key": "field_5ead5f11fe7eb",
-            "label": "Hintegrundfarbe wählen",
-            "name": "block_cf_bgcolor",
+            "key": "field_5ead5f43fe7ec",
+            "label": "Formular auswählen",
+            "name": "block_cf_form",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 1,
@@ -16,31 +17,11 @@
                 "id": ""
             },
             "choices": {
-                "bg-primary": "Blau",
-                "bg-secondary": "Gelb"
+                "2": "Mitglied werden",
+                "3": "Kontaktformular",
+                "5": "Neue Kampagne unterstützen",
+                "7": "Gönner*in werden"
             },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 1,
-            "ajax": 0,
-            "return_format": "value",
-            "placeholder": ""
-        },
-        {
-            "key": "field_5ead5f43fe7ec",
-            "label": "Formular auswählen",
-            "name": "block_cf_form",
-            "type": "select",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": [],
             "default_value": [],
             "allow_null": 0,
             "multiple": 0,
@@ -65,7 +46,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1588420517
+    "show_in_rest": 0,
+    "modified": 1678021220
 }

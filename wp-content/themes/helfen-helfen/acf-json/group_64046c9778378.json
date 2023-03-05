@@ -1,7 +1,28 @@
 {
     "key": "group_64046c9778378",
-    "title": "Kachelliste",
+    "title": "Block: Kachelliste",
     "fields": [
+        {
+            "key": "field_64047004d68ee",
+            "label": "Anzahl Spalten",
+            "name": "block_kachellist_columns",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "min": 2,
+            "max": 3,
+            "step": 1,
+            "prepend": "",
+            "append": ""
+        },
         {
             "key": "field_64046c971899a",
             "label": "Elemente",
@@ -66,6 +87,27 @@
                     },
                     "return_format": "array",
                     "parent_repeater": "field_64046c971899a"
+                },
+                {
+                    "key": "field_64048ee266dd5",
+                    "label": "Untertitel",
+                    "name": "subtitle",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_64046c971899a"
                 }
             ]
         }
@@ -88,5 +130,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1678012158
+    "modified": 1678020523
 }

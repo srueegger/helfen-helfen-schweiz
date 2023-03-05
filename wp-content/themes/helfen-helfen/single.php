@@ -42,7 +42,7 @@ $image = get_field('news_image');
 						?>
 					</div>
 					<div class="col-12 col-lg-4 home-news-link">
-						<a href="<?php echo get_post_type_archive_link('post'); ?>" target="self" class="btn btn-secondary btn-lg">Zum Newsarchiv</a>
+						<a href="<?php echo get_post_type_archive_link('post'); ?>" target="self" class="btn btn-outline-primary btn-lg">Zum Newsarchiv</a>
 					</div>
 					<div class="col-12 col-lg-4 prev-news-link">
 						<?php

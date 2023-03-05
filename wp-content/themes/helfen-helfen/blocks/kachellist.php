@@ -39,11 +39,8 @@ if( $columns == 2 ) {
             <div class="inner">
               <h2><?php echo esc_attr( $link['title'] ); ?></h2>
               <?php
-              if(!empty($h1_txt)) {
-                echo '<h1 class="h3">'.$h1_txt.'</h1>';
-              }
-              if(!empty($h2_txt)) {
-                echo '<h2>'.$h2_txt.'</h2>';
+              if( !empty( get_sub_field( 'subtitle' ) ) ) {
+                echo '<p class="font-weight-bold">' . esc_attr( get_sub_field( 'subtitle' ) ) . '</p>';
               }
               ?>
             </div>

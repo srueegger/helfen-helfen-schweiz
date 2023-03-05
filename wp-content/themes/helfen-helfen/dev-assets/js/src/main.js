@@ -80,7 +80,7 @@
 	});
 
 	/* In den Full-Image Block den ScrollDown Pfeil einfügen */
-	$('.wp-block-cover.fullpage').append(global_vars.txt.arrow_bottom);
+	$('.wp-block-cover.fullpage, .wp-block-video.fullpage').append(global_vars.txt.arrow_bottom);
 
 	/* 100vh herunterscrollen nach Klick auf das Scroll Down Icon */
 	$(document).on('click', '.fullpageArrowBottom', function() {
@@ -264,6 +264,26 @@
 	$('#rm-email').attr('placeholder', 'E-Mail-Adresse');
 	$('#rm-firstname').attr('required', 'required');
 	$('#rm-lastname').attr('required', 'required');
+
+	/* Swiper */
+	/* Init History Slider */
+  var timelineSwiper = new Swiper ('.timeline .swiper-container', {
+    direction: 'vertical',
+    loop: false,
+    speed: 1600,
+    dynamicBullets: true,
+    pagination: {
+      el: '.swiper-pagination',
+      renderBullet: function (index, className) {
+        var year = document.querySelectorAll('.swiper-slide')[index].getAttribute('data-year');
+        return '<span class="' + className + '">' + year + '</span>';
+      },
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.slider-next-element'
+    }
+  });
 
 	/* Bild Polyfill für IE aktivieren */
 	objectFitPolyfill();

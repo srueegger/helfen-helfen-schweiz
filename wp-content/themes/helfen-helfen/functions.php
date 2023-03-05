@@ -21,7 +21,7 @@ require_once 'inc/gravityforms.php';
 /***************************************
  * 		Theme Support and Options
  ***************************************/
-add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'script', 'style' ) );
 add_theme_support( 'title-tag' );
 add_theme_support( 'menus' );
 add_theme_support( 'responsive-embeds' );
@@ -55,16 +55,18 @@ function hh_startup_scripts() {
 	wp_enqueue_script( 'hh-counterup', DIST_JS . '/jquery.rcounterup.min.js', array('jquery'), '1.0', false );
 	/* Raisenow Widget JS Code */
 	wp_enqueue_script( 'hh-raisenow', 'https://widget.raisenow.com/widgets/lema/helfe-077a/js/dds-init-widget-de.js', array(), false, true );
+	/* Swiper Script */
+	wp_enqueue_script( 'swiper', DIST_JS . '/swiper.min.js', array( 'jquery' ), '9.1.0', true );
 	if (WP_DEBUG) {
 		$modificated_css = date( 'YmdHis', filemtime( get_stylesheet_directory() . '/dev-assets/css/theme.css' ) );
 		$modificated_js = date( 'YmdHis', filemtime( get_stylesheet_directory() . '/dev-assets/js/theme.js' ) );
 		wp_register_style( 'hh-style', DEV_CSS . '/theme.css', array('hh-fonts'), $modificated_css );
-		wp_register_script( 'hh-script', DEV_JS . '/theme.js', array('jquery', 'hh-counterup', 'hh-raisenow'), $modificated_js, true );
+		wp_register_script( 'hh-script', DEV_JS . '/theme.js', array('jquery', 'hh-counterup', 'hh-raisenow', 'swiper'), $modificated_js, true );
 	} else {
 		$modificated_css = date( 'YmdHis', filemtime( get_stylesheet_directory() . '/dist-assets/css/theme.min.css' ) );
 		$modificated_js = date( 'YmdHis', filemtime( get_stylesheet_directory() . '/dist-assets/js/theme.min.js' ) );
 		wp_register_style( 'hh-style', DIST_CSS . '/theme.min.css', array('hh-fonts'), $modificated_css );
-		wp_register_script( 'hh-script', DIST_JS . '/theme.min.js', array('jquery', 'hh-counterup', 'hh-raisenow'), $modificated_js, true );
+		wp_register_script( 'hh-script', DIST_JS . '/theme.min.js', array('jquery', 'hh-counterup', 'hh-raisenow', 'swiper'), $modificated_js, true );
 	}
 	$global_vars = array(
 		'home_url' => HOME_URI,
@@ -214,7 +216,7 @@ function hh_gutenberg_colors() {
 		array(
 			'name'  => esc_html__( 'Primary', 'theme-slug' ),
 			'slug'  => 'primary',
-			'color' => '#0061ab',
+			'color' => '#193a72',
 		),
 		array(
 			'name'  => esc_html__( 'Secondary', 'theme-slug' ),

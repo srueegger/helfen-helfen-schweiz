@@ -6,7 +6,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'block-contactform '.get_field('block_cf_bgcolor');
+$className = 'block-contactform';
 if( !empty($block['className']) ) {
 	$className .= ' ' . $block['className'];
 }

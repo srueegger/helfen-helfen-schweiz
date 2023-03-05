@@ -7,7 +7,7 @@ $btn_target = $btn['target'] ? $btn['target'] : '_self'
 	<div class="inner">
 		<h1><?php the_field('404_title', 'option'); ?></h1>
 		<?php the_field('404_txt', 'option'); ?>
-		<p><a href="<?php echo $btn['url']; ?>" class="btn btn-secondary" target="<?php echo $btn_target; ?>"><?php echo $btn['title']; ?></a></p>
+		<p><a href="<?php echo $btn['url']; ?>" class="btn btn-light" target="<?php echo $btn_target; ?>"><?php echo $btn['title']; ?></a></p>
 	</div>
 </main>
 <?php

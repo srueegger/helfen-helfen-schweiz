@@ -11,6 +11,10 @@ button {
 	}
 }
 
+p:last-of-type {
+	margin-bottom: 0;
+}
+
 .mt-25 {
 	margin-top: 2.5rem;
 }
@@ -506,7 +510,7 @@ blockquote {
 	opacity: 1;
 	position: absolute;
 	z-index: 999;
-	bottom: 25px;
+	bottom: 75px;
 	width: 50px;
 	height: 50px;
 	background-color: rgba(255, 255, 255, .4);
@@ -516,6 +520,8 @@ blockquote {
 	transition: all .5s linear;
 	cursor: pointer;
 	animation: blockarrow 3s normal;
+	right: 50%;
+	transform: translateX(50%);
 	svg {
 		color: $black;
 	}
@@ -713,7 +719,10 @@ blockquote {
 		}
 		&:nth-child(even) {
 			.overlay {
-				background-color: rgba(255, 213, 0, .5);
+				background-color: rgba(255, 255, 255, .5);
+				.inner {
+					color: $black;
+				}
 			}
 		}
 		&:hover {
@@ -728,7 +737,10 @@ blockquote {
 			}
 			&:nth-child(even) {
 				.overlay {
-					background-color: rgba(255, 213, 0, .7);
+					background-color: rgba(255, 255, 255, .7);
+					.inner {
+						color: $black;
+					}
 				}
 			}
 		}
@@ -1077,5 +1089,37 @@ blockquote {
 ul {
 	.container {
 		padding: 0;
+	}
+}
+
+.accordion {
+	.card {
+		border: none;
+		border-bottom: 1px solid $primary !important;
+		.card-header {
+			padding: 0;
+			cursor: pointer;
+			background-color: $gray-100;
+			h6 {
+				line-height: 49px;
+			}
+		}
+		.card-body {
+			background-color: $gray-100;
+			padding: 1rem 0;
+			p {
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+.social-icons {
+	padding: 25px 0;
+	p {
+		font-size: 2.5rem;
+		font-weight: 700;
 	}
 }

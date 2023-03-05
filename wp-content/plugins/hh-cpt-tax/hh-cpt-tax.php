@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Custom Post Types and Taxonomies
- * Version: 1.4.4
+ * Version: 1.5
  * Plugin URI: https://rueegger.me
  * Description: Dieses Plugin managt die Post Types und Taxonomies für Helfen-helfen Schweiz
  * Author: Samuel Rüegger
@@ -297,5 +297,40 @@ function cptui_register_my_taxes() {
 		"show_in_quick_edit" => true,
 	];
 	register_taxonomy( "hh_mitstreiterkategorien", [ "hh_mitstreiter" ], $args );
+
+	/**
+	 * Taxonomy: Partnerkategorien.
+	 */
+
+	 $labels = [
+		"name" => __( "Partner-Kategorien", "hh-wptheme" ),
+		"singular_name" => __( "Partner-Kategorie", "hh-wptheme" ),
+		"menu_name" => __( "Kategorien", "hh-wptheme" ),
+		"all_items" => __( "Alle Partner-Kategorien", "hh-wptheme" ),
+		"edit_item" => __( "Partner-Kategorie bearbeiten", "hh-wptheme" ),
+		"view_item" => __( "Partner-Kategorie ansehen", "hh-wptheme" ),
+		"add_new_item" => __( "Neue Partner-Kategorie", "hh-wptheme" ),
+		"search_items" => __( "Partner-Kategorien suchen", "hh-wptheme" ),
+		"not_found" => __( "Keine Partner-Kategorien gefunden", "hh-wptheme" ),
+	];
+
+	$args = [
+		"label" => __( "Partner-Kategorien", "hh-wptheme" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => true,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => [ 'slug' => 'partner-kategorie', 'with_front' => false, ],
+		"show_admin_column" => true,
+		"show_in_rest" => true,
+		"rest_base" => "hh_partnerkategorien",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"show_in_quick_edit" => true,
+	];
+	register_taxonomy( "hh_partnerkategorien", [ "hh_partner" ], $args );
 }
 add_action( 'init', 'cptui_register_my_taxes' );

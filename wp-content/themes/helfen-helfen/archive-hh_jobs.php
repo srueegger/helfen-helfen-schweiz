@@ -1,8 +1,8 @@
 <?php
 get_header();
 ?>
-<main id="job-overview" class="emptypage">
-	<div class="inner">
+<main id="job-overview" class="foerderer">
+
 		<?php
 		/* Prüfen ob es Jobs gibt */
 		$args = array(
@@ -14,20 +14,34 @@ get_header();
 		);
 		$jobs = get_posts($args);
 		if(!empty($jobs)) {
-			echo '<ul class="list-unstyled text-center">';
+			echo '<div class="row no-gutters">';
 			global $post;
 			foreach($jobs as $post) {
 				setup_postdata( $post );
-				echo '<li><a href="'.get_the_permalink().'" target="_self">'.get_the_title().'</a></li>';
+				$image = get_field( 'news_image' );
+				?>
+				<div class="col-12 col-lg-6 col-xl-4 foerdererItem">
+					<a href="<?php the_permalink(); ?>">
+						<picture>
+							<source srcset="<?php echo $image['sizes']['kopf']; ?> 1x, <?php echo $image['sizes']['kopf2x']; ?> 2x">
+							<img data-object-fit="cover" src="<?php echo $image['sizes']['kopf']; ?>" loading="lazy" alt="<?php echo $image['alt']; ?>">
+						</picture>
+						<div class="overlay">
+							<div class="inner">
+								<h2><?php the_title(); ?></h2>
+							</div>
+						</div>
+					</a>
+				</div>
+				<?php
 			}
 			wp_reset_postdata();
-			echo '</ul>';
+			echo '</div>';
 		} else {
 			/* Anzeige bei keinen offenen Jobs */
 			the_field( 'setting_job_nojobs', 'option' );
 		}
 		?>
-	</div>
 </main>
 <?php
 get_template_part( 'templates/page', 'footer' );
