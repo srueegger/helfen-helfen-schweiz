@@ -26,6 +26,18 @@ function register_acf_block_types() {
 		'mode' => 'edit'
 	));
 
+	// Video Block.
+	acf_register_block_type(array(
+		'name' => 'multiplevideos',
+		'title' => __('Video Block'),
+		'description' => __('Der Block rendert ein Video'),
+		'render_template' => '/blocks/video.php',
+		'category' => 'layout',
+		'icon' => 'format-video',
+		'keywords' => array( 'counter', 'zahlen' ),
+		'mode' => 'edit'
+	));
+
 	// register a Countdown block.
 	acf_register_block_type(array(
 		'name' => 'countdown',

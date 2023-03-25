@@ -100,7 +100,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 	});
 
 	/* In den Full-Image Block den ScrollDown Pfeil einfügen */
-	$('.wp-block-cover.fullpage, .wp-block-video.fullpage').append(global_vars.txt.arrow_bottom);
+	$('.wp-block-cover.fullpage, .wp-block-video.fullpage, .videoblock.fullpage').append(global_vars.txt.arrow_bottom);
 
 	/* 100vh herunterscrollen nach Klick auf das Scroll Down Icon */
 	$(document).on('click', '.fullpageArrowBottom', function() {
@@ -304,6 +304,13 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       nextEl: '.slider-next-element'
     }
   });
+
+	/* Video Block - zwischen den Videos wechseln */
+	$( '.video_navigation li' ).on( 'click', function() {
+		let show = $( this ).data( 'show' );
+		$( '.videoblock video' ).hide();
+		$( show ).show();
+	} );
 
 	/* Bild Polyfill für IE aktivieren */
 	objectFitPolyfill();
