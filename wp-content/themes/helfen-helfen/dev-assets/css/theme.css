@@ -10181,8 +10181,8 @@ blockquote {
   height: 50px;
   border-radius: 100%;
   background-color: #fff;
-  border: 2px solid #000;
-  color: #000;
+  border: 2px solid #193a72;
+  color: #193a72;
   transition: all 0.5s linear;
   display: inline-block;
   line-height: 50px;
@@ -10195,7 +10195,7 @@ blockquote {
   margin-left: 20px;
 }
 .social-media-container .sm-icon:hover {
-  background-color: #000;
+  background-color: #193a72;
   color: #fff;
 }
 .social-media-container .sm-icon svg {
@@ -10246,8 +10246,8 @@ blockquote {
 }
 
 .menu-news-container {
-  border-top: 4px solid #000;
-  border-bottom: 4px solid #000;
+  border-top: 4px solid #193a72;
+  border-bottom: 4px solid #193a72;
   padding-top: 25px;
   padding-bottom: 25px;
   width: 60%;
@@ -10259,10 +10259,12 @@ blockquote {
   font-weight: 400;
   letter-spacing: 2px;
   margin-bottom: 10px;
+  color: #193a72;
 }
 .menu-news-container .news-item h3 {
   font-weight: 700;
   font-size: 1.6rem;
+  color: #193a72;
 }
 @media (max-width: 1200px) {
   .menu-news-container .news-item h3 {
@@ -10272,9 +10274,10 @@ blockquote {
 .menu-news-container .news-item p {
   margin-bottom: 0;
   font-size: 1.125rem;
+  color: #193a72;
 }
 .menu-news-container .news-item:not(:last-of-type) {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #193a72;
   padding-bottom: 15px;
 }
 .menu-news-container .news-item:not(:first-of-type) {

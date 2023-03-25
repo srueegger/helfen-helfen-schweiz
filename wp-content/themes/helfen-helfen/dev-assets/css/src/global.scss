@@ -412,8 +412,8 @@ blockquote {
 		height: 50px;
 		border-radius: 100%;
 		background-color: $white;
-		border: 2px solid $black;
-		color: $black;
+		border: 2px solid $blue;
+		color: $blue;
 		transition: all .5s linear;
 		display: inline-block;
 		line-height: 50px;
@@ -425,7 +425,7 @@ blockquote {
 			margin-left: 20px;
 		}
 		&:hover {
-			background-color: $black;
+			background-color: $blue;
 			color: $white;
 		}
 		svg {
@@ -476,8 +476,8 @@ blockquote {
 }
 
 .menu-news-container {
-	border-top: 4px solid $black;
-	border-bottom: 4px solid $black;
+	border-top: 4px solid $blue;
+	border-bottom: 4px solid $blue;
 	padding-top: 25px;
 	padding-bottom: 25px;
 	width: 60%;
@@ -487,17 +487,20 @@ blockquote {
 			font-weight: 400;
 			letter-spacing: 2px;
 			margin-bottom: 10px;
+			color: $blue;
 		}
 		h3 {
 			font-weight: 700;
 			@include font-size(1.6rem);
+			color: $blue;
 		}
 		p {
 			margin-bottom: 0;
 			@include font-size(1.125rem);
+			color: $blue;
 		}
 		&:not(:last-of-type) {
-			border-bottom: 1px solid $black;
+			border-bottom: 1px solid $blue;
 			padding-bottom: 15px;
 		}
 		&:not(:first-of-type) {
