@@ -20,11 +20,11 @@ if( !empty($block['align']) ) {
 		echo '<div class="hh-full-carousel mb-0">';
 		while(have_rows('block_fps_elements')) {
 			the_row();
-			$link = get_sub_field('link');
+			$link = get_sub_field( 'linknew' );
 			$image = get_sub_field('image');
 			?>
 			<div>
-				<a href="<?php echo get_the_permalink( $link ); ?>" target="_self">
+				<a href="<?php echo esc_url( $link ); ?>" target="_self">
 					<picture>
 						<img src="<?php echo $image['sizes']['imgsize-1920']; ?>" alt="<?php echo $image['alt']; ?>">
 					</picture>
