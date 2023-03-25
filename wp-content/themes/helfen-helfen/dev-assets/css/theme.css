@@ -10917,11 +10917,29 @@ ul .container {
 }
 
 .social-icons {
-  padding: 25px 0;
+  padding: 50px 0;
 }
 .social-icons p {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
+}
+.social-icons svg {
+  transition: all 0.25s;
+}
+.social-icons svg:hover.fa-facebook-square {
+  color: #3b5998;
+}
+.social-icons svg:hover.fa-instagram-square {
+  color: #8a3ab9;
+}
+.social-icons svg:hover.fa-twitter-square {
+  color: #00aced;
+}
+.social-icons svg:hover.fa-youtube-square {
+  color: #c4302b;
+}
+.social-icons svg:hover.fa-linkedin {
+  color: #0077b5;
 }
 
 .videoblock {
