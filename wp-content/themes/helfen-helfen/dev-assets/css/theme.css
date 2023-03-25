@@ -11042,13 +11042,6 @@ ul .container {
   color: #fff;
 }
 
-html,
-body,
-.container,
-.container-lg {
-  height: 100%;
-}
-
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -11138,6 +11131,15 @@ body {
   .timeline .swiper-slide .timeline-year {
     margin-bottom: 50px;
   }
+}
+.timeline .swiper-slide:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .timeline .swiper-pagination {
   position: absolute;
