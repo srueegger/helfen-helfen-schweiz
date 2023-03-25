@@ -6,7 +6,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'foerderer';
+$className = 'foerderer kachellist-container';
 if( !empty($block['className']) ) {
 	$className .= ' ' . $block['className'];
 }
@@ -25,16 +25,11 @@ if( $columns == 2 ) {
     echo '<div class="row no-gutters">';
     while( have_rows( 'block_kachellist_elements' ) ) {
       the_row();
-      $image = get_sub_field( 'img' );
       $link = get_sub_field( 'link' );
       $link_target = $link['target'] ? $link['target'] : '_self';
       ?>
       <div class="<?php echo $print_columns; ?> foerdererItem">
         <a href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
-          <picture>
-            <source srcset="<?php echo $image['sizes']['kopf']; ?> 1x, <?php echo $image['sizes']['kopf2x']; ?> 2x">
-            <img data-object-fit="cover" src="<?php echo $image['sizes']['kopf']; ?>" loading="lazy" alt="<?php echo $image['alt']; ?>">
-          </picture>
           <div class="overlay">
             <div class="inner">
               <h2><?php echo esc_attr( $link['title'] ); ?></h2>
