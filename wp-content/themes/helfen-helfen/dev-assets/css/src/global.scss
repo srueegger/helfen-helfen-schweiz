@@ -1100,14 +1100,17 @@ ul {
 			padding: 0;
 			cursor: pointer;
 			background-color: $gray-100;
+			padding: 15px 0;
 			h6 {
-				line-height: 49px;
+				line-height: 1.5;
+				color: $blue;
 			}
 		}
 		.card-body {
 			background-color: $gray-100;
 			padding: 1rem 0;
 			p {
+				color: $blue;
 				&:last-of-type {
 					margin-bottom: 0;
 				}

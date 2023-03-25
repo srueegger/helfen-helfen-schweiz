@@ -10904,13 +10904,18 @@ ul .container {
   padding: 0;
   cursor: pointer;
   background-color: #f8f9fa;
+  padding: 15px 0;
 }
 .accordion .card .card-header h6 {
-  line-height: 49px;
+  line-height: 1.5;
+  color: #193a72;
 }
 .accordion .card .card-body {
   background-color: #f8f9fa;
   padding: 1rem 0;
+}
+.accordion .card .card-body p {
+  color: #193a72;
 }
 .accordion .card .card-body p:last-of-type {
   margin-bottom: 0;
