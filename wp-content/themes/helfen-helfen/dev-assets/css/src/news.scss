@@ -2,11 +2,19 @@
 	.news-date,
 	.news-author {
 		text-align: left;
+		color: $blue;
 	}
 	@include media-breakpoint-up(lg) {
 		.news-author {
 			text-align: right;
 		}
+	}
+}
+
+#newsarchive {
+	h2,
+	p {
+		color: $blue;
 	}
 }
 

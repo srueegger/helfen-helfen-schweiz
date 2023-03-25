@@ -3,7 +3,7 @@ get_header();
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 $image = get_field('news_image');
 ?>
-<main id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
+<main id="page-<?php the_ID(); ?>" <?php post_class( 'text-primary' ); ?>>
 	<div class="wp-block-cover has-background-dim-40 <?php the_field('news_image_layer'); ?> has-background-dim fullpage" style="background-image:url(<?php echo $image['sizes']['imgsize-1920']; ?>)">
 		<div class="wp-block-cover__inner-container">
 			<div class="container">

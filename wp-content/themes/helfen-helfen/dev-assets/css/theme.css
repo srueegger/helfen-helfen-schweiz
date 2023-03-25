@@ -11004,11 +11004,17 @@ ul .container {
 .news-meta-container .news-date,
 .news-meta-container .news-author {
   text-align: left;
+  color: #193a72;
 }
 @media (min-width: 992px) {
   .news-meta-container .news-author {
     text-align: right;
   }
+}
+
+#newsarchive h2,
+#newsarchive p {
+  color: #193a72;
 }
 
 .next-news-link,
