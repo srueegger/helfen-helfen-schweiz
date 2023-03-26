@@ -42,6 +42,8 @@ if( !empty($block['align']) ) {
 				<div class="overlay">
 					<div class="inner">
 						<h2><?php echo esc_attr( get_the_title( get_the_ID() ) ); ?></h2>
+						<p class="mt-3"><?php echo get_the_time( get_option( 'date_format' ), get_the_ID() ); ?></p>
+						<p><?php the_field( 'presse_medium', get_the_ID() ); ?></p>
 					</div>
 				</div>
 			</a>

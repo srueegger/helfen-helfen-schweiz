@@ -10953,7 +10953,7 @@ ul .container {
 .videoblock video {
   width: 100%;
   height: 100vh;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 
