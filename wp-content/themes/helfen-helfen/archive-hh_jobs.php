@@ -29,6 +29,7 @@ get_header();
 						<div class="overlay">
 							<div class="inner">
 								<h2><?php the_title(); ?></h2>
+								<p class="mt-3 mb-0">#TeamBlue</p>
 							</div>
 						</div>
 					</a>
