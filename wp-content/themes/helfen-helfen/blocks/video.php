@@ -24,7 +24,7 @@ if( !empty($block['align']) ) {
       $style = ' style="display: none;"';
     }
     if( wp_is_mobile(  ) ) {
-      echo '<video' . $style . ' id="video-' . $index . '" autoplay controls loop muted src="' . esc_url( get_sub_field( 'moble' ) ) . '" playsinline></video>';
+      echo '<video' . $style . ' id="video-' . $index . '" autoplay controls loop muted src="' . esc_url( get_sub_field( 'mobile' ) ) . '" playsinline></video>';
     } else {
       echo '<video' . $style . ' id="video-' . $index . '" autoplay controls loop muted src="' . esc_url( get_sub_field( 'desktop' ) ) . '" playsinline></video>';
     }
