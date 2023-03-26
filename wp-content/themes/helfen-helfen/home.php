@@ -10,7 +10,7 @@ $image = get_field('news_image', get_queried_object_id());
 				<div class="row justify-content-center">
 					<div class="col-12 col-lg-9">
 						<?php echo '<h1 class="d-none">'.get_the_title(get_queried_object_id()).'</h1>'; ?>
-						<p class="has-text-align-center has-large-font-size"><?php echo get_the_title(get_queried_object_id()); ?></p>
+						<p class="has-text-align-center has-large-font-size text-white"><?php echo get_the_title(get_queried_object_id()); ?></p>
 					</div>
 				</div>
 			</div>
