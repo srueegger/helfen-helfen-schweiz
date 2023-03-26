@@ -86,7 +86,7 @@ function hh_startup_scripts() {
 			'nextArrow' => '<button type="button" class="slick-next"><i class="fa fa-arrow-right"></i></button>',
 			'responsive' => array(
 				array(
-					'breakpoint' => 769,
+					'breakpoint' => 1081,
 					'settings' => array(
 						'slidesToShow' => 1,
 						'arrows' => false,

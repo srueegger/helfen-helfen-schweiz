@@ -10102,11 +10102,11 @@ blockquote {
 }
 .hh-full-carousel .slick-slide .inner-container .inner h2 {
   font-weight: 700;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 @media (max-width: 1200px) {
   .hh-full-carousel .slick-slide .inner-container .inner h2 {
-    font-size: calc(1.625rem + 4.5vw);
+    font-size: calc(1.525rem + 3.3vw);
   }
 }
 .hh-full-carousel .slick-slide .inner-container .inner p {
