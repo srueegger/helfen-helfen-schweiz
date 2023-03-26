@@ -234,8 +234,8 @@ add_filter( 'render_block', function( $block_content, $block ) {
 	if(!is_front_page() && !is_page('presse')) {
 		// Target core/* and core-embed/* blocks.
 		//print_r($block);
-		//echo $block['blockName'];
-		if ( preg_match( '~^core/|core-embed/~', $block['blockName'] ) && $block['blockName'] != 'core/cover' && $block['blockName'] != 'core/gallery' && $block['blockName'] != 'core/column' && $block['blockName'] != 'core/columns' && $block['blockName'] != 'core/quote' && $block['blockName'] != 'core/media-text' && $block['blockName'] != 'core/image' && $block['attrs']['className'] != 'left' ) {
+		//echo $block['blockName'] . '<br><br>';
+		if ( preg_match( '~^core/|core-embed/~', $block['blockName'] ) && $block['blockName'] != 'core/cover' && $block['blockName'] != 'core/gallery' && $block['blockName'] != 'core/column' && $block['blockName'] != 'core/column' && $block['blockName'] != 'core/quote' && $block['blockName'] != 'core/media-text' && $block['blockName'] != 'core/image' && $block['attrs']['className'] != 'left' ) {
 			$block_content = sprintf( '<div class="container"><div class="row justify-content-center"><div class="col-12 col-lg-9">%s</div></div></div>', $block_content );
 		} elseif ($block['blockName'] == 'core/gallery') {
 			$block_content = sprintf( '<div class="container-fluid"><div class="row justify-content-center"><div class="col-12 col-lg-9">%s</div></div></div>', $block_content );

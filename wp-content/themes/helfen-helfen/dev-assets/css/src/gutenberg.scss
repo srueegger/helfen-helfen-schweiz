@@ -52,9 +52,8 @@ main {
 		}
 		cite {
 			display: block;
-			margin-left: 100px;
+			margin-left: 125px;
 			position: relative;
-			//border-top: 1px solid $blue;
 			&:before {
 				content: '';
 				height: 1px;
@@ -71,12 +70,15 @@ main {
 			font-size: 10rem;
 			line-height: 0;
 			bottom: -50px;
-			left: 90px;
+			left: 115px;
 		}
 	}
 	@include media-breakpoint-up(lg) {
 		.wp-block-quote {
 			margin: 80px auto;
+			p {
+				margin-left: 25px;
+			}
 		}
 	}
 }

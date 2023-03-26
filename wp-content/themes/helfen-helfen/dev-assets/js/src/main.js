@@ -295,6 +295,13 @@
 		$( show ).trigger('play');
 	} );
 
+	/* Column Fix */
+	$( '.wp-block-column' ).each( function( index, element ) {
+		$( element ).find( '.row' ).removeClass( 'justify-content-center' );
+		$( element ).find( '.col-lg-9' ).removeClass( 'col-lg-9 col-12' );
+	} );
+	$( '.wp-block-columns' ).parent().removeClass( 'col-lg-9' );
+
 	/* Bild Polyfill für IE aktivieren */
 	objectFitPolyfill();
 })(jQuery);

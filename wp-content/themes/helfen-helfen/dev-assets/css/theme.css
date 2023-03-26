@@ -9525,7 +9525,7 @@ main.page h2 {
 }
 .wp-block-media-text__content .wp-block-quote cite {
   display: block;
-  margin-left: 100px;
+  margin-left: 125px;
   position: relative;
 }
 .wp-block-media-text__content .wp-block-quote cite:before {
@@ -9543,11 +9543,14 @@ main.page h2 {
   font-size: 10rem;
   line-height: 0;
   bottom: -50px;
-  left: 90px;
+  left: 115px;
 }
 @media (min-width: 992px) {
   .wp-block-media-text__content .wp-block-quote {
     margin: 80px auto;
+  }
+  .wp-block-media-text__content .wp-block-quote p {
+    margin-left: 25px;
   }
 }
 
