@@ -34,8 +34,6 @@ blockquote {
 	transition: all .5s linear;
 	img {
 		width: 60px;
-		background-color: $white;
-		border-radius: 100%;
 	}
 	@include media-breakpoint-up(md) {
 		top: 40px;

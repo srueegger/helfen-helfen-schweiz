@@ -9825,8 +9825,6 @@ blockquote {
 }
 #logoContainer img {
   width: 60px;
-  background-color: #fff;
-  border-radius: 100%;
 }
 @media (min-width: 768px) {
   #logoContainer {
