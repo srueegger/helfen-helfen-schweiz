@@ -308,8 +308,11 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 	/* Video Block - zwischen den Videos wechseln */
 	$( '.video_navigation li' ).on( 'click', function() {
 		let show = $( this ).data( 'show' );
-		$( '.videoblock video' ).hide();
+		let videos = $( '.videoblock video' );
+		videos.hide();
+		videos.trigger('pause');
 		$( show ).show();
+		$( show ).trigger('play');
 	} );
 
 	/* Bild Polyfill für IE aktivieren */
