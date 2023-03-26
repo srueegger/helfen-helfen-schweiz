@@ -9632,7 +9632,7 @@ body .gform_wrapper .gf_page_steps {
 }
 body .gform_wrapper .gf_page_steps .gf_step {
   width: 100%;
-  padding-left: 35px;
+  padding-left: 30px;
   background-color: #edece7;
   padding-top: 15px;
   height: 50px;
@@ -9641,6 +9641,9 @@ body .gform_wrapper .gf_page_steps .gf_step {
   border-left: 5px solid rgba(250, 250, 250, 0.5);
   display: block;
   position: relative;
+}
+body .gform_wrapper .gf_page_steps .gf_step .gf_step_number {
+  display: none;
 }
 body .gform_wrapper .gf_page_steps .gf_step.gf_step_first {
   border-left: none;
