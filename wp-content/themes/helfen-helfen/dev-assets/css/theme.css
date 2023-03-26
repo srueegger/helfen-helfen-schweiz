@@ -10516,7 +10516,7 @@ blockquote {
   text-align: center;
   color: #193a72;
   position: absolute;
-  width: 100%;
+  width: calc(100% - 30px);
   bottom: 50%;
   transform: translateY(50%);
 }
@@ -10528,6 +10528,12 @@ blockquote {
   transform: scale(1);
   transition: all 0.5s linear;
   font-size: 1.6rem;
+}
+.foerderer .foerdererItem .overlay:hover,
+.foerderer .mitstreiterItem .overlay:hover,
+#mitstreiter-list .foerdererItem .overlay:hover,
+#mitstreiter-list .mitstreiterItem .overlay:hover {
+  transform: scale(1.1);
 }
 .foerderer .foerdererItem:nth-child(even) .overlay,
 .foerderer .mitstreiterItem:nth-child(even) .overlay,
