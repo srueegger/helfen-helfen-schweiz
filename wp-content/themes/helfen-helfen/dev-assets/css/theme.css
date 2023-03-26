@@ -9507,7 +9507,6 @@ main.page h2 {
   margin: 40px auto;
   align-self: center;
   border: none;
-  border-left: 4px solid #193a72;
 }
 .wp-block-media-text__content .wp-block-quote p {
   position: relative;
@@ -9525,13 +9524,12 @@ main.page h2 {
 }
 .wp-block-media-text__content .wp-block-quote cite {
   display: block;
-  margin-left: 125px;
   position: relative;
 }
 .wp-block-media-text__content .wp-block-quote cite:before {
   content: "";
   height: 1px;
-  width: calc(100% - 100px);
+  width: 100%;
   background-color: #193a72;
   position: absolute;
   left: 0;
@@ -9548,12 +9546,24 @@ main.page h2 {
 @media (min-width: 992px) {
   .wp-block-media-text__content .wp-block-quote {
     margin: 80px auto;
+    border-left: 4px solid #193a72;
   }
   .wp-block-media-text__content .wp-block-quote p {
     margin-left: 25px;
   }
+  .wp-block-media-text__content .wp-block-quote cite {
+    margin-left: 125px;
+  }
+  .wp-block-media-text__content .wp-block-quote cite:before {
+    width: calc(100% - 100px);
+  }
 }
 
+.wp-block-media-text.roundimage {
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+}
 .wp-block-media-text.roundimage img {
   border-radius: 100%;
   width: 75%;
@@ -9561,6 +9571,13 @@ main.page h2 {
 }
 .wp-block-media-text.has-media-on-the-right {
   grid-template-columns: 1fr 35%;
+}
+@media (min-width: 992px) {
+  .wp-block-media-text.roundimage {
+    display: grid;
+    text-align: left;
+    margin-top: 0;
+  }
 }
 
 .wp-block-gallery a {

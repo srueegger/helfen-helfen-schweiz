@@ -40,7 +40,6 @@ main {
 		margin: 40px auto;
 		align-self: center;
 		border: none;
-		border-left: 4px solid $primary;
 		p {
 			position: relative;
 			color: $blue;
@@ -52,12 +51,11 @@ main {
 		}
 		cite {
 			display: block;
-			margin-left: 125px;
 			position: relative;
 			&:before {
 				content: '';
 				height: 1px;
-				width: calc(100% - 100px);
+				width: 100%;
 				background-color: $blue;
 				position: absolute;
 				left: 0;
@@ -76,8 +74,15 @@ main {
 	@include media-breakpoint-up(lg) {
 		.wp-block-quote {
 			margin: 80px auto;
+			border-left: 4px solid $primary;
 			p {
 				margin-left: 25px;
+			}
+			cite {
+				margin-left: 125px;
+				&:before {
+					width: calc(100% - 100px);
+				}
 			}
 		}
 	}
@@ -85,6 +90,9 @@ main {
 
 .wp-block-media-text {
 	&.roundimage {
+		display: block;
+		text-align: center;
+		margin-top: 25px;
 		img {
 			border-radius: 100%;
 			width: 75%;
@@ -93,6 +101,13 @@ main {
 	}
 	&.has-media-on-the-right {
 		grid-template-columns: 1fr 35%;
+	}
+	@include media-breakpoint-up(lg) {
+		&.roundimage {
+			display: grid;
+			text-align: left;
+			margin-top: 0;
+		}
 	}
 }
 
