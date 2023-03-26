@@ -92,7 +92,8 @@
 		var vheight = $(window).height();
 		var vwidth = $(window).width();
 		$('.wp-block-cover.fullpage').css({
-			'height': vheight,
+			'height': '100vh',
+			'min-height': '100vh',
 			'width': vwidth 
 		});
 	};
