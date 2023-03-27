@@ -1138,25 +1138,39 @@ ul {
 
 .video_navigation {
 	position: absolute;
-	top: 125px;
-	right: 45px;
+	top: 25px;
 	list-style: none;
+	padding-left: 0;
+	text-align: center;
+	width: 100%;
 	li {
 		display: inline-block;
 		background-color: rgba(0,0,0,.5);
 		text-transform: uppercase;
 		color: $white;
-		padding: 1rem 1.6rem;
+		padding: .7rem 1rem;
 		border: 1px solid $white;
 		border-radius: 25px;
 		font-weight: 700;
-		font-size: 1.3rem;
+		font-size: 1rem;
 		transition: all .25s;
 		&:hover {
 			background-color: rgba(0,0,0,.9);
 		}
 		&:not(:last-of-type) {
-			margin-right: 25px;
+			margin-right: 10px;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		right: 45px;
+		top: 125px;
+		width: auto;
+		li {
+			padding: 1rem 1.6rem;
+			font-size: 1.3rem;
+			&:not(:last-of-type) {
+				margin-right: 25px;
+			}
 		}
 	}
 }
