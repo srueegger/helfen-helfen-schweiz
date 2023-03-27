@@ -10206,6 +10206,9 @@ blockquote {
   color: #fff;
 }
 
+.social-media-container {
+  display: none;
+}
 .social-media-container .sm-icon {
   width: 50px;
   height: 50px;
@@ -10272,6 +10275,11 @@ blockquote {
   }
   .social-media-container .menu-news svg {
     font-size: 4em;
+  }
+}
+@media screen and (min-height: 739px) {
+  .social-media-container {
+    display: block;
   }
 }
 
