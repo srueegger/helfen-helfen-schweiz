@@ -277,7 +277,7 @@
       el: '.swiper-pagination',
       renderBullet: function (index, className) {
         var year = document.querySelectorAll('.swiper-slide')[index].getAttribute('data-year');
-        return '<span class="' + className + '">' + year + '</span>';
+        return '<span class="' + className + '"><span class="d-inline-block mr-3">' + year + '</span></span>';
       },
       clickable: true,
     },

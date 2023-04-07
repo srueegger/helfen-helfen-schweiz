@@ -28,7 +28,7 @@ if( !empty($block['align']) ) {
           ?>
           <div class="swiper-slide" style="background-image: url('<?php echo $img['url']; ?>');" data-year="<?php echo $year; ?>">
             <div class="swiper-slide-content text-white">
-              <div class="row">
+              <div class="row px-3 p-lg-0">
                 <div class="col-12 d-lg-none">
                   <h2 class="h1"><?php the_sub_field( 'titel' ); ?></h4>
                 </div> 
