@@ -191,24 +191,6 @@ add_action( 'admin_menu', 'hh_remove_menus' );
 
 
 /***************************************
- * 	 E-Mails per SMTP senden
- ***************************************/
-function hh_send_smtp( $phpmailer ) {
-	$phpmailer->isSMTP();
-	$phpmailer->Host = get_field( 'sys_smtp_host', 'option' );
-	$phpmailer->SMTPAuth = true;
-	$phpmailer->Port = get_field( 'sys_smtp_port', 'option' );
-	$phpmailer->Username = get_field( 'sys_smtp_username', 'option' );
-	$phpmailer->Password = get_field( 'sys_smtp_password', 'option' );
-	$phpmailer->SMTPSecure = get_field( 'sys_smtp_secure', 'option' );
-	$phpmailer->From = get_field( 'sys_smtp_frommail', 'option' );
-	$phpmailer->FromName = get_field( 'sys_smtp_fromname', 'option' );
-	$phpmailer->CharSet = 'utf-8';
-}
-add_action( 'phpmailer_init', 'hh_send_smtp' );
-
-
-/***************************************
  * 	 Gutenberg Custom Farben hinterlegen
  ***************************************/
 function hh_gutenberg_colors() {
