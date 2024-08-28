@@ -23,17 +23,9 @@
 	hamburger.on('click', function() {
 		hamburger.toggleClass('is-active');
 		$('.main_menu').toggleClass('active');
-		invertBTNs();
 		/* Body Scrollen ein und Auschalten */
 		$('body').toggleClass('no-scroll');
 	});
-
-	/* Funktion die Menübutton und Logo invertiert / bzw wieder normal darstellt */
-	function invertBTNs() {
-		/* Logo invertieren */
-		$('.logo-normal').toggleClass('d-none');
-		$('.logo-invert').toggleClass('d-none');
-	}
 
 	/* Hauptmenü Desktop steuern */
 	$('.menu-list:not(.menu-list-mobile) .menu-item.menu-item-has-children:not(.hovered-menu)').on('click', function(event) {

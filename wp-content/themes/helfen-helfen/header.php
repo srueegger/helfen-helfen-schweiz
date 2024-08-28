@@ -21,10 +21,7 @@
 			<div id="logoContainer"<?php echo $addLogoClass; ?>>
 				<a href="<?php echo HOME_URI; ?>" target="_self">
 					<picture>
-						<img class="logo-normal" src="<?php echo THEME_IMAGES; ?>/logo_blue.png" alt="">
-					</picture>
-					<picture>
-						<img class="logo-invert d-none" src="<?php echo THEME_IMAGES; ?>/logo_blue.png" alt="">
+						<img class="logo-normal" src="<?php echo THEME_IMAGES; ?>/Logo_he_mit_Signet.svg" alt="">
 					</picture>
 				</a>
 			</div>
