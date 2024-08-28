@@ -74,7 +74,9 @@ wp-content/cache/
 wp-content/upgrade/
 wp-content/uploads/
 wp-content/languages/
+wp-content/maintenance/
 wp-content/wp-cache-config.php
+wp-content/maintenance.php
 
 
 wp-includes/
