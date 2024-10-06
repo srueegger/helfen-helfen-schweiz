@@ -10054,6 +10054,11 @@ blockquote {
   border-right: 1px solid #193a72;
   padding-right: 11px;
 }
+@media (min-width: 1200px) {
+  .submenu-list {
+    margin-left: 200px;
+  }
+}
 
 .dynamic-menu-content {
   max-height: 0;

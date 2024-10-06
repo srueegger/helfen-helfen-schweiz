@@ -252,6 +252,9 @@ blockquote {
 			padding-right: 11px;
 		}
 	}
+	@include media-breakpoint-up(xl) {
+		margin-left: 200px;
+	}
 }
 
 .dynamic-menu-content {
