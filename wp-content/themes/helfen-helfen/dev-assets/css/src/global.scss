@@ -193,6 +193,7 @@ blockquote {
 		}
 	}
 	@include media-breakpoint-up(xl) {
+		margin-left: 200px;
 		.menu-item {
 			&:not(:last-of-type) {
 				margin-bottom: 30px;

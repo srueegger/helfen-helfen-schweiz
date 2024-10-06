@@ -9999,6 +9999,9 @@ blockquote {
   }
 }
 @media (min-width: 1200px) {
+  .menu-list {
+    margin-left: 200px;
+  }
   .menu-list .menu-item:not(:last-of-type) {
     margin-bottom: 30px;
   }
