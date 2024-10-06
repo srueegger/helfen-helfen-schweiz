@@ -193,6 +193,7 @@ blockquote {
 		}
 	}
 	@include media-breakpoint-up(xl) {
+		margin-left: 200px;
 		.menu-item {
 			&:not(:last-of-type) {
 				margin-bottom: 30px;
@@ -250,6 +251,9 @@ blockquote {
 			border-right: 1px solid $primary;
 			padding-right: 11px;
 		}
+	}
+	@include media-breakpoint-up(xl) {
+		margin-left: 200px;
 	}
 }
 
@@ -434,12 +438,6 @@ blockquote {
 			bottom: 50%;
 			transform: translate(50%, 50%);
 		}
-		@include media-breakpoint-up(xl) {
-			margin-right: 20px !important;
-			&:first-of-type {
-				margin-left: 0;
-			}
-		}
 	}
 	.menu-news {
 		background-color: $primary;
@@ -464,7 +462,21 @@ blockquote {
 				transform: translate(50%, 50%) rotate(25deg);
 			}
 		}
-		@include media-breakpoint-up(xl) {
+	}
+	@media screen and ( min-height: 739px ) {
+		display: block;
+	}
+	@include media-breakpoint-up(xl) {
+		margin-left: 200px;
+		width: 100%;
+		white-space: nowrap;
+		.sm-icon {
+			margin-right: 20px !important;
+			&:first-of-type {
+				margin-left: 0;
+			}
+		}
+		.menu-news {
 			width: 140px;
 			height: 140px;
 			top: 50px;
@@ -472,9 +484,6 @@ blockquote {
 				font-size: 4em;
 			}
 		}
-	}
-	@media screen and ( min-height: 739px ) {
-		display: block;
 	}
 }
 
