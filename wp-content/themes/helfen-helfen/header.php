@@ -25,13 +25,13 @@
 					</picture>
 				</a>
 			</div>
-			<div id="menuButton"<?php echo $addMenuClass; ?>>
+			<!-- <div id="menuButton"<?php echo $addMenuClass; ?>>
 				<button class="hamburger hamburger--squeeze" type="button">
 					<span class="hamburger-box">
 						<span class="hamburger-inner"></span>
 					</span>
 				</button>
-			</div>
+			</div> -->
 		</header>
 		<?php
-		get_sidebar('menu');
+		//get_sidebar('menu');
